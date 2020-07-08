@@ -1,0 +1,122 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3595,        112]
+NotebookOptionsPosition[      2954,         93]
+NotebookOutlinePosition[      3329,        109]
+CellTagsIndexPosition[      3286,        106]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"qho", "=", 
+   RowBox[{"Import", "[", "\"\<matrices//qho_0_20.wdx\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "=", 
+   RowBox[{"Import", "[", "\"\<matrices//r2_0_20.wdx\>\"", "]"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.796473052489725*^9, 
+  3.7964731933914585`*^9}},ExpressionUUID->"e9829176-5847-44a7-897a-\
+96934920c504"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\OriginalPranksta\\\\Desktop\\\\baryons\"\>"],\
+ "Output",
+ CellChangeTimes->{{3.7964731376931677`*^9, 3.7964731522588806`*^9}, 
+   3.7964731939660997`*^9},ExpressionUUID->"cce83e4a-bd1a-4ddd-8fe9-\
+a651aabafa4d"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m1", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m2", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m3", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Mu]\[Rho]", "=", 
+   FractionBox[
+    RowBox[{"2", " ", "m1", " ", "m2"}], 
+    RowBox[{"m1", "+", "m2"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Mu]\[Lambda]", "=", 
+   FractionBox[
+    RowBox[{"3", 
+     RowBox[{"(", 
+      RowBox[{"m1", " ", "+", " ", "m2"}], ")"}], " ", "m3"}], 
+    RowBox[{"2", 
+     RowBox[{"(", 
+      RowBox[{"m1", "+", "m2", "+", "m3"}], ")"}]}]]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]\[Rho]", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Omega]\[Lambda]", "=", "1"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.796473218237299*^9, 3.7964733629308915`*^9}, {
+  3.7964742079053283`*^9, 
+  3.7964742187981405`*^9}},ExpressionUUID->"9f9b9f1c-19da-4688-8813-\
+404dce04a8bb"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"matrix", "=", 
+   RowBox[{
+    RowBox[{"\[Omega]\[Rho]", "*", "qho"}], " ", "+", " ", 
+    RowBox[{"\[Omega]\[Lambda]", "*", "qho"}], " ", "-", " ", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox["\[Omega]\[Rho]", "2"], "*", "r2"}], "-", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox["\[Omega]\[Lambda]", "2"], "*", "r2"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.796473364717873*^9, 3.7964733965127535`*^9}, {
+  3.7964741549814787`*^9, 
+  3.796474229224198*^9}},ExpressionUUID->"68e7d0df-6707-41f8-9e9a-\
+c4a027bf2ab6"]
+},
+WindowSize->{958, 988},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 504, 13, 141, "Input",ExpressionUUID->"e9829176-5847-44a7-897a-96934920c504"],
+Cell[1087, 37, 245, 4, 68, "Output",ExpressionUUID->"cce83e4a-bd1a-4ddd-8fe9-a651aabafa4d"]
+}, Open  ]],
+Cell[1347, 44, 1006, 29, 390, "Input",ExpressionUUID->"9f9b9f1c-19da-4688-8813-404dce04a8bb"],
+Cell[2356, 75, 594, 16, 96, "Input",ExpressionUUID->"68e7d0df-6707-41f8-9e9a-c4a027bf2ab6"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
