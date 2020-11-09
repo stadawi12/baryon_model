@@ -1,0 +1,21 @@
+μρ = (m1 m2)/(m1 + m2);
+μλ = ((m1 + m2) m3)/(m1 + m2 + m3);
+μ1 = (m2 m3)/(m2 + m3);
+μ2 = (m1 m3)/(m1 + m3);
+{{a1, b1}, {c1, d1}} = {{-m3/(m2 + m3), -1}, {(m2 (m1 + m2 + m3))/( (m1 + m2) (m2 + m3)), -m1/(m1 + m2)}};
+{{a2, b2}, {c2, d2}} = {{-m3/(m1 + m3), 1}, {(- m1 (m1 + m2 + m3))/( (m1 + m2) (m1 + m3)), -(m2/(m1 + m2))}};
+α = Sqrt[μρ omega];
+β = Sqrt[μλ omega];
+α1 = (α a1)/Cos[theta[1]];
+α2 = (α a2)/Cos[theta[2]];
+α11 = (β c1)/Sin[theta[1]];
+α22 = (β c2)/Sin[theta[2]];
+β1 = -((α b1)/Sin[theta[1]]);
+β11 = (β d1)/Cos[theta[1]];
+β2 = -((α b2)/Sin[theta[2]]);
+β22 = (β d2)/Cos[theta[2]];
+(* test if orthogonality conditions are met *)
+α1 == α11;
+α2 == α22;
+β1 == β11;
+β2 == β22;
