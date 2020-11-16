@@ -75,7 +75,7 @@ stateMatrix[Λ_, γMax_] := (
 	matrixOfStates = Table[{flatStates[[i]], flatStates[[j]]}, {i, 1, Length[flatStates]}, 
      {j, 1, Length[flatStates]}])
      
-tMatrix[Λ_, γMax_, θ_] := (
+tMatrix[Λ_, γMax_, θ_] := tMatrix[Λ, γMax, θ]=(
 	γMinEven = If[EvenQ[Λ], Λ, Λ + 1];
 	γMinOdd = If[EvenQ[Λ], Λ + 1, Λ];
 	energies = If[EvenQ[γMax], Table[n, {n, γMinEven, γMax, 2}], Table[n, {n, γMinOdd, γMax, 2}]];
