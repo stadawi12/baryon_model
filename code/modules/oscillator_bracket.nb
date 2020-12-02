@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     39193,       1067]
-NotebookOptionsPosition[     38903,       1054]
-NotebookOutlinePosition[     39236,       1069]
-CellTagsIndexPosition[     39193,       1066]
+NotebookDataLength[     35975,        967]
+NotebookOptionsPosition[     35686,        954]
+NotebookOutlinePosition[     36019,        969]
+CellTagsIndexPosition[     35976,        966]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,7 +50,7 @@ Cell[BoxData[{
      RowBox[{"Return", "[", 
       RowBox[{
        RowBox[{"ArcTan", "[", "tan", "]"}], "+", "Pi"}], "]"}]}], ")"}]}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"nineJ", "[", 
@@ -85,7 +85,7 @@ Cell[BoxData[{
        RowBox[{"l1", ",", "l2", ",", "\[CapitalLambda]"}], "}"}], ",", 
       RowBox[{"{", 
        RowBox[{"x", ",", "j1", ",", "j2"}], "}"}]}], "]"}]}]}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"talmi", "[", 
@@ -575,7 +575,7 @@ Cell[BoxData[{
        RowBox[{"Total", "[", "sum", "]"}], "*", "coeff"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"Return", "[", "t", "]"}]}], ")"}]}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"sumArgs", "[", 
@@ -678,7 +678,7 @@ Cell[BoxData[{
                     RowBox[{"[", "m", "]"}], "]"}]}], "}"}]}], "]"}]}], 
                 "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}], ";", 
      RowBox[{"Return", "[", "sArgs", "]"}]}], ")"}]}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"talmiCoeffs", "[", 
@@ -738,7 +738,7 @@ Cell[BoxData[{
                RowBox[{"[", "wuba", "]"}], "]"}]}], "}"}]}], "]"}]}], 
          "]"}]}]}], "]"}], ";", 
      RowBox[{"Return", "[", "coeffs", "]"}]}], ")"}]}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"tBlock", "[", 
@@ -837,7 +837,7 @@ Cell[BoxData[{
          RowBox[{
           RowBox[{"Length", "[", "states", "]"}], ",", 
           RowBox[{"Length", "[", "states", "]"}]}], "}"}]}], "]"}]}]}], 
-    ")"}]}], "\[IndentingNewLine]"}], "\n", 
+    ")"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"stateMatrix", "[", 
@@ -901,155 +901,55 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{"j", ",", "1", ",", 
           RowBox[{"Length", "[", "flatStates", "]"}]}], "}"}]}], "]"}]}]}], 
-    ")"}]}], "\[IndentingNewLine]"}], "\n", 
+    ")"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"tMatrix", "[", 
-    RowBox[{"\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", "\[Theta]_"}], 
-    "]"}], ":=", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"\[Gamma]MinEven", "=", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"EvenQ", "[", "\[CapitalLambda]", "]"}], ",", 
-        "\[CapitalLambda]", ",", 
-        RowBox[{"\[CapitalLambda]", "+", "1"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\[Gamma]MinOdd", "=", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"EvenQ", "[", "\[CapitalLambda]", "]"}], ",", 
-        RowBox[{"\[CapitalLambda]", "+", "1"}], ",", "\[CapitalLambda]"}], 
-       "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"energies", "=", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"EvenQ", "[", "\[Gamma]Max", "]"}], ",", 
-        RowBox[{"Table", "[", 
-         RowBox[{"n", ",", 
-          RowBox[{"{", 
-           RowBox[{
-           "n", ",", "\[Gamma]MinEven", ",", "\[Gamma]Max", ",", "2"}], 
-           "}"}]}], "]"}], ",", 
-        RowBox[{"Table", "[", 
-         RowBox[{"n", ",", 
-          RowBox[{"{", 
-           RowBox[{"n", ",", "\[Gamma]MinOdd", ",", "\[Gamma]Max", ",", "2"}],
-            "}"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"blocks", "=", 
-      RowBox[{"Map", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"tBlock", "[", 
-          RowBox[{"\[CapitalLambda]", ",", "#", ",", "\[Theta]"}], "]"}], 
-         "&"}], ",", "energies"}], "]"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"ArrayFlatten", "[", 
-      RowBox[{"ReleaseHold", "[", 
-       RowBox[{"DiagonalMatrix", "[", 
-        RowBox[{"Hold", "/@", "blocks"}], "]"}], "]"}], "]"}]}], ")"}]}], 
-  "\n"}], "\[IndentingNewLine]", 
- RowBox[{"ClearAll", "[", 
-  RowBox[{"Rcoeff", ",", "Lcoeff", ",", "ksum", ",", "rPsum", ",", "rel"}], 
-  "]"}], "\n", 
- RowBox[{
-  RowBox[{"Rcoeff", "[", 
-   RowBox[{"n_", ",", "l_"}], "]"}], ":=", 
-  RowBox[{
-   RowBox[{"Rcoeff", "[", 
-    RowBox[{"n", ",", "l"}], "]"}], "=", 
-   RowBox[{"Sqrt", "[", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{"2", "*", 
-       RowBox[{"n", "!"}]}], ")"}], "/", 
-     RowBox[{"Gamma", "[", 
-      RowBox[{"n", "+", "l", "+", 
-       RowBox[{"3", "/", "2"}]}], "]"}]}], "]"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"Lcoeff", "[", 
-   RowBox[{"n_", ",", "l_", ",", "k_"}], "]"}], ":=", 
-  RowBox[{
-   RowBox[{"Lcoeff", "[", 
-    RowBox[{"n", ",", "l", ",", "k"}], "]"}], "=", 
+  RowBox[{"tMatrix", "[", 
+   RowBox[{"\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", "\[Theta]_"}], 
+   "]"}], ":=", 
+  RowBox[{"(", 
    RowBox[{
-    RowBox[{"(", 
-     RowBox[{
+    RowBox[{"\[Gamma]MinEven", "=", 
+     RowBox[{"If", "[", 
       RowBox[{
-       RowBox[{"(", 
-        RowBox[{"-", "1"}], ")"}], "^", "k"}], "*", 
-      RowBox[{"Gamma", "[", 
-       RowBox[{"n", "+", "l", "+", 
-        RowBox[{"3", "/", "2"}]}], "]"}]}], ")"}], "/", 
-    RowBox[{"(", 
-     RowBox[{
+       RowBox[{"EvenQ", "[", "\[CapitalLambda]", "]"}], ",", 
+       "\[CapitalLambda]", ",", 
+       RowBox[{"\[CapitalLambda]", "+", "1"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\[Gamma]MinOdd", "=", 
+     RowBox[{"If", "[", 
       RowBox[{
-       RowBox[{"(", 
-        RowBox[{"n", "-", "k"}], ")"}], "!"}], "*", 
-      RowBox[{"Gamma", "[", 
-       RowBox[{"k", "+", "l", "+", 
-        RowBox[{"3", "/", "2"}]}], "]"}], "*", 
-      RowBox[{"k", "!"}]}], ")"}]}]}]}], "\n", 
- RowBox[{
-  RowBox[{"ksum", "[", 
-   RowBox[{"n_", ",", "m_", ",", "l_", ",", "p_"}], "]"}], ":=", 
-  RowBox[{
-   RowBox[{"ksum", "[", 
-    RowBox[{"n", ",", "m", ",", "l", ",", "p"}], "]"}], "=", 
-   RowBox[{"Sum", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"Lcoeff", "[", 
-       RowBox[{"n", ",", "l", ",", "k"}], "]"}], "*", 
-      RowBox[{"Lcoeff", "[", 
-       RowBox[{"m", ",", "l", ",", 
-        RowBox[{"p", "-", "k", "-", "l"}]}], "]"}]}], ",", 
-     RowBox[{"{", 
-      RowBox[{"k", ",", 
-       RowBox[{"Max", "[", 
-        RowBox[{"0", ",", 
-         RowBox[{"p", "-", "l", "-", "m"}]}], "]"}], ",", 
-       RowBox[{"Min", "[", 
+       RowBox[{"EvenQ", "[", "\[CapitalLambda]", "]"}], ",", 
+       RowBox[{"\[CapitalLambda]", "+", "1"}], ",", "\[CapitalLambda]"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"energies", "=", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"EvenQ", "[", "\[Gamma]Max", "]"}], ",", 
+       RowBox[{"Table", "[", 
         RowBox[{"n", ",", 
-         RowBox[{"p", "-", "l"}]}], "]"}]}], "}"}]}], "]"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"rPsum", "[", 
-   RowBox[{"n_", ",", "m_", ",", "l_", ",", "y_"}], "]"}], ":=", 
-  RowBox[{
-   RowBox[{"rPsum", "[", 
-    RowBox[{"n", ",", "m", ",", "l", ",", "y"}], "]"}], "=", 
-   RowBox[{"Sum", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"Gamma", "[", 
-       RowBox[{"p", "+", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{"1", "/", "2"}], ")"}], "*", "y"}], "+", 
-        RowBox[{"3", "/", "2"}]}], "]"}], "*", 
-      RowBox[{"ksum", "[", 
-       RowBox[{"n", ",", "m", ",", "l", ",", "p"}], "]"}]}], ",", 
-     RowBox[{"{", 
-      RowBox[{"p", ",", "l", ",", 
-       RowBox[{"l", "+", "n", "+", "m"}]}], "}"}]}], "]"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"rel", "[", 
-   RowBox[{"n_", ",", "m_", ",", "l_", ",", "y_"}], "]"}], ":=", 
-  RowBox[{
-   RowBox[{"rel", "[", 
-    RowBox[{"n", ",", "m", ",", "l", ",", "y"}], "]"}], "=", 
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{"1", "/", "2"}], ")"}], "*", 
-    RowBox[{"Rcoeff", "[", 
-     RowBox[{"n", ",", "l"}], "]"}], "*", 
-    RowBox[{"Rcoeff", "[", 
-     RowBox[{"m", ",", "l"}], "]"}], "*", 
-    RowBox[{"rPsum", "[", 
-     RowBox[{"n", ",", "m", ",", "l", ",", "y"}], "]"}]}]}]}]}], "Input",
+         RowBox[{"{", 
+          RowBox[{"n", ",", "\[Gamma]MinEven", ",", "\[Gamma]Max", ",", "2"}],
+           "}"}]}], "]"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{"n", ",", 
+         RowBox[{"{", 
+          RowBox[{"n", ",", "\[Gamma]MinOdd", ",", "\[Gamma]Max", ",", "2"}], 
+          "}"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"blocks", "=", 
+     RowBox[{"Map", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"tBlock", "[", 
+         RowBox[{"\[CapitalLambda]", ",", "#", ",", "\[Theta]"}], "]"}], 
+        "&"}], ",", "energies"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"ArrayFlatten", "[", 
+     RowBox[{"ReleaseHold", "[", 
+      RowBox[{"DiagonalMatrix", "[", 
+       RowBox[{"Hold", "/@", "blocks"}], "]"}], "]"}], "]"}]}], 
+   ")"}]}]}], "Input",
  CellChangeTimes->{{3.8145102102999*^9, 3.814510269460178*^9}, {
-  3.81452268764421*^9, 
-  3.8145226895528927`*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
+  3.81452268764421*^9, 3.8145226895528927`*^9}, {3.815751044279109*^9, 
+  3.815751045493334*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
 db12206f4eb3"]
 },
 WindowSize->{923, 1016},
@@ -1068,7 +968,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 38341, 1032, 2585, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+Cell[558, 20, 35124, 932, 2355, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)
