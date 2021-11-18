@@ -20,11 +20,11 @@ the potential is a simple harmonic oscillator. The three
 particles are connected by "quantum-springs". This was created
 because it can be 
 
-<b\ >
-
 You can run everything in those files and see how they work.
 
 Then there are 3 other files that serve as modules: 
 `oscillator_bracket.nb` `mews_and_alphas.nb` `operators.nb`
 These are imported before running anything in `baryon_code.nb`
 or `sho_code.nb` (first cell of each file imports those modules).
+
+Hello I am new here
