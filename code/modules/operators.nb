@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     47393,       1255]
-NotebookOptionsPosition[     47072,       1241]
-NotebookOutlinePosition[     47436,       1257]
-CellTagsIndexPosition[     47393,       1254]
+NotebookDataLength[     47832,       1261]
+NotebookOptionsPosition[     47511,       1247]
+NotebookOutlinePosition[     47875,       1263]
+CellTagsIndexPosition[     47832,       1260]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -277,18 +277,19 @@ Cell[BoxData[{
            RowBox[{"Length", "[", "sM", "]"}]}], "}"}]}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"Return", "[", "new", "]"}]}]}], "\[IndentingNewLine]", "]"}]}],
-   "\n"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorRho", "[", 
-    RowBox[{"\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", "power_"}], "]"}], 
-   ":=", 
+    RowBox[{
+    "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", 
+     "power_"}], "]"}], ":=", 
    RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"sM", "=", 
       RowBox[{"stateMatrix", "[", 
-       RowBox[{"\[CapitalLambda]", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
+       RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"new", "=", 
       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"For", "[", 
@@ -369,14 +370,15 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorLambda", "[", 
-    RowBox[{"\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", "power_"}], "]"}], 
-   ":=", 
+    RowBox[{
+    "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", 
+     "power_"}], "]"}], ":=", 
    RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"sM", "=", 
       RowBox[{"stateMatrix", "[", 
-       RowBox[{"\[CapitalLambda]", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
+       RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"new", "=", 
       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"For", "[", 
@@ -579,13 +581,14 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"delta3RhoMatrix", "[", 
-    RowBox[{"\[CapitalLambda]_", ",", "\[Gamma]Max_"}], "]"}], ":=", 
+    RowBox[{"J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_"}], 
+    "]"}], ":=", 
    RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"sM", "=", 
       RowBox[{"stateMatrix", "[", 
-       RowBox[{"\[CapitalLambda]", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
+       RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"new", "=", 
       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"For", "[", 
@@ -669,8 +672,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"ExponentialOperator2", "[", 
    RowBox[{
-   "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", "power_", ",", "omega_", 
-    ",", "alphaCounter_"}], "]"}], ":=", 
+   "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", 
+    "power_", ",", "omega_", ",", "alphaCounter_"}], "]"}], ":=", 
   RowBox[{"(", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"\[Omega]", "=", "omega"}], ";", "\[IndentingNewLine]", 
@@ -939,8 +942,8 @@ Cell[BoxData[{
      FontFamily->"Consolas"], "\[IndentingNewLine]", 
     RowBox[{"sM", "=", 
      RowBox[{"stateMatrix", "[", 
-      RowBox[{"\[CapitalLambda]", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
+      RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"new", "=", 
      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"For", "[", 
@@ -1021,8 +1024,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"GaussOperator", "[", 
    RowBox[{
-   "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", "omega_", ",", 
-    "alphaCounter_", ",", "mi_", ",", "mj_"}], "]"}], ":=", 
+   "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", 
+    "omega_", ",", "alphaCounter_", ",", "mi_", ",", "mj_"}], "]"}], ":=", 
   RowBox[{"(", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{"<", 
@@ -1114,8 +1117,8 @@ Cell[BoxData[{
     "\[IndentingNewLine]", 
     RowBox[{"sM", "=", 
      RowBox[{"stateMatrix", "[", 
-      RowBox[{"\[CapitalLambda]", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
+      RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"new", "=", 
      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
     RowBox[{"For", "[", 
@@ -1235,8 +1238,11 @@ Cell[BoxData[{
    3.843819678355624*^9, 3.843819678452935*^9}, {3.843819772480983*^9, 
    3.843819772581574*^9}, 3.843820194272502*^9, 3.843820253026285*^9, {
    3.843820448993847*^9, 3.84382045692625*^9}, {3.8463094300922327`*^9, 
-   3.846309512292781*^9}, {3.8463124713411407`*^9, 
-   3.8463125185734873`*^9}},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
+   3.846309512292781*^9}, {3.8463124713411407`*^9, 3.8463125185734873`*^9}, {
+   3.846324812795289*^9, 3.846324827016301*^9}, {3.8463255450612717`*^9, 
+   3.846325550333198*^9}, {3.846325656531358*^9, 3.8463256611581917`*^9}, {
+   3.846325691391829*^9, 
+   3.846325723177627*^9}},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
 a991744c92b5"]
 },
 WindowSize->{1854, 1016},
@@ -1256,7 +1262,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 46510, 1219, 4563, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
+Cell[558, 20, 46949, 1225, 4563, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
 }
 ]
 *)
