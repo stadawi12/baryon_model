@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     60032,       1549]
-NotebookOptionsPosition[     59711,       1535]
-NotebookOutlinePosition[     60075,       1551]
-CellTagsIndexPosition[     60032,       1548]
+NotebookDataLength[     60281,       1552]
+NotebookOptionsPosition[     59960,       1538]
+NotebookOutlinePosition[     60324,       1554]
+CellTagsIndexPosition[     60281,       1551]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -280,7 +280,8 @@ Cell[BoxData[{
                  RowBox[{"(", "omega", ")"}], "^", "2"}]}], ")"}], "/", 
               RowBox[{
                RowBox[{"\[Alpha]", "[", 
-                RowBox[{"m1", ",", "m2"}], "]"}], "^", "2"}]}], " ", 
+                RowBox[{"m1", ",", "m2", ",", "\[Omega]"}], "]"}], "^", 
+               "2"}]}], " ", 
              RowBox[{"rel", "[", 
               RowBox[{"np", ",", "n", ",", "l", ",", "2"}], "]"}]}]}], ";", 
            "\[IndentingNewLine]", 
@@ -306,8 +307,8 @@ Cell[BoxData[{
                  RowBox[{"(", "omega", ")"}], "^", "2"}]}], ")"}], "/", 
               RowBox[{
                RowBox[{"\[Beta]", "[", 
-                RowBox[{"m1", ",", "m2", ",", "m3"}], "]"}], "^", "2"}]}], 
-             " ", 
+                RowBox[{"m1", ",", "m2", ",", "m3", ",", "\[Omega]"}], "]"}], 
+               "^", "2"}]}], " ", 
              RowBox[{"rel", "[", 
               RowBox[{"nlp", ",", "nl", ",", "ll", ",", "2"}], "]"}]}]}], ";",
             "\[IndentingNewLine]", 
@@ -331,7 +332,7 @@ Cell[BoxData[{
          RowBox[{"Diagonal", "[", "new", "]"}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"Return", "[", "new", "]"}]}]}], "\[IndentingNewLine]", "]"}]}],
-   "\n"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorRho", "[", 
@@ -451,7 +452,7 @@ Cell[BoxData[{
        RowBox[{"Transpose", "[", "new", "]"}], "-", 
        RowBox[{"DiagonalMatrix", "[", 
         RowBox[{"Diagonal", "[", "new", "]"}], "]"}]}]}]}], 
-    "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]"}], "\n", 
+    "\[IndentingNewLine]", ")"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorLambda", "[", 
@@ -1163,11 +1164,11 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{
        RowBox[{"\[Alpha]1", "[", 
-        RowBox[{"mi", ",", "mj", ",", "mk"}], "]"}], ",", 
+        RowBox[{"mi", ",", "mj", ",", "mk", ",", "\[Omega]"}], "]"}], ",", 
        RowBox[{"\[Alpha]2", "[", 
-        RowBox[{"mi", ",", "mj", ",", "mk"}], "]"}], ",", 
+        RowBox[{"mi", ",", "mj", ",", "mk", ",", "\[Omega]"}], "]"}], ",", 
        RowBox[{"\[Alpha]", "[", 
-        RowBox[{"mi", ",", "mj"}], "]"}]}], "}"}]}], ";", 
+        RowBox[{"mi", ",", "mj", ",", "\[Omega]"}], "]"}]}], "}"}]}], ";", 
     "\[IndentingNewLine]", 
     RowBox[{"r0list", "=", 
      RowBox[{"{", 
@@ -1529,8 +1530,10 @@ Cell[BoxData[{
    3.847977892922387*^9, 3.847977896029191*^9}, {3.847977928143344*^9, 
    3.847977952027499*^9}, {3.8479779910935993`*^9, 3.847978017891296*^9}, {
    3.84804423985334*^9, 3.84804426171093*^9}, {3.8480450554161377`*^9, 
-   3.8480450555830603`*^9}, {3.848045136849457*^9, 
-   3.848045149927125*^9}},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
+   3.8480450555830603`*^9}, {3.848045136849457*^9, 3.848045149927125*^9}, {
+   3.848483911046527*^9, 3.848483912551354*^9}, {3.848483952704011*^9, 
+   3.848483954001759*^9}, {3.848488073605742*^9, 
+   3.848488097059511*^9}},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
 a991744c92b5"]
 },
 WindowSize->{1854, 1016},
@@ -1550,7 +1553,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 59149, 1513, 6093, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
+Cell[558, 20, 59398, 1516, 6093, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
 }
 ]
 *)
