@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     60283,       1530]
-NotebookOptionsPosition[     59962,       1516]
-NotebookOutlinePosition[     60326,       1532]
-CellTagsIndexPosition[     60283,       1529]
+NotebookDataLength[     60331,       1531]
+NotebookOptionsPosition[     60010,       1517]
+NotebookOutlinePosition[     60374,       1533]
+CellTagsIndexPosition[     60331,       1530]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -330,7 +330,7 @@ Cell[BoxData[{
          RowBox[{"Diagonal", "[", "new", "]"}], "]"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"Return", "[", "new", "]"}]}]}], "\[IndentingNewLine]", "]"}]}],
-   "\n"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorRho", "[", 
@@ -450,7 +450,7 @@ Cell[BoxData[{
        RowBox[{"Transpose", "[", "new", "]"}], "-", 
        RowBox[{"DiagonalMatrix", "[", 
         RowBox[{"Diagonal", "[", "new", "]"}], "]"}]}]}]}], 
-    "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]"}], "\n", 
+    "\[IndentingNewLine]", ")"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorLambda", "[", 
@@ -1510,8 +1510,9 @@ Cell[BoxData[{
    3.852119184617703*^9, 3.852119313732719*^9}, {3.85211951797731*^9, 
    3.852119518347809*^9}, {3.852121257037219*^9, 3.8521212596908703`*^9}, {
    3.8521304273247137`*^9, 3.852130457298181*^9}, {3.852130500064369*^9, 
-   3.852130503914978*^9}, {3.852130648372016*^9, 
-   3.852130648514913*^9}},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
+   3.852130503914978*^9}, {3.852130648372016*^9, 3.852130648514913*^9}, 
+   3.852179791867618*^9, 
+   3.852184495229546*^9},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
 a991744c92b5"]
 },
 WindowSize->{1854, 1016},
@@ -1531,7 +1532,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 59400, 1494, 5669, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
+Cell[558, 20, 59448, 1495, 5669, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
 }
 ]
 *)
