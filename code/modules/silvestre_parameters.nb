@@ -1,0 +1,107 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3158,         99]
+NotebookOptionsPosition[      2870,         86]
+NotebookOutlinePosition[      3205,        101]
+CellTagsIndexPosition[      3162,         98]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"MODEL", " ", "PARAMETERS"}], " ", "-", " ", 
+    RowBox[{
+     RowBox[{"Silvestre", "'"}], "s", " ", "1996", " ", "paper"}]}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"uq", "=", "0.315"}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{"up", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"sq", "=", "0.577"}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{"strange", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cq", "=", "1.836"}], 
+    RowBox[{"(*", " ", 
+     RowBox[{"charm", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"bq", "=", "5.227"}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{"bottom", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Lambda]", "=", "0.1653"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "coefficient", " ", "of", " ", "string", " ", "strength", " ", "term"}], 
+    " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Kappa]", "=", "0.5069"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"coefficient", " ", "of", " ", "Coulomb", " ", "term", " ", 
+     RowBox[{"(", "0.0175", ")"}], " ", "if", " ", "you", " ", "want", " ", 
+     "to", " ", "replicate", " ", "Roberts"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Cqqq", "=", "0.8321"}], 
+    RowBox[{"(*", " ", 
+     RowBox[{"V", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["\[Kappa]", "r"]}], " ", "+", " ", "\[Lambda]r", " ", "+",
+        " ", 
+       SubscriptBox["C", "qqq"]}]}], " ", "*)"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\[Kappa]p", "=", "1.8609"}], 
+    RowBox[{"(*", " ", 
+     RowBox[{"Thing", " ", "in", " ", "the", " ", "spin", " ", "term"}], " ", 
+     "*)"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"CF", "=", 
+     FractionBox["1", "2"]}], 
+    RowBox[{"(*", " ", 
+     RowBox[{"Colour", " ", "Factor"}], " ", "*)"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.852356541423649*^9, 
+  3.852356544756234*^9}},ExpressionUUID->"c06085ac-c4bc-4e62-a72f-\
+eb57008621d4"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{490, Automatic}, {48, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2308, 64, 286, "Input",ExpressionUUID->"c06085ac-c4bc-4e62-a72f-eb57008621d4"]
+}
+]
+*)
+
