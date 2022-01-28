@@ -1,0 +1,210 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8759,        202]
+NotebookOptionsPosition[      8471,        189]
+NotebookOutlinePosition[      8804,        204]
+CellTagsIndexPosition[      8761,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{"eigVal", ",", "findMinimum"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"eigVal", "[", "omega_", "]"}], ":=", "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"hamiltonian", ",", "eigenValue"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"hamiltonian", "=", 
+       RowBox[{"Hb", "[", 
+        RowBox[{
+        "J", ",", "P", ",", "Isospin", ",", "\[CapitalLambda]", ",", 
+         "\[Gamma]Max", ",", "omega", ",", "m1", ",", "m2", ",", "m3", ",", 
+         "project"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"eigenValue", "=", 
+       RowBox[{
+        RowBox[{"Eigenvalues", "[", "hamiltonian", "]"}], "[", 
+        RowBox[{"[", 
+         RowBox[{"-", "firstNonZero"}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", "eigenValue", "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"findMinimum", "[", 
+   RowBox[{"learningRate_", ",", "nSteps_", ",", 
+    RowBox[{"d\[Omega]_:", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "5"}]]}]}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "This", " ", "function", " ", "should", " ", "return", " ", "the", " ", 
+     "minimum", " ", "of", " ", "the", " ", "energy", " ", "vs", " ", 
+     "\[Omega]", " ", "plot"}], ",", " ", 
+    RowBox[{
+    "it", " ", "should", " ", "return", " ", "the", " ", "optimal", " ", 
+     "value", " ", "of", " ", "\[Omega]", " ", 
+     RowBox[{"(", 
+      SubscriptBox["\[Omega]", "min"], ")"}], " ", "and", " ", "the", " ", 
+     "eigenvalue", " ", "corresponding", " ", "to", " ", "the", " ", "value", 
+     " ", "of", " ", 
+     SubscriptBox["\[Omega]", "min"], " ", 
+     RowBox[{
+      RowBox[{"(", 
+       SubscriptBox["E", "min"], ")"}], ".", "\[IndentingNewLine]", "This"}], 
+     " ", "function", " ", "will", " ", "use", " ", "the", " ", "gradient", 
+     " ", "descent", " ", "method", " ", "to", " ", "reach", " ", "the", " ", 
+     
+     RowBox[{"minimum", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "omega", ",", "eigenValue", ",", "eigenValue2", ",", "dE", ",", "m", ",",
+       "i"}], "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"SeedRandom", "[", "1234", "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Set", " ", "learning", " ", "rate", " ", "so", " ", "we", " ", "can", 
+       " ", "change", " ", "it"}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"lr", "=", "learningRate"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Generate", " ", "a", " ", "random", " ", "starting", " ", "point", " ", 
+       SubscriptBox["\[Omega]", "0"]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"omega", "=", 
+      RowBox[{
+       RowBox[{"RandomReal", "[", 
+        RowBox[{"0.3", ",", "1"}], "]"}], "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "omega", "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Calculate", " ", "initial", " ", "eigenvalue", " ", "at", " ", 
+       SubscriptBox["\[Omega]", "0"]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"eigenValue", "=", 
+      RowBox[{"eigVal", "[", "omega", "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Store", " ", 
+       RowBox[{"{", 
+        RowBox[{"\[Omega]", ",", " ", "E"}], "}"}], " ", "data"}], " ", 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"data", "=", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{"omega", ",", "eigenValue"}], "}"}], "}"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{"i", "\[LessEqual]", "nSteps"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Mod", "[", 
+             RowBox[{"i", ",", "15"}], "]"}], "\[Equal]", "0"}], ",", 
+           RowBox[{"lr", "=", 
+            RowBox[{"lr", "/", "2"}]}]}], "]"}], ";"}], "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"omega", "+=", "d\[Omega]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"dE", "=", 
+         RowBox[{
+          RowBox[{"eigVal", "[", "omega", "]"}], "-", "eigenValue"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"m", "=", 
+         RowBox[{"dE", "/", "d\[Omega]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"omega", "+=", 
+         RowBox[{
+          RowBox[{"-", "lr"}], "*", "m"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"eigenValue", "=", 
+         RowBox[{"eigVal", "[", "omega", "]"}]}], ";", "\[IndentingNewLine]", 
+        
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"data", ",", 
+          RowBox[{"{", 
+           RowBox[{"omega", ",", "eigenValue"}], "}"}]}], "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], 
+     RowBox[{"(*", " ", 
+      RowBox[{"End", " ", "of", " ", "i", " ", "loop"}], " ", "*)"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", 
+      RowBox[{"{", 
+       RowBox[{"omega", ",", "eigenValue", ",", "data"}], "}"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.852363880408098*^9, 3.852363996573134*^9}, {
+   3.8523641715846653`*^9, 3.852364237336851*^9}, {3.8523675235119762`*^9, 
+   3.852367546858047*^9}, {3.852367618115608*^9, 3.852367625770927*^9}, {
+   3.852368482346952*^9, 3.852368528040337*^9}, {3.852368578240834*^9, 
+   3.852368580077601*^9}, {3.852368615918347*^9, 3.8523687066249733`*^9}, 
+   3.8523692651383247`*^9, {3.852369314159645*^9, 3.85236933403489*^9}, {
+   3.852369590778204*^9, 3.852369591605445*^9}, {3.852369643674841*^9, 
+   3.852369682029208*^9}, {3.852369721171568*^9, 3.8523700756363993`*^9}, {
+   3.852370107643186*^9, 3.8523702800701323`*^9}, {3.8523703263148413`*^9, 
+   3.852370340569278*^9}, {3.8523703806109047`*^9, 3.852370481957243*^9}, {
+   3.8523705920319433`*^9, 3.852370778167678*^9}, {3.8523708270408688`*^9, 
+   3.8523708673408546`*^9}, {3.852370919521735*^9, 3.852371029660552*^9}, {
+   3.852371083838489*^9, 3.8523710894418783`*^9}, {3.852371156083159*^9, 
+   3.8523711569230556`*^9}, {3.852371264893094*^9, 3.8523712700403976`*^9}, {
+   3.8523713413732*^9, 3.8523714041991167`*^9}, 3.8523714368637037`*^9, {
+   3.852371488854507*^9, 3.8523714915622063`*^9}, {3.852371536454287*^9, 
+   3.85237163397252*^9}, {3.852371666796468*^9, 3.852371700449244*^9}, {
+   3.852371736207548*^9, 3.852371820627317*^9}, {3.852371887433181*^9, 
+   3.852371980687778*^9}, {3.852372011083818*^9, 3.8523720673168783`*^9}, {
+   3.8523722023194523`*^9, 3.852372209372204*^9}, {3.852372263555647*^9, 
+   3.852372267561838*^9}, {3.852372306860326*^9, 3.852372310551876*^9}, {
+   3.8523723489378242`*^9, 3.852372353045081*^9}, {3.8523723851957893`*^9, 
+   3.852372427017735*^9}, {3.852372530392744*^9, 3.852372535521289*^9}, {
+   3.852372568621705*^9, 3.8523726105244217`*^9}, {3.852372787861533*^9, 
+   3.852372791970413*^9}, 3.852373589549613*^9, {3.852373624494339*^9, 
+   3.852373634130867*^9}, {3.852373688537405*^9, 3.852373774085512*^9}, {
+   3.852373958430872*^9, 3.8523740403693867`*^9}, {3.852374176409816*^9, 
+   3.852374178149732*^9}, {3.852374534032868*^9, 3.8523745580077877`*^9}, 
+   3.852374733018297*^9, {3.852374792573151*^9, 
+   3.852374815922269*^9}},ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-\
+413d86d537e5"]
+},
+WindowSize->{927, 1016},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7909, 167, 1006, "Input",ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-413d86d537e5"]
+}
+]
+*)
+
