@@ -10,103 +10,102 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3864,        120]
-NotebookOptionsPosition[      3576,        107]
-NotebookOutlinePosition[      3911,        122]
-CellTagsIndexPosition[      3868,        119]
+NotebookDataLength[      3838,        119]
+NotebookOptionsPosition[      3551,        106]
+NotebookOutlinePosition[      3885,        121]
+CellTagsIndexPosition[      3842,        118]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
+  RowBox[{"ClearAll", "[", "r0", "]"}], "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"MODEL", " ", "PARAMETERS"}], " ", "-", " ", 
     RowBox[{
      RowBox[{"Silvestre", "'"}], "s", " ", "1996", " ", "paper"}]}], " ", 
-   "*)"}], "\[IndentingNewLine]", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"uq", "=", "0.315"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"up", " ", "quark", " ", "mass"}], " ", "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sq", "=", "0.577"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"strange", " ", "quark", " ", "mass"}], " ", "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cq", "=", "1.836"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{"charm", " ", "quark", " ", "mass"}], " ", "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bq", "=", "5.227"}], " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"bottom", " ", "quark", " ", "mass"}], " ", "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Lambda]", "=", "0.1653"}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "coefficient", " ", "of", " ", "string", " ", "strength", " ", "term"}], 
+   " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"\[Kappa]", "=", "0.5069"}], ";", " ", 
+  RowBox[{"(*", " ", 
+   RowBox[{"coefficient", " ", "of", " ", "Coulomb", " ", "term", " ", 
+    RowBox[{"(", "0.0175", ")"}], " ", "if", " ", "you", " ", "want", " ", 
+    "to", " ", "replicate", " ", "Roberts"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Cqqq", "=", "0.8321"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{"V", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Kappa]", "r"]}], " ", "+", " ", "\[Lambda]r", " ", "+", 
+     " ", 
+     SubscriptBox["C", "qqq"]}]}], " ", "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Kappa]p", "=", "1.8609"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{"Thing", " ", "in", " ", "the", " ", "spin", " ", "term"}], " ", 
+   "*)"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
-   RowBox[{
-    RowBox[{"uq", "=", "0.315"}], " ", 
-    RowBox[{"(*", " ", 
-     RowBox[{"up", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"sq", "=", "0.577"}], " ", 
-    RowBox[{"(*", " ", 
-     RowBox[{"strange", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"cq", "=", "1.836"}], 
-    RowBox[{"(*", " ", 
-     RowBox[{"charm", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"bq", "=", "5.227"}], " ", 
-    RowBox[{"(*", " ", 
-     RowBox[{"bottom", " ", "quark", " ", "mass"}], " ", "*)"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[Lambda]", "=", "0.1653"}], ";"}], " ", 
+   RowBox[{"CF", "=", 
+    FractionBox["1", "2"]}], 
    RowBox[{"(*", " ", 
-    RowBox[{
-    "coefficient", " ", "of", " ", "string", " ", "strength", " ", "term"}], 
-    " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Colour", " ", "Factor"}], " ", "*)"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
    RowBox[{
-    RowBox[{"\[Kappa]", "=", "0.5069"}], ";"}], " ", 
-   RowBox[{"(*", " ", 
-    RowBox[{"coefficient", " ", "of", " ", "Coulomb", " ", "term", " ", 
-     RowBox[{"(", "0.0175", ")"}], " ", "if", " ", "you", " ", "want", " ", 
-     "to", " ", "replicate", " ", "Roberts"}], " ", "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"Cqqq", "=", "0.8321"}], 
-    RowBox[{"(*", " ", 
-     RowBox[{"V", " ", "=", " ", 
-      RowBox[{
-       RowBox[{"-", 
-        FractionBox["\[Kappa]", "r"]}], " ", "+", " ", "\[Lambda]r", " ", "+",
-        " ", 
-       SubscriptBox["C", "qqq"]}]}], " ", "*)"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"\[Kappa]p", "=", "1.8609"}], 
-    RowBox[{"(*", " ", 
-     RowBox[{"Thing", " ", "in", " ", "the", " ", "spin", " ", "term"}], " ", 
-     "*)"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"CF", "=", 
-     FractionBox["1", "2"]}], 
-    RowBox[{"(*", " ", 
-     RowBox[{"Colour", " ", "Factor"}], " ", "*)"}], ";"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-     RowBox[{"Define", " ", 
-      SubscriptBox["r", "0"], " ", "parameter"}], ",", " ", 
-     RowBox[{"see", " ", 
-      RowBox[{"Silvestre", "'"}], "s", " ", "1996", " ", 
-      RowBox[{"paper", ".", " ", 
-       RowBox[{"Potential", ":", " ", "AL1"}]}]}]}], " ", "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"r0", "[", 
-     RowBox[{"mi_", ",", "mj_"}], "]"}], ":=", 
-    RowBox[{"1.6553", 
-     SuperscriptBox[
-      RowBox[{"(", 
-       FractionBox[
-        RowBox[{"2", "mi", " ", "mj"}], 
-        RowBox[{"mi", "+", "mj"}]], ")"}], 
-      RowBox[{"-", "0.2204"}]]}]}]}]}]], "Input",
+    RowBox[{"Define", " ", 
+     SubscriptBox["r", "0"], " ", "parameter"}], ",", " ", 
+    RowBox[{"see", " ", 
+     RowBox[{"Silvestre", "'"}], "s", " ", "1996", " ", 
+     RowBox[{"paper", ".", " ", 
+      RowBox[{"Potential", ":", " ", "AL1"}]}]}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r0", "[", 
+   RowBox[{"mi_", ",", "mj_"}], "]"}], ":=", 
+  RowBox[{"1.6553", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"2", "mi", " ", "mj"}], 
+      RowBox[{"mi", "+", "mj"}]], ")"}], 
+    RowBox[{"-", "0.2204"}]]}]}]}], "Input",
  CellChangeTimes->{{3.852356541423649*^9, 3.852356544756234*^9}, {
-  3.852362524498321*^9, 
-  3.8523625248289213`*^9}},ExpressionUUID->"c06085ac-c4bc-4e62-a72f-\
+  3.852362524498321*^9, 3.8523625248289213`*^9}, {3.8523842908001966`*^9, 
+  3.8523842919648733`*^9}},ExpressionUUID->"c06085ac-c4bc-4e62-a72f-\
 eb57008621d4"]
 },
 WindowSize->{808, 911},
-WindowMargins->{{490, Automatic}, {11, Automatic}},
+WindowMargins->{{490, Automatic}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -121,7 +120,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3014, 85, 357, "Input",ExpressionUUID->"c06085ac-c4bc-4e62-a72f-eb57008621d4"]
+Cell[558, 20, 2989, 84, 380, "Input",ExpressionUUID->"c06085ac-c4bc-4e62-a72f-eb57008621d4"]
 }
 ]
 *)

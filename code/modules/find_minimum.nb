@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8759,        202]
-NotebookOptionsPosition[      8471,        189]
-NotebookOutlinePosition[      8804,        204]
-CellTagsIndexPosition[      8761,        201]
+NotebookDataLength[     11113,        253]
+NotebookOptionsPosition[     10824,        240]
+NotebookOutlinePosition[     11157,        255]
+CellTagsIndexPosition[     11114,        252]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -46,7 +46,10 @@ Cell[BoxData[{
     "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"findMinimum", "[", 
-   RowBox[{"learningRate_", ",", "nSteps_", ",", 
+   RowBox[{
+    RowBox[{"learningRate_:", "1"}], ",", 
+    RowBox[{"nSteps_:", "50"}], ",", 
+    RowBox[{"\[Omega]0_:", "0.5"}], ",", 
     RowBox[{"d\[Omega]_:", 
      SuperscriptBox["10", 
       RowBox[{"-", "5"}]]}]}], "]"}], ":=", "\[IndentingNewLine]", 
@@ -75,26 +78,37 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"{", 
      RowBox[{
-     "omega", ",", "eigenValue", ",", "eigenValue2", ",", "dE", ",", "m", ",",
-       "i"}], "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "data", ",", "lr", ",", "omega", ",", "eigenValue", ",", "eigenValue2", 
+      ",", "dE", ",", "m", ",", "i"}], "}"}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"SeedRandom", "[", "1234", "]"}], ";"}], "*)"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "Set", " ", "learning", " ", "rate", " ", "so", " ", "we", " ", "can", 
+      " ", "change", " ", "it"}], " ", "*)"}], "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"SeedRandom", "[", "1234", "]"}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", " ", 
-      RowBox[{
-      "Set", " ", "learning", " ", "rate", " ", "so", " ", "we", " ", "can", 
-       " ", "change", " ", "it"}], " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"lr", "=", "learningRate"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
       "Generate", " ", "a", " ", "random", " ", "starting", " ", "point", " ", 
-       SubscriptBox["\[Omega]", "0"]}], " ", "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"omega", "=", 
+       SubscriptBox["\[Omega]", "0"], " ", "between", " ", "0.3", " ", "and", 
+       " ", "1"}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"(*", 
       RowBox[{
-       RowBox[{"RandomReal", "[", 
-        RowBox[{"0.3", ",", "1"}], "]"}], "[", 
-       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"omega", "=", 
+        RowBox[{
+         RowBox[{"RandomReal", "[", 
+          RowBox[{"0.3", ",", "1"}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "*)"}], 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Use", " ", "a", " ", "custom", " ", 
+       SubscriptBox["\[Omega]", "0"]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"omega", "=", "\[Omega]0"}], ";", "\[IndentingNewLine]", 
      RowBox[{"Print", "[", "omega", "]"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
@@ -118,7 +132,7 @@ Cell[BoxData[{
       RowBox[{
        RowBox[{"i", "=", "1"}], ",", 
        RowBox[{"i", "\[LessEqual]", "nSteps"}], ",", 
-       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
        RowBox[{"(*", 
         RowBox[{
          RowBox[{"If", "[", 
@@ -128,21 +142,54 @@ Cell[BoxData[{
              RowBox[{"i", ",", "15"}], "]"}], "\[Equal]", "0"}], ",", 
            RowBox[{"lr", "=", 
             RowBox[{"lr", "/", "2"}]}]}], "]"}], ";"}], "*)"}], 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{"increment", " ", "\[Omega]"}], "\[Rule]", 
+         RowBox[{"\[Omega]", "+", "d\[Omega]"}]}], " ", "*)"}], 
        "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"omega", "+=", "d\[Omega]"}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Calculate", " ", "change", " ", "in", " ", 
+          RowBox[{"E", ":", " ", "dE"}]}], " ", "*)"}], "\[IndentingNewLine]", 
         RowBox[{"dE", "=", 
          RowBox[{
           RowBox[{"eigVal", "[", "omega", "]"}], "-", "eigenValue"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"calculate", " ", "gradient", " ", 
+          RowBox[{"dE", "/", "d\[Omega]"}]}], " ", "*)"}], 
         "\[IndentingNewLine]", 
         RowBox[{"m", "=", 
          RowBox[{"dE", "/", "d\[Omega]"}]}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+          RowBox[{"update", " ", 
+           SubscriptBox["\[Omega]", "new"]}], " ", "=", " ", 
+          RowBox[{
+           SubscriptBox["\[Omega]", "old"], " ", "-", " ", 
+           RowBox[{"learningRate", " ", "x", " ", "gradient"}]}]}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
         RowBox[{"omega", "+=", 
          RowBox[{
           RowBox[{"-", "lr"}], "*", "m"}]}], ";", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Obtain", " ", "eigenvalue", " ", "using", " ", 
+          SubscriptBox["\[Omega]", "new"]}], " ", "*)"}], 
+        "\[IndentingNewLine]", 
         RowBox[{"eigenValue", "=", 
          RowBox[{"eigVal", "[", "omega", "]"}]}], ";", "\[IndentingNewLine]", 
-        
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Append", " ", 
+          RowBox[{"{", 
+           RowBox[{"\[Omega]", ",", " ", "E"}], "}"}], " ", "to", " ", "a", 
+          " ", "list", " ", "for", " ", "plotting"}], " ", "*)"}], 
+        "\[IndentingNewLine]", 
         RowBox[{"AppendTo", "[", 
          RowBox[{"data", ",", 
           RowBox[{"{", 
@@ -183,8 +230,12 @@ Cell[BoxData[{
    3.852373634130867*^9}, {3.852373688537405*^9, 3.852373774085512*^9}, {
    3.852373958430872*^9, 3.8523740403693867`*^9}, {3.852374176409816*^9, 
    3.852374178149732*^9}, {3.852374534032868*^9, 3.8523745580077877`*^9}, 
-   3.852374733018297*^9, {3.852374792573151*^9, 
-   3.852374815922269*^9}},ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-\
+   3.852374733018297*^9, {3.852374792573151*^9, 3.852374815922269*^9}, {
+   3.8523763797784977`*^9, 3.852376381079652*^9}, {3.852380584189528*^9, 
+   3.8523805860017776`*^9}, {3.852384557733642*^9, 3.852384565456534*^9}, {
+   3.852384596019711*^9, 3.852384734572598*^9}, {3.852384823504366*^9, 
+   3.852384893977913*^9}, 3.852384952970646*^9, {3.852384994059561*^9, 
+   3.852385234122048*^9}},ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-\
 413d86d537e5"]
 },
 WindowSize->{927, 1016},
@@ -203,7 +254,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7909, 167, 1006, "Input",ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-413d86d537e5"]
+Cell[558, 20, 10262, 218, 1374, "Input",ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-413d86d537e5"]
 }
 ]
 *)

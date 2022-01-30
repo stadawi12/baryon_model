@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14583,        372]
-NotebookOptionsPosition[     14292,        359]
-NotebookOutlinePosition[     14627,        374]
-CellTagsIndexPosition[     14584,        371]
+NotebookDataLength[     15390,        392]
+NotebookOptionsPosition[     15101,        379]
+NotebookOutlinePosition[     15434,        394]
+CellTagsIndexPosition[     15391,        391]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -342,23 +342,43 @@ Cell[BoxData[{
           RowBox[{"v12baryon", "+", "v23baryon", "+", "v31baryon", "-", 
            RowBox[{"3", "*", "cqqq"}]}], ")"}]}]}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"(*", " ", 
-       RowBox[{"Finally", ",", " ", 
+      RowBox[{"Hbaryon", "=", 
+       RowBox[{"Hbaryon", "-", 
         RowBox[{
-         RowBox[{"apply", " ", "projector", " ", "if", " ", "project"}], 
-         "\[Equal]", "True"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+         RowBox[{"IdentityMatrix", "[", 
+          RowBox[{"Length", "[", "sM", "]"}], "]"}], "*", 
+         FractionBox[
+          RowBox[{"2.02", "*", 
+           SuperscriptBox["10", 
+            RowBox[{"-", "3"}]]}], 
+          RowBox[{"m1", "*", "m2", "*", "m3"}]]}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Apply", " ", "projector", " ", "if", " ", "project"}], 
+        "\[Equal]", "True"}], " ", "*)"}], "\[IndentingNewLine]", 
       RowBox[{"If", "[", 
        RowBox[{"project", ",", 
         RowBox[{"Hbaryon", "=", 
          RowBox[{"ApplyProjector", "[", 
           RowBox[{"Hbaryon", ",", "projector"}], "]"}]}]}], "]"}], ";", 
       "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Finally", ",", " ", 
+        RowBox[{
+         RowBox[{"subtract", " ", "the", " ", "three"}], "-", 
+         RowBox[{"body", " ", "contribution"}]}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
       RowBox[{"Return", "[", "Hbaryon", "]"}]}]}], "\[IndentingNewLine]", 
-    "]"}]}]}]}], "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+    "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.852375607016711*^9, 3.852375632857542*^9}, {
+  3.85237570546586*^9, 3.8523757503043013`*^9}, {3.8523757870175257`*^9, 
+  3.8523757944283037`*^9}, {3.852384371477243*^9, 
+  3.852384376588442*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
-WindowSize->{808, 911},
-WindowMargins->{{490, Automatic}, {48, Automatic}},
+WindowSize->{927, 1016},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -373,10 +393,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 13730, 337, 1527, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 14539, 357, 1435, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
