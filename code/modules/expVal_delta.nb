@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5466,        152]
-NotebookOptionsPosition[      5177,        139]
-NotebookOutlinePosition[      5512,        154]
-CellTagsIndexPosition[      5469,        151]
+NotebookDataLength[      5548,        152]
+NotebookOptionsPosition[      5260,        139]
+NotebookOutlinePosition[      5594,        154]
+CellTagsIndexPosition[      5551,        151]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,7 +24,7 @@ Cell[BoxData[
    RowBox[{
    "J_", ",", "P_", ",", "Isospin_", ",", "\[CapitalLambda]_", ",", 
     "\[Gamma]Max_", ",", "wMin_", ",", "m1_", ",", "m2_", ",", "m3_", ",", 
-    "project_"}], "]"}], ":=", 
+    "project_", ",", "alpha_"}], "]"}], ":=", 
   RowBox[{"Module", "[", "\n", 
    RowBox[{
     RowBox[{"{", 
@@ -112,7 +112,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{
           RowBox[{"alphas", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "^", "3"}], "*", 
+           RowBox[{"[", "alpha", "]"}], "]"}], "^", "3"}], "*", 
          RowBox[{
           RowBox[{"eVec", "[", "wMin", "]"}], ".", 
           RowBox[{"observables", "[", 
@@ -120,25 +120,25 @@ Cell[BoxData[
           RowBox[{"eVec", "[", "wMin", "]"}]}], "*", "1800.149"}], ",", 
         RowBox[{"{", 
          RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";", "\n", 
-     RowBox[{
-      RowBox[{"Print", "[", 
-       RowBox[{
-       "\"\<Expectation Values at Subscript[\[Omega], min]: \>\"", ",", 
-        "expVals"}], "]"}], "\n", 
-      RowBox[{"Print", "[", 
-       RowBox[{"\"\<Expectation Values as ratios: \>\"", ",", 
-        RowBox[{"Sort", "[", 
-         RowBox[{"expVals", "/", 
-          RowBox[{"Max", "[", "expVals", "]"}]}], "]"}]}], "]"}], "\n", 
-      RowBox[{"Print", "[", 
-       RowBox[{"\"\<Subscript[\[Omega], min]: \>\"", ",", "wMin"}], 
-       "]"}]}]}]}], "\n", "]"}]}]], "Input",
- CellChangeTimes->{{3.85236237164781*^9, 
-  3.8523623716634502`*^9}},ExpressionUUID->"78c8ad12-1eb5-4e08-a460-\
+     RowBox[{"Print", "[", 
+      RowBox[{
+      "\"\<Expectation Values pair {12, 23, 31}: \>\"", ",", "expVals"}], 
+      "]"}], ";", "\n", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<Expectation Values as ratios: \>\"", ",", 
+       RowBox[{"expVals", "/", 
+        RowBox[{"expVals", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}]}], "]"}]}]}], "\n", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.85236237164781*^9, 3.8523623716634502`*^9}, {
+   3.85263438077129*^9, 3.852634384676106*^9}, {3.852634760370203*^9, 
+   3.852634763607747*^9}, {3.852634889584935*^9, 3.8526349313876467`*^9}, 
+   3.852635994848576*^9, {3.852638253852765*^9, 
+   3.852638273834157*^9}},ExpressionUUID->"78c8ad12-1eb5-4e08-a460-\
 e9bf319d6242"]
 },
 WindowSize->{804, 873},
-WindowMargins->{{278, Automatic}, {47, Automatic}},
+WindowMargins->{{278, Automatic}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -153,7 +153,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4615, 117, 584, "Input",ExpressionUUID->"78c8ad12-1eb5-4e08-a460-e9bf319d6242"]
+Cell[558, 20, 4698, 117, 584, "Input",ExpressionUUID->"78c8ad12-1eb5-4e08-a460-e9bf319d6242"]
 }
 ]
 *)
