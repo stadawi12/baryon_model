@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11113,        253]
-NotebookOptionsPosition[     10824,        240]
-NotebookOutlinePosition[     11157,        255]
-CellTagsIndexPosition[     11114,        252]
+NotebookDataLength[     11092,        253]
+NotebookOptionsPosition[     10802,        240]
+NotebookOutlinePosition[     11136,        255]
+CellTagsIndexPosition[     11093,        252]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -109,7 +109,6 @@ Cell[BoxData[{
       RowBox[{"Use", " ", "a", " ", "custom", " ", 
        SubscriptBox["\[Omega]", "0"]}], " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"omega", "=", "\[Omega]0"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"Print", "[", "omega", "]"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
@@ -235,11 +234,12 @@ Cell[BoxData[{
    3.8523805860017776`*^9}, {3.852384557733642*^9, 3.852384565456534*^9}, {
    3.852384596019711*^9, 3.852384734572598*^9}, {3.852384823504366*^9, 
    3.852384893977913*^9}, 3.852384952970646*^9, {3.852384994059561*^9, 
-   3.852385234122048*^9}},ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-\
+   3.852385234122048*^9}, {3.852633189624461*^9, 
+   3.852633193995229*^9}},ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-\
 413d86d537e5"]
 },
-WindowSize->{927, 1016},
-WindowMargins->{{Automatic, 0}, {0, Automatic}},
+WindowSize->{1854, 1016},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -254,7 +254,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 10262, 218, 1374, "Input",ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-413d86d537e5"]
+Cell[558, 20, 10240, 218, 1305, "Input",ExpressionUUID->"a7e5c46d-29d5-419e-8fb4-413d86d537e5"]
 }
 ]
 *)
