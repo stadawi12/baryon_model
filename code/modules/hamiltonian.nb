@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15390,        392]
-NotebookOptionsPosition[     15101,        379]
-NotebookOutlinePosition[     15434,        394]
-CellTagsIndexPosition[     15391,        391]
+NotebookDataLength[     15152,        386]
+NotebookOptionsPosition[     14863,        373]
+NotebookOutlinePosition[     15196,        388]
+CellTagsIndexPosition[     15153,        385]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,9 +38,9 @@ Cell[BoxData[{
       RowBox[{
       "projector", ",", "sM", ",", "vCoulomb", ",", "vLinear", ",", 
        "spinPart12", ",", "spinPart23", ",", "spinPart31", ",", "v12baryon", 
-       ",", "v23baryon", ",", "v31baryon", ",", "kin", ",", "mas1", ",", 
-       "mas2", ",", "mas3", ",", "cqqq", ",", "kinetic", ",", "Hbaryon"}], 
-      "}"}], ",", "\[IndentingNewLine]", 
+       ",", "v23baryon", ",", "v31baryon", ",", "kin", ",", "mTot", ",", 
+       "cqqq", ",", "kinetic", ",", "Hbaryon"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
       "THIS", " ", "FUNCTION", " ", "RETURNS", " ", "THE", " ", "BARYON", " ",
@@ -294,17 +294,11 @@ Cell[BoxData[{
         SubscriptBox["m", "i"], " ", "terms", " ", "in", " ", "the", " ", 
         "hamiltonian", " ", "as", " ", "matrices"}], " ", "*)"}], 
       "\[IndentingNewLine]", 
-      RowBox[{"mas1", "=", 
+      RowBox[{"mTot", "=", 
        RowBox[{
-        RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", "m1"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"mas2", "=", 
-       RowBox[{
-        RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", "m2"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"mas3", "=", 
-       RowBox[{
-        RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", "m3"}]}], ";", 
+        RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"m1", "+", "m2", "+", "m3"}], ")"}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{"Generate", " ", "the", " ", 
@@ -321,8 +315,7 @@ Cell[BoxData[{
          " ", "kinetic", " ", "term", " ", "into", " ", "one", " ", "term"}], 
        " ", "*)"}], "\[IndentingNewLine]", 
       RowBox[{"kinetic", "=", 
-       RowBox[{"mas1", "+", "mas2", "+", "mas3", "+", "kin"}]}], ";", 
-      "\[IndentingNewLine]", 
+       RowBox[{"mTot", "+", "kin"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
         RowBox[{"Combine", " ", "all", " ", "terms"}], ",", " ", 
@@ -373,8 +366,9 @@ Cell[BoxData[{
     "]"}]}]}]}], "Input",
  CellChangeTimes->{{3.852375607016711*^9, 3.852375632857542*^9}, {
   3.85237570546586*^9, 3.8523757503043013`*^9}, {3.8523757870175257`*^9, 
-  3.8523757944283037`*^9}, {3.852384371477243*^9, 
-  3.852384376588442*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+  3.8523757944283037`*^9}, {3.852384371477243*^9, 3.852384376588442*^9}, {
+  3.853314759661025*^9, 
+  3.853314799711234*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{927, 1016},
@@ -393,7 +387,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14539, 357, 1435, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 14301, 351, 1389, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
