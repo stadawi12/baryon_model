@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15152,        386]
-NotebookOptionsPosition[     14863,        373]
-NotebookOutlinePosition[     15196,        388]
-CellTagsIndexPosition[     15153,        385]
+NotebookDataLength[     15278,        387]
+NotebookOptionsPosition[     14989,        374]
+NotebookOutlinePosition[     15322,        389]
+CellTagsIndexPosition[     15279,        386]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -365,10 +365,11 @@ Cell[BoxData[{
       RowBox[{"Return", "[", "Hbaryon", "]"}]}]}], "\[IndentingNewLine]", 
     "]"}]}]}]}], "Input",
  CellChangeTimes->{{3.852375607016711*^9, 3.852375632857542*^9}, {
-  3.85237570546586*^9, 3.8523757503043013`*^9}, {3.8523757870175257`*^9, 
-  3.8523757944283037`*^9}, {3.852384371477243*^9, 3.852384376588442*^9}, {
-  3.853314759661025*^9, 
-  3.853314799711234*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.85237570546586*^9, 3.8523757503043013`*^9}, {3.8523757870175257`*^9, 
+   3.8523757944283037`*^9}, {3.852384371477243*^9, 3.852384376588442*^9}, {
+   3.853314759661025*^9, 3.853314799711234*^9}, {3.855211904527978*^9, 
+   3.8552119045868187`*^9}, 3.855212193053739*^9, {3.855212695608996*^9, 
+   3.8552127031498013`*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{927, 1016},
@@ -387,7 +388,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14301, 351, 1389, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 14427, 352, 1389, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)

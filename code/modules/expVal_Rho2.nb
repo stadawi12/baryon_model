@@ -10,65 +10,69 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5978,        153]
-NotebookOptionsPosition[      5660,        139]
-NotebookOutlinePosition[      6023,        155]
-CellTagsIndexPosition[      5980,        152]
+NotebookDataLength[      5543,        142]
+NotebookOptionsPosition[      5256,        129]
+NotebookOutlinePosition[      5589,        144]
+CellTagsIndexPosition[      5546,        141]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "expValRho2", "]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"expValDelta", "[", 
+  RowBox[{"expValRho2", "[", 
    RowBox[{
    "J_", ",", "P_", ",", "Isospin_", ",", "\[CapitalLambda]_", ",", 
     "\[Gamma]Max_", ",", "wMin_", ",", "m1_", ",", "m2_", ",", "m3_", ",", 
-    "project_", ",", "alpha_"}], "]"}], ":=", 
-  RowBox[{"Module", "[", "\n", 
+    "project_", ",", "power_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"{", 
      RowBox[{
      "sM", ",", "observable12", ",", "observable23", ",", "observable31", ",",
-       "observables", ",", "alphas", ",", "eVec"}], "}"}], ",", "\n", 
+       "observables", ",", "alphas", ",", "eVec"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
     RowBox[{"(*", " ", 
-     RowBox[{"Get", " ", "state", " ", "matrix"}], " ", "*)"}], "\n", 
+     RowBox[{"Get", " ", "state", " ", "matrix"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"sM", "=", 
       RowBox[{"stateMatrix", "[", 
        RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
-       "]"}]}], ";", "\n", 
+       "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
       "Obtain", " ", "observable", " ", "in", " ", "12", " ", "frame"}], " ", 
-      "*)"}], "\n", 
+      "*)"}], "\[IndentingNewLine]", 
      RowBox[{"observable12", "=", 
-      RowBox[{"delta3RhoMatrix", "[", "sM", "]"}]}], ";", "\n", 
+      RowBox[{"polynomialOperatorRho", "[", 
+       RowBox[{"sM", ",", "power"}], "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
       "transform", " ", "the", " ", "observable", " ", "in", " ", "to", " ", 
-       "frame", " ", "23"}], " ", "*)"}], "\n", 
+       "frame", " ", "23"}], " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"observable23", "=", 
       RowBox[{
        RowBox[{"Transpose", "[", "t1", "]"}], ".", "observable12", ".", 
-       "t1"}]}], ";", "\n", 
+       "t1"}]}], ";", 
      RowBox[{"(*", " ", 
       RowBox[{
       "transform", " ", "the", " ", "observable", " ", "in", " ", "to", " ", 
-       "frame", " ", "31"}], " ", "*)"}], "\n", 
+       "frame", " ", "31"}], " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{"observable31", "=", 
       RowBox[{
        RowBox[{"Transpose", "[", "t2", "]"}], ".", "observable12", ".", 
-       "t2"}]}], ";", "\n", 
+       "t2"}]}], ";", 
      RowBox[{"(*", " ", 
       RowBox[{
       "Collect", " ", "observables", " ", "into", " ", "a", " ", "list", " ", 
        "that", " ", "we", " ", "can", " ", "iterate", " ", "over"}], " ", 
-      "*)"}], "\n", 
+      "*)"}], 
      RowBox[{"observables", "=", 
       RowBox[{"{", 
        RowBox[{"observable12", ",", "observable23", ",", "observable31"}], 
-       "}"}]}], ";", "\n", 
+       "}"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"alphas", "=", 
       RowBox[{"{", 
        RowBox[{
@@ -78,10 +82,10 @@ Cell[BoxData[
          RowBox[{"m1", ",", "m2", ",", "m3", ",", "wMin"}], "]"}], ",", 
         RowBox[{"\[Alpha]2", "[", 
          RowBox[{"m1", ",", "m2", ",", "m3", ",", "wMin"}], "]"}]}], "}"}]}], 
-     ";", "\n", 
+     ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"eVec", "[", "omega_", "]"}], ":=", 
-      RowBox[{"(", "\n", 
+      RowBox[{"(", "\[IndentingNewLine]", 
        RowBox[{"evec", "=", 
         RowBox[{
          RowBox[{
@@ -93,53 +97,38 @@ Cell[BoxData[
              ",", "project"}], "]"}], "]"}], "[", 
           RowBox[{"[", 
            RowBox[{"-", "firstNonZero"}], "]"}], "]"}], "//", "Chop"}]}], 
-       "\n", ")"}]}], ";", "\n", 
+       ")"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"expVals", "=", 
       RowBox[{"Table", "[", 
        RowBox[{
-        RowBox[{
+        RowBox[{"(", 
          RowBox[{
-          RowBox[{"alphas", "[", 
-           RowBox[{"[", "alpha", "]"}], "]"}], "^", "3"}], "*", 
-         RowBox[{
-          RowBox[{"eVec", "[", "wMin", "]"}], ".", 
-          RowBox[{"observables", "[", 
-           RowBox[{"[", "i", "]"}], "]"}], ".", 
-          RowBox[{"eVec", "[", "wMin", "]"}]}]}], ",", 
+          SuperscriptBox[
+           RowBox[{"alphas", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], 
+           RowBox[{"-", "2"}]], "*", 
+          RowBox[{
+           RowBox[{"eVec", "[", "wMin", "]"}], ".", 
+           RowBox[{"observables", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ".", 
+           RowBox[{"eVec", "[", "wMin", "]"}]}]}], ")"}], ",", 
         RowBox[{"{", 
-         RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", " ", 
-      RowBox[{"Fudge", " ", "Factor"}], " ", "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"ff", "=", "1801.1047"}], ";", "\n", 
-     RowBox[{"Print", "[", 
-      RowBox[{"\"\<Expectation Values pair {12, 23, 31}: \>\"", ",", 
-       RowBox[{"expVals", "*", "ff"}]}], "]"}], ";", "\n", 
-     RowBox[{"Print", "[", 
-      RowBox[{"\"\<Expectation Values as ratios: \>\"", ",", 
-       RowBox[{"expVals", "/", 
-        RowBox[{"expVals", "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}]}], "]"}]}]}], "\n", 
-   "]"}]}]], "Input",
- CellChangeTimes->{{3.85236237164781*^9, 3.8523623716634502`*^9}, {
-   3.85263438077129*^9, 3.852634384676106*^9}, {3.852634760370203*^9, 
-   3.852634763607747*^9}, {3.852634889584935*^9, 3.8526349313876467`*^9}, 
-   3.852635994848576*^9, {3.852638253852765*^9, 3.852638273834157*^9}, {
-   3.8527276594751577`*^9, 3.8527276692026463`*^9}, {3.8550476815297813`*^9, 
-   3.8550477441742067`*^9}, {3.855047878718075*^9, 3.855047970192052*^9}, {
-   3.855048018561038*^9, 3.855048021812079*^9}, {3.855048054268352*^9, 
-   3.855048054658987*^9}, 3.85504852977419*^9, {3.855049382859048*^9, 
-   3.85504938328123*^9}, {3.8550494176599483`*^9, 3.855049419224052*^9}, {
-   3.855050691541789*^9, 3.855050727722842*^9}, 3.8550508469611187`*^9, {
-   3.855050971084813*^9, 3.855051005312097*^9}, 3.855051619268208*^9, {
-   3.855051694208869*^9, 3.855051700201722*^9}, {3.8550517691619043`*^9, 
-   3.8550517717933693`*^9}, {3.855052250923966*^9, 
-   3.855052259393614*^9}},ExpressionUUID->"78c8ad12-1eb5-4e08-a460-\
-e9bf319d6242"]
+         RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.855061666223476*^9, 3.855061771774568*^9}, {
+   3.8550618113128157`*^9, 3.855061868527515*^9}, {3.855061949041774*^9, 
+   3.855062024943923*^9}, {3.855209988723116*^9, 3.855210036104344*^9}, {
+   3.8552103675496407`*^9, 3.855210367826663*^9}, {3.855210397973877*^9, 
+   3.855210402279562*^9}, {3.855210454646874*^9, 3.855210495320808*^9}, 
+   3.855210532830811*^9, 3.855210632531495*^9, {3.8552110686077538`*^9, 
+   3.855211070101612*^9}, {3.855213558003942*^9, 3.855213587720286*^9}, {
+   3.855214097781046*^9, 3.855214107333932*^9}, {3.855214139376704*^9, 
+   3.8552141425591793`*^9}, {3.855214191830114*^9, 
+   3.85521420154014*^9}},ExpressionUUID->"e5e7a59b-dd7e-4bc5-87f1-\
+83f07eb6e201"]
 },
 WindowSize->{927, 1016},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
-Magnification:>1.4 Inherited,
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -154,7 +143,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5098, 117, 1002, "Input",ExpressionUUID->"78c8ad12-1eb5-4e08-a460-e9bf319d6242"]
+Cell[558, 20, 4694, 107, 537, "Input",ExpressionUUID->"e5e7a59b-dd7e-4bc5-87f1-83f07eb6e201"]
 }
 ]
 *)
