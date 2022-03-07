@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5978,        153]
-NotebookOptionsPosition[      5660,        139]
-NotebookOutlinePosition[      6023,        155]
-CellTagsIndexPosition[      5980,        152]
+NotebookDataLength[      5622,        144]
+NotebookOptionsPosition[      5305,        130]
+NotebookOutlinePosition[      5668,        146]
+CellTagsIndexPosition[      5625,        143]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -107,19 +107,7 @@ Cell[BoxData[
            RowBox[{"[", "i", "]"}], "]"}], ".", 
           RowBox[{"eVec", "[", "wMin", "]"}]}]}], ",", 
         RowBox[{"{", 
-         RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"(*", " ", 
-      RowBox[{"Fudge", " ", "Factor"}], " ", "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"ff", "=", "1801.1047"}], ";", "\n", 
-     RowBox[{"Print", "[", 
-      RowBox[{"\"\<Expectation Values pair {12, 23, 31}: \>\"", ",", 
-       RowBox[{"expVals", "*", "ff"}]}], "]"}], ";", "\n", 
-     RowBox[{"Print", "[", 
-      RowBox[{"\"\<Expectation Values as ratios: \>\"", ",", 
-       RowBox[{"expVals", "/", 
-        RowBox[{"expVals", "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}]}], "]"}]}]}], "\n", 
+         RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}]}], "\n", 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.85236237164781*^9, 3.8523623716634502`*^9}, {
    3.85263438077129*^9, 3.852634384676106*^9}, {3.852634760370203*^9, 
@@ -133,8 +121,11 @@ Cell[BoxData[
    3.855050691541789*^9, 3.855050727722842*^9}, 3.8550508469611187`*^9, {
    3.855050971084813*^9, 3.855051005312097*^9}, 3.855051619268208*^9, {
    3.855051694208869*^9, 3.855051700201722*^9}, {3.8550517691619043`*^9, 
-   3.8550517717933693`*^9}, {3.855052250923966*^9, 
-   3.855052259393614*^9}},ExpressionUUID->"78c8ad12-1eb5-4e08-a460-\
+   3.8550517717933693`*^9}, {3.855052250923966*^9, 3.855052259393614*^9}, {
+   3.8556480629798326`*^9, 3.855648063336467*^9}, {3.855648164784195*^9, 
+   3.855648191733226*^9}, {3.855648912278222*^9, 3.855648943159204*^9}, {
+   3.855649009426045*^9, 
+   3.855649016479931*^9}},ExpressionUUID->"78c8ad12-1eb5-4e08-a460-\
 e9bf319d6242"]
 },
 WindowSize->{927, 1016},
@@ -154,7 +145,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5098, 117, 1002, "Input",ExpressionUUID->"78c8ad12-1eb5-4e08-a460-e9bf319d6242"]
+Cell[558, 20, 4743, 108, 870, "Input",ExpressionUUID->"78c8ad12-1eb5-4e08-a460-e9bf319d6242"]
 }
 ]
 *)
