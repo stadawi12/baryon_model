@@ -10,16 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9552,        238]
-NotebookOptionsPosition[      9264,        225]
-NotebookOutlinePosition[      9597,        240]
-CellTagsIndexPosition[      9554,        237]
+NotebookDataLength[     10026,        243]
+NotebookOptionsPosition[      9738,        230]
+NotebookOutlinePosition[     10071,        245]
+CellTagsIndexPosition[     10028,        242]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
- RowBox[{"ClearAll", "[", "expValRho2", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ClearAll", "[", 
+  RowBox[{"expValRho", ",", "expValLam"}], "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"expValRho", "[", 
    RowBox[{
@@ -32,9 +33,6 @@ Cell[BoxData[{
      RowBox[{
      "sM", ",", "observable12", ",", "observable23", ",", "observable31", ",",
        "observables", ",", "alphas", ",", "eVec"}], "}"}], ",", 
-    "\[IndentingNewLine]", 
-    RowBox[{"(*", " ", 
-     RowBox[{"Get", " ", "state", " ", "matrix"}], " ", "*)"}], 
     "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"sM", "=", 
@@ -55,7 +53,7 @@ Cell[BoxData[{
      RowBox[{"observable23", "=", 
       RowBox[{
        RowBox[{"Transpose", "[", "t1", "]"}], ".", "observable12", ".", 
-       "t1"}]}], ";", 
+       "t1"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
       "transform", " ", "the", " ", "observable", " ", "in", " ", "to", " ", 
@@ -98,20 +96,20 @@ Cell[BoxData[{
           RowBox[{"[", 
            RowBox[{"-", "firstNonZero"}], "]"}], "]"}], "//", "Chop"}]}], 
        ")"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"evec", "=", 
+      RowBox[{"eVec", "[", "wMin", "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
      RowBox[{"expVals", "=", 
       RowBox[{"Table", "[", 
        RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          SuperscriptBox[
-           RowBox[{"alphas", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], 
-           RowBox[{"-", "2"}]], "*", 
-          RowBox[{
-           RowBox[{"eVec", "[", "wMin", "]"}], ".", 
-           RowBox[{"observables", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], ".", 
-           RowBox[{"eVec", "[", "wMin", "]"}]}]}], ")"}], ",", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"alphas", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], 
+          RowBox[{"-", "2"}]], "*", 
+         RowBox[{"evec", ".", 
+          RowBox[{"observables", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ".", "evec"}]}], ",", 
         RowBox[{"{", 
          RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}]}], 
    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
@@ -193,20 +191,19 @@ Cell[BoxData[{
           RowBox[{"[", 
            RowBox[{"-", "firstNonZero"}], "]"}], "]"}], "//", "Chop"}]}], 
        ")"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"evec", "[", "wMin", "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
      RowBox[{"expVals", "=", 
       RowBox[{"Table", "[", 
        RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          SuperscriptBox[
-           RowBox[{"betas", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], 
-           RowBox[{"-", "2"}]], "*", 
-          RowBox[{
-           RowBox[{"eVec", "[", "wMin", "]"}], ".", 
-           RowBox[{"observables", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], ".", 
-           RowBox[{"eVec", "[", "wMin", "]"}]}]}], ")"}], ",", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"betas", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], 
+          RowBox[{"-", "2"}]], "*", 
+         RowBox[{"evec", ".", 
+          RowBox[{"observables", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ".", "evec"}]}], ",", 
         RowBox[{"{", 
          RowBox[{"i", ",", "1", ",", "3"}], "}"}]}], "]"}]}]}]}], 
    "\[IndentingNewLine]", "]"}]}]}], "Input",
@@ -220,7 +217,15 @@ Cell[BoxData[{
    3.855214097781046*^9, 3.855214107333932*^9}, {3.855214139376704*^9, 
    3.8552141425591793`*^9}, {3.855214191830114*^9, 3.85521420154014*^9}, {
    3.855386075901072*^9, 3.855386128999999*^9}, {3.855386195275955*^9, 
-   3.855386235553155*^9}},ExpressionUUID->"e5e7a59b-dd7e-4bc5-87f1-\
+   3.855386235553155*^9}, {3.855726297189537*^9, 3.855726297562454*^9}, {
+   3.855728083543242*^9, 3.855728088927414*^9}, {3.8557290539664993`*^9, 
+   3.855729113164221*^9}, {3.855729178304564*^9, 3.855729219213686*^9}, {
+   3.85572925623304*^9, 3.855729297723308*^9}, {3.855729528944742*^9, 
+   3.855729533645328*^9}, {3.85572970345301*^9, 3.8557297073119993`*^9}, {
+   3.855729796223123*^9, 3.855729897282382*^9}, {3.855729928860989*^9, 
+   3.855729991648634*^9}, {3.855730036061648*^9, 3.8557300785265512`*^9}, {
+   3.8557302613987637`*^9, 
+   3.855730265709013*^9}},ExpressionUUID->"e5e7a59b-dd7e-4bc5-87f1-\
 83f07eb6e201"]
 },
 WindowSize->{927, 1016},
@@ -239,7 +244,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 8702, 203, 1042, "Input",ExpressionUUID->"e5e7a59b-dd7e-4bc5-87f1-83f07eb6e201"]
+Cell[558, 20, 9176, 208, 1111, "Input",ExpressionUUID->"e5e7a59b-dd7e-4bc5-87f1-83f07eb6e201"]
 }
 ]
 *)

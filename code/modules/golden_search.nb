@@ -10,45 +10,23 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4734,        122]
-NotebookOptionsPosition[      4448,        109]
-NotebookOutlinePosition[      4781,        124]
-CellTagsIndexPosition[      4738,        121]
+NotebookDataLength[      4647,        115]
+NotebookOptionsPosition[      4361,        102]
+NotebookOutlinePosition[      4694,        117]
+CellTagsIndexPosition[      4651,        114]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"ClearAll", "[", 
-   RowBox[{"eigVal", ",", "goldenSearch"}], "]"}], 
+  RowBox[{"ClearAll", "[", "goldenSearch", "]"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"eigVal", "[", "omega_", "]"}], ":=", "\[IndentingNewLine]", 
-   RowBox[{"Module", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"hamiltonian", ",", "eigenValue"}], "}"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"hamiltonian", "=", 
-       RowBox[{"Hb", "[", 
-        RowBox[{
-        "J", ",", "P", ",", "Isospin", ",", "\[CapitalLambda]", ",", 
-         "\[Gamma]Max", ",", "omega", ",", "m1", ",", "m2", ",", "m3", ",", 
-         "project"}], "]"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"eigenValue", "=", 
-       RowBox[{
-        RowBox[{"Eigenvalues", "[", "hamiltonian", "]"}], "[", 
-        RowBox[{"[", 
-         RowBox[{"-", "firstNonZero"}], "]"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"Return", "[", "eigenValue", "]"}]}]}], "\[IndentingNewLine]", 
-    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{
   RowBox[{"goldenSearch", "[", 
-   RowBox[{"lowerBound_", ",", "upperBound_", ",", "tol_"}], "]"}], ":=", 
+   RowBox[{
+   "ham_", ",", "idx_", ",", "lowerBound_", ",", "upperBound_", ",", "tol_"}],
+    "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
     RowBox[{"{", 
@@ -77,9 +55,17 @@ Cell[BoxData[{
         RowBox[{"x2", "=", 
          RowBox[{"b", "-", "d"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"fx1", "=", 
-         RowBox[{"eigVal", "[", "x1", "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Eigenvalues", "[", 
+           RowBox[{"ham", "[", "x1", "]"}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"-", "idx"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"fx2", "=", 
-         RowBox[{"eigVal", "[", "x2", "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Eigenvalues", "[", 
+           RowBox[{"ham", "[", "x2", "]"}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"-", "idx"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"If", "[", 
          RowBox[{
           RowBox[{"fx1", "<", "fx2"}], ",", 
@@ -103,8 +89,15 @@ Cell[BoxData[{
    3.8556441364570932`*^9}, {3.855644450206958*^9, 3.855644450459824*^9}, {
    3.855646777911026*^9, 3.855646812628023*^9}, {3.855646949796089*^9, 
    3.855646953617648*^9}, 3.855647577005301*^9, {3.855647620847773*^9, 
-   3.85564764206466*^9}, {3.855647718006102*^9, 
-   3.8556477195963383`*^9}},ExpressionUUID->"11613607-1a3a-4ed2-93ec-\
+   3.85564764206466*^9}, {3.855647718006102*^9, 3.8556477195963383`*^9}, {
+   3.8557270256458893`*^9, 3.855727057536951*^9}, {3.8557271027736883`*^9, 
+   3.8557271780157423`*^9}, {3.855727521940402*^9, 3.855727525533037*^9}, {
+   3.855727569818524*^9, 3.855727636385702*^9}, {3.855730361758491*^9, 
+   3.855730396756626*^9}, {3.855730454174268*^9, 3.855730459505356*^9}, {
+   3.855732959270342*^9, 3.855732962903696*^9}, {3.85573644251157*^9, 
+   3.85573647014041*^9}, {3.8557368609444237`*^9, 3.855736861309416*^9}, {
+   3.8557379634482718`*^9, 3.85573797043426*^9}, {3.855738423312571*^9, 
+   3.855738429327498*^9}},ExpressionUUID->"11613607-1a3a-4ed2-93ec-\
 ca6c170674d3"]
 },
 WindowSize->{927, 1016},
@@ -123,7 +116,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3886, 87, 538, "Input",ExpressionUUID->"11613607-1a3a-4ed2-93ec-ca6c170674d3"]
+Cell[558, 20, 3799, 80, 377, "Input",ExpressionUUID->"11613607-1a3a-4ed2-93ec-ca6c170674d3"]
 }
 ]
 *)
