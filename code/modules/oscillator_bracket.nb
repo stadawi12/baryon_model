@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     99478,       2272]
-NotebookOptionsPosition[     99086,       2257]
-NotebookOutlinePosition[     99520,       2274]
-CellTagsIndexPosition[     99477,       2271]
+NotebookDataLength[     99955,       2273]
+NotebookOptionsPosition[     99563,       2258]
+NotebookOutlinePosition[     99997,       2275]
+CellTagsIndexPosition[     99954,       2272]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1251,8 +1251,9 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"allStates", "[", 
-    RowBox[{"J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_"}], 
-    "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{
+    "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "S_", ",", 
+     "\[Gamma]Max_"}], "]"}], ":=", "\[IndentingNewLine]", 
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
@@ -1413,27 +1414,66 @@ Cell[BoxData[{
          RowBox[{"Length", "[", "spinlessStates", "]"}]}], ",", 
         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
         RowBox[{
-         RowBox[{"For", "[", 
+         RowBox[{"If", "[", 
           RowBox[{
-           RowBox[{"j", "=", "1"}], ",", 
-           RowBox[{"j", "\[LessEqual]", 
-            RowBox[{"Length", "[", "spinBasis12", "]"}]}], ",", 
-           RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
-           "\[IndentingNewLine]", 
+           RowBox[{"S", "\[Equal]", 
+            FractionBox["1", "2"]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{
+             RowBox[{"If", " ", "S"}], "=", 
+             RowBox[{
+              FractionBox["1", "2"], " ", "then", " ", 
+              RowBox[{"do", ":"}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"For", "[", 
+             RowBox[{
+              RowBox[{"j", "=", "1"}], ",", 
+              RowBox[{"j", "\[LessEqual]", 
+               RowBox[{"Length", "[", "spinBasis12", "]"}]}], ",", 
+              RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"MemberQ", "[", 
+                 RowBox[{"Jlist12", ",", "J"}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"spinlessState", "=", 
+                  RowBox[{"spinlessStates", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"spinBaseFunction", "=", 
+                  RowBox[{"spinBasis12", "[", 
+                   RowBox[{"[", "j", "]"}], "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"combinedState", "=", 
+                  RowBox[{
+                   RowBox[{"AppendTo", "[", 
+                    RowBox[{"spinlessState", ",", "spinBaseFunction"}], "]"}],
+                    "//", "Flatten"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"AppendTo", "[", 
+                  RowBox[{"combinedStates", ",", "combinedState"}], "]"}], 
+                 ";"}]}], "\[IndentingNewLine]", "]"}]}], 
+             RowBox[{"(*", " ", 
+              RowBox[{"End", " ", "of", " ", "If", " ", "statement"}], " ", 
+              "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], 
+            RowBox[{"(*", " ", 
+             RowBox[{"End", " ", "of", " ", "j", " ", "loop"}], " ", "*)"}], 
+            ";"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Else", ":"}], " ", "*)"}], "\[IndentingNewLine]", 
            RowBox[{"If", "[", 
             RowBox[{
              RowBox[{"MemberQ", "[", 
-              RowBox[{"Jlist12", ",", "J"}], "]"}], ",", 
+              RowBox[{"Jlist32", ",", "J"}], "]"}], ",", 
              "\[IndentingNewLine]", 
              RowBox[{
               RowBox[{"spinlessState", "=", 
                RowBox[{"spinlessStates", "[", 
                 RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
               
-              RowBox[{"spinBaseFunction", "=", 
-               RowBox[{"spinBasis12", "[", 
-                RowBox[{"[", "j", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-              
+              RowBox[{"spinBaseFunction", "=", "spinBasis32"}], ";", 
+              "\[IndentingNewLine]", 
               RowBox[{"combinedState", "=", 
                RowBox[{
                 RowBox[{"AppendTo", "[", 
@@ -1443,33 +1483,10 @@ Cell[BoxData[{
                RowBox[{"combinedStates", ",", "combinedState"}], "]"}], 
               ";"}]}], "\[IndentingNewLine]", "]"}]}], 
           RowBox[{"(*", " ", 
-           RowBox[{"End", " ", "of", " ", "If", " ", "statement"}], " ", 
-           "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], 
-         RowBox[{"(*", " ", 
-          RowBox[{"End", " ", "of", " ", "j", " ", "loop"}], " ", "*)"}], ";",
-          "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         RowBox[{"If", "[", 
-          RowBox[{
-           RowBox[{"MemberQ", "[", 
-            RowBox[{"Jlist32", ",", "J"}], "]"}], ",", "\[IndentingNewLine]", 
-           
-           RowBox[{
-            RowBox[{"spinlessState", "=", 
-             RowBox[{"spinlessStates", "[", 
-              RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"spinBaseFunction", "=", "spinBasis32"}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"combinedState", "=", 
-             RowBox[{
-              RowBox[{"AppendTo", "[", 
-               RowBox[{"spinlessState", ",", "spinBaseFunction"}], "]"}], "//",
-               "Flatten"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"AppendTo", "[", 
-             RowBox[{"combinedStates", ",", "combinedState"}], "]"}], ";"}]}],
-           "\[IndentingNewLine]", "]"}]}]}], 
-       RowBox[{"(*", " ", 
-        RowBox[{"End", " ", "of", " ", "if", " ", "statement"}], " ", "*)"}], 
-       "\[IndentingNewLine]", "]"}], 
+           RowBox[{"End", " ", "of", " ", "if", " ", "statement"}], " ", 
+           "*)"}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       "]"}], 
       RowBox[{"(*", " ", 
        RowBox[{"End", " ", "of", " ", "i", " ", "loop"}], " ", "*)"}], ";", 
       "\[IndentingNewLine]", 
@@ -1550,8 +1567,8 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"tMatrix", "[", 
     RowBox[{
-    "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "\[Gamma]Max_", ",", 
-     "m1_", ",", "m2_", ",", "m3_", ",", "basis_"}], "]"}], ":=", 
+    "J_", ",", "P_", ",", "\[CapitalLambda]_", ",", "S_", ",", "\[Gamma]Max_",
+      ",", "m1_", ",", "m2_", ",", "m3_", ",", "basis_"}], "]"}], ":=", 
    "\[IndentingNewLine]", 
    RowBox[{"Module", "[", 
     RowBox[{
@@ -1565,38 +1582,15 @@ Cell[BoxData[{
        "spinMultiplier"}], "}"}], ",", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
-      RowBox[{
-      "The", " ", "for", " ", "loop", " ", "would", " ", "have", " ", "to", 
-       " ", "go", " ", "from", " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"1", ",", "1"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"2", ",", "2"}], "}"}]}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"3", ",", "3"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"10", ",", "10"}], "}"}]}], "}"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"11", ",", "11"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"40", ",", "40"}], "}"}]}], "}"}]}], "}"}]}], " ", "*)"}],
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"(*", " ", 
       RowBox[{"Generate", " ", "all", " ", "states"}], " ", "*)"}], 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"states", "=", 
        RowBox[{"allStates", "[", 
-        RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
-        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{
+        "J", ",", "P", ",", "\[CapitalLambda]", ",", "S", ",", 
+         "\[Gamma]Max"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{"Generate", " ", "stateMatrix"}], " ", "*)"}], 
       "\[IndentingNewLine]", 
@@ -1632,8 +1626,9 @@ Cell[BoxData[{
         RowBox[{
          RowBox[{"Length", "[", 
           RowBox[{"allStates", "[", 
-           RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]"}], 
-           "]"}], "]"}], ",", 
+           RowBox[{
+           "J", ",", "P", ",", "\[CapitalLambda]", ",", "S", ",", 
+            "\[Gamma]"}], "]"}], "]"}], ",", 
          RowBox[{"{", 
           RowBox[{
           "\[Gamma]", ",", "startPoint", ",", "\[Gamma]Max", ",", "2"}], 
@@ -1783,8 +1778,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"stateMatrix", "[", 
-    RowBox[{"J_", ",", "P_", ",", "L_", ",", "\[Gamma]Max_"}], "]"}], ":=", 
-   "\[IndentingNewLine]", 
+    RowBox[{"J_", ",", "P_", ",", "L_", ",", "S_", ",", "\[Gamma]Max_"}], 
+    "]"}], ":=", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
     "Produces", " ", "matrix", " ", "of", " ", "states", " ", "with", " ", 
@@ -1808,8 +1803,8 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"states", "=", 
        RowBox[{"allStates", "[", 
-        RowBox[{"J", ",", "P", ",", "L", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"J", ",", "P", ",", "L", ",", "S", ",", "\[Gamma]Max"}], 
+        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
        "Make", " ", "a", " ", "matrix", " ", "out", " ", "of", " ", 
@@ -1839,8 +1834,8 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{"Projector", "[", 
     RowBox[{
-    "J_", ",", "P_", ",", "L_", ",", "\[Gamma]Max_", ",", "Isospin_"}], "]"}],
-    ":=", "\[IndentingNewLine]", 
+    "J_", ",", "P_", ",", "L_", ",", "S_", ",", "\[Gamma]Max_", ",", 
+     "Isospin_"}], "]"}], ":=", "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
      RowBox[{"Spin", " ", "x", " ", "Space", " ", "x", " ", "Flavour"}], " ", 
@@ -1919,8 +1914,8 @@ Cell[BoxData[{
          " ", "about", " ", "parity"}], " ", "*)"}], "\[IndentingNewLine]", 
       RowBox[{"states", "=", 
        RowBox[{"allStates", "[", 
-        RowBox[{"J", ",", "P", ",", "L", ",", "\[Gamma]Max"}], "]"}]}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"J", ",", "P", ",", "L", ",", "S", ",", "\[Gamma]Max"}], 
+        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"projectorList", "=", 
        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
       "\[IndentingNewLine]", 
@@ -1945,7 +1940,8 @@ Cell[BoxData[{
          RowBox[{"(*", " ", 
           RowBox[{"Grab", " ", 
            SubscriptBox["l", "\[Rho]"], " ", "to", " ", "determine", " ", 
-           "spatial", " ", "parity"}], " ", "*)"}], "\[IndentingNewLine]", 
+           "spatial", " ", "parity", " ", "between", " ", "quarks", " ", "1", 
+           " ", "and", " ", "2"}], " ", "*)"}], "\[IndentingNewLine]", 
          RowBox[{"lRho", "=", 
           RowBox[{"state", "[", 
            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
@@ -2251,8 +2247,13 @@ Cell[BoxData[{
    3.852630318340872*^9, 3.852630396499193*^9}, {3.8526304329887323`*^9, 
    3.852630518131414*^9}, {3.852630585680086*^9, 3.8526306146081543`*^9}, {
    3.852631933278895*^9, 3.852631943863763*^9}, 3.8557253651677113`*^9, {
-   3.855725522874461*^9, 
-   3.855725549224869*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
+   3.855725522874461*^9, 3.855725549224869*^9}, {3.856522294637048*^9, 
+   3.8565223025982723`*^9}, {3.8565234783077993`*^9, 3.85652347938058*^9}, {
+   3.856600247905877*^9, 3.856600248636376*^9}, {3.85660728038055*^9, 
+   3.8566073798387127`*^9}, {3.8566074678731728`*^9, 
+   3.8566075354565067`*^9}, {3.856608096134079*^9, 3.856608138367073*^9}, {
+   3.85660835376403*^9, 
+   3.8566083551379843`*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
 db12206f4eb3"]
 },
 WindowSize->{927, 1016},
@@ -2273,7 +2274,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 98524, 2235, 13323, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+Cell[558, 20, 99001, 2236, 13535, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)

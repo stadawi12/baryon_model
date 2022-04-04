@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15671,        392]
-NotebookOptionsPosition[     15382,        379]
-NotebookOutlinePosition[     15715,        394]
-CellTagsIndexPosition[     15672,        391]
+NotebookDataLength[     15812,        396]
+NotebookOptionsPosition[     15492,        382]
+NotebookOutlinePosition[     15856,        398]
+CellTagsIndexPosition[     15813,        395]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,13 +23,13 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Hb", "[", 
    RowBox[{
-   "J_", ",", "P_", ",", "Isospin_", ",", "\[CapitalLambda]_", ",", 
-    "\[Gamma]Max_", ",", "\[Omega]_", ",", "m1_", ",", "m2_", ",", "m3_", ",",
-     "project_"}], "]"}], ":=", "\[IndentingNewLine]", 
+   "J_", ",", "P_", ",", "Isospin_", ",", "\[CapitalLambda]_", ",", "S_", ",",
+     "\[Gamma]Max_", ",", "\[Omega]_", ",", "m1_", ",", "m2_", ",", "m3_", 
+    ",", "project_"}], "]"}], ":=", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"Hb", "[", 
     RowBox[{
-    "J", ",", "P", ",", "Isospin", ",", "\[CapitalLambda]", ",", 
+    "J", ",", "P", ",", "Isospin", ",", "\[CapitalLambda]", ",", "S", ",", 
      "\[Gamma]Max", ",", "\[Omega]", ",", "m1", ",", "m2", ",", "m3", ",", 
      "project"}], "]"}], "=", 
    RowBox[{"Module", "[", "\[IndentingNewLine]", 
@@ -127,8 +127,8 @@ Cell[BoxData[{
       RowBox[{"projector", "=", 
        RowBox[{"Projector", "[", 
         RowBox[{
-        "J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max", ",", 
-         "Isospin"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        "J", ",", "P", ",", "\[CapitalLambda]", ",", "S", ",", "\[Gamma]Max", 
+         ",", "Isospin"}], "]"}]}], ";", "\[IndentingNewLine]", 
       "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
@@ -137,8 +137,10 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"sM", "=", 
        RowBox[{"stateMatrix", "[", 
-        RowBox[{"J", ",", "P", ",", "\[CapitalLambda]", ",", "\[Gamma]Max"}], 
-        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{
+        "J", ",", "P", ",", "\[CapitalLambda]", ",", "S", ",", 
+         "\[Gamma]Max"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
        "Obtain", " ", "the", " ", "dimensionless", " ", "linear", " ", "and", 
@@ -374,11 +376,13 @@ Cell[BoxData[{
    3.855734632771023*^9, 3.8557346414120626`*^9}, {3.855734948140349*^9, 
    3.855734954296399*^9}, {3.8557350553954973`*^9, 3.855735059713451*^9}, {
    3.855735461127137*^9, 3.855735502967235*^9}, 3.8557357167381287`*^9, 
-   3.855735838637127*^9},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.855735838637127*^9, {3.8566075958502617`*^9, 
+   3.856607624719781*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
-WindowSize->{927, 1016},
+WindowSize->{1854, 1016},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
+Magnification:>1.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -393,7 +397,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14820, 357, 1389, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 14930, 360, 1558, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
