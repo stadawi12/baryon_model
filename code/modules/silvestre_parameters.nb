@@ -10,17 +10,18 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3838,        119]
-NotebookOptionsPosition[      3551,        106]
-NotebookOutlinePosition[      3885,        121]
-CellTagsIndexPosition[      3842,        118]
+NotebookDataLength[      4396,        134]
+NotebookOptionsPosition[      4110,        121]
+NotebookOutlinePosition[      4443,        136]
+CellTagsIndexPosition[      4400,        133]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"ClearAll", "[", "r0", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"ClearAll", "[", 
+   RowBox[{"r0", ",", "coeffSS"}], "]"}], "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
     RowBox[{"MODEL", " ", "PARAMETERS"}], " ", "-", " ", 
@@ -48,12 +49,12 @@ Cell[BoxData[{
    RowBox[{"bottom", " ", "quark", " ", "mass"}], " ", "*)"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"\[Lambda]", "=", "0.1653"}], ";", " ", 
+  RowBox[{"coeffLinear", "=", "0.1653"}], ";", " ", 
   RowBox[{"(*", " ", 
    RowBox[{
    "coefficient", " ", "of", " ", "string", " ", "strength", " ", "term"}], 
    " ", "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"\[Kappa]", "=", "0.5069"}], ";", " ", 
+  RowBox[{"coeffCoulomb", "=", "0.5069"}], ";", " ", 
   RowBox[{"(*", " ", 
    RowBox[{"coefficient", " ", "of", " ", "Coulomb", " ", "term", " ", 
     RowBox[{"(", "0.0175", ")"}], " ", "if", " ", "you", " ", "want", " ", 
@@ -71,8 +72,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"\[Kappa]p", "=", "1.8609"}], 
   RowBox[{"(*", " ", 
-   RowBox[{"Thing", " ", "in", " ", "the", " ", "spin", " ", "term"}], " ", 
-   "*)"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Thing", " ", "in", " ", "the", " ", "spin", " ", "term"}], " ", "*)"}
+   ], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"CF", "=", 
@@ -98,14 +99,28 @@ Cell[BoxData[{
      FractionBox[
       RowBox[{"2", "mi", " ", "mj"}], 
       RowBox[{"mi", "+", "mj"}]], ")"}], 
-    RowBox[{"-", "0.2204"}]]}]}]}], "Input",
+    RowBox[{"-", "0.2204"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"coeffSS", "[", 
+   RowBox[{"mi_", ",", "mj_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{"8", "\[Kappa]p"}], 
+   RowBox[{"3", "mi", " ", "mj", " ", 
+    SuperscriptBox[
+     RowBox[{"r0", "[", 
+      RowBox[{"mi", ",", "mj"}], "]"}], "3"], 
+    SuperscriptBox["Pi", 
+     FractionBox["1", "2"]]}]]}]}], "Input",
  CellChangeTimes->{{3.852356541423649*^9, 3.852356544756234*^9}, {
-  3.852362524498321*^9, 3.8523625248289213`*^9}, {3.8523842908001966`*^9, 
-  3.8523842919648733`*^9}},ExpressionUUID->"c06085ac-c4bc-4e62-a72f-\
+   3.852362524498321*^9, 3.8523625248289213`*^9}, {3.8523842908001966`*^9, 
+   3.8523842919648733`*^9}, {3.858317082594386*^9, 3.8583171870101433`*^9}, {
+   3.858317251579336*^9, 3.858317261210943*^9}, 3.858317430689543*^9, {
+   3.8583177864519176`*^9, 
+   3.858317787942505*^9}},ExpressionUUID->"c06085ac-c4bc-4e62-a72f-\
 eb57008621d4"]
 },
-WindowSize->{808, 911},
-WindowMargins->{{490, Automatic}, {0, Automatic}},
+WindowSize->{927, 1016},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -120,7 +135,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2989, 84, 380, "Input",ExpressionUUID->"c06085ac-c4bc-4e62-a72f-eb57008621d4"]
+Cell[558, 20, 3548, 99, 436, "Input",ExpressionUUID->"c06085ac-c4bc-4e62-a72f-eb57008621d4"]
 }
 ]
 *)
