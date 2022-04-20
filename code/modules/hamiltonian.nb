@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17973,        442]
-NotebookOptionsPosition[     17653,        428]
-NotebookOutlinePosition[     18017,        444]
-CellTagsIndexPosition[     17974,        441]
+NotebookDataLength[     18176,        447]
+NotebookOptionsPosition[     17856,        433]
+NotebookOutlinePosition[     18220,        449]
+CellTagsIndexPosition[     18177,        446]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -340,7 +340,11 @@ Cell[BoxData[{
       RowBox[{"(*", " ", 
        RowBox[{
         RowBox[{"Apply", " ", "projector", " ", "if", " ", "project"}], 
-        "\[Equal]", "True"}], " ", "*)"}], "\[IndentingNewLine]", 
+        "\[Equal]", 
+        RowBox[{
+        "True", " ", "and", " ", "remove", " ", "rows", " ", "and", " ", 
+         "columns", " ", "which", " ", "are", " ", "zeros"}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
       RowBox[{"If", "[", 
        RowBox[{"project", ",", 
         RowBox[{
@@ -423,7 +427,8 @@ Cell[BoxData[{
    3.858077416386285*^9, 3.8580776551168528`*^9}, {3.858161647314391*^9, 
    3.8581616681633453`*^9}, {3.858317271384447*^9, 3.858317346319175*^9}, {
    3.858317484012496*^9, 3.858317502141095*^9}, {3.858318972568215*^9, 
-   3.8583189946688967`*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.8583189946688967`*^9}, {3.858754590297682*^9, 
+   3.858754602470346*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -443,7 +448,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 17091, 406, 1756, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 17294, 411, 1756, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
