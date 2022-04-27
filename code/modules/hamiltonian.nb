@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18264,        448]
-NotebookOptionsPosition[     17944,        434]
-NotebookOutlinePosition[     18308,        450]
-CellTagsIndexPosition[     18265,        447]
+NotebookDataLength[     22392,        542]
+NotebookOptionsPosition[     22072,        528]
+NotebookOutlinePosition[     22436,        544]
+CellTagsIndexPosition[     22393,        541]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,10 +36,11 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"{", " ", 
       RowBox[{
-      "projector", ",", "sM", ",", "vCoulomb", ",", "vLinear", ",", 
-       "spinPart12", ",", "spinPart23", ",", "spinPart31", ",", "v12baryon", 
-       ",", "v23baryon", ",", "v31baryon", ",", "kin", ",", "mTot", ",", 
-       "cqqq", ",", "kinetic", ",", "Hbaryon"}], "}"}], ",", 
+      "p", ",", "sM", ",", "vCoulomb", ",", "vLinear", ",", "spinPart12", ",",
+        "spinPart23", ",", "spinPart31", ",", "v12baryon", ",", "v23baryon", 
+       ",", "v31baryon", ",", "kin", ",", "mTot", ",", "cqqq", ",", "kinetic",
+        ",", "Hbaryon", ",", "rightP", ",", "leftP", ",", "zeros", ",", "row",
+        ",", "r", ",", "c", ",", "removeList"}], "}"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
@@ -124,7 +125,7 @@ Cell[BoxData[{
         RowBox[{"only", " ", "applied", " ", "when", " ", "project"}], 
         "\[Equal]", "True"}]}], " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{
-      RowBox[{"projector", "=", 
+      RowBox[{"p", "=", 
        RowBox[{"Projector", "[", 
         RowBox[{
         "J", ",", "P", ",", "\[CapitalLambda]", ",", "S", ",", "\[Gamma]Max", 
@@ -338,20 +339,29 @@ Cell[BoxData[{
           RowBox[{"m1", "*", "m2", "*", "m3"}]]}]}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
+       RowBox[{"m1", "=", 
+        RowBox[{"m2", "\[NotEqual]", 
+         RowBox[{"m3", " ", 
+          RowBox[{"(", 
+           RowBox[{"project", "=", "1"}], ")"}]}]}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
        RowBox[{
         RowBox[{"Apply", " ", "projector", " ", "if", " ", "project"}], 
         "\[Equal]", 
         RowBox[{
-        "True", " ", "and", " ", "remove", " ", "rows", " ", "and", " ", 
+        "1", " ", "and", " ", "remove", " ", "rows", " ", "and", " ", 
          "columns", " ", "which", " ", "are", " ", "zeros"}]}], " ", "*)"}], 
       "\[IndentingNewLine]", 
       RowBox[{"If", "[", 
-       RowBox[{"project", ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"project", "\[Equal]", "1"}], ",", "\[IndentingNewLine]", 
         RowBox[{
+         RowBox[{"Print", "[", "\"\<Hello I'm 1\>\"", "]"}], ";", 
+         "\[IndentingNewLine]", 
          RowBox[{"Hbaryon", "=", 
-          RowBox[{
-           RowBox[{"Transpose", "[", "projector", "]"}], ".", "Hbaryon", ".", 
-           "projector"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"p", ".", "Hbaryon", ".", "p"}]}], ";", 
+         "\[IndentingNewLine]", 
          RowBox[{"zeros", "=", 
           RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
          RowBox[{"For", "[", 
@@ -404,11 +414,88 @@ Cell[BoxData[{
            RowBox[{"Hbaryon", ",", "removeList"}], "]"}]}]}]}], 
        "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
-       RowBox[{"Finally", ",", " ", 
+       RowBox[{"m1", "=", 
+        RowBox[{"m2", "=", 
+         RowBox[{"m3", " ", 
+          RowBox[{"(", 
+           RowBox[{"project", "=", "2"}], ")"}]}]}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{"Apply", " ", "projector", " ", "if", " ", "project"}], 
+        "\[Equal]", 
         RowBox[{
-         RowBox[{"subtract", " ", "the", " ", "three"}], "-", 
-         RowBox[{"body", " ", "contribution"}]}]}], " ", "*)"}], 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        "2", " ", "and", " ", "remove", " ", "rows", " ", "and", " ", 
+         "columns", " ", "which", " ", "are", " ", "zeros"}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"project", "\[Equal]", "2"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Print", "[", "\"\<Hello I'm 2\>\"", "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"rightP", "=", 
+          RowBox[{
+           RowBox[{"Inverse", "[", "t2", "]"}], ".", "p", ".", "t2", ".", 
+           RowBox[{"Inverse", "[", "t1", "]"}], ".", "p", ".", "t1", ".", 
+           "p"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"leftP", "=", 
+          RowBox[{"Transpose", "[", "rightP", "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Hbaryon", "=", 
+          RowBox[{"leftP", ".", "Hbaryon", ".", "rightP"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"zeros", "=", 
+          RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"For", "[", 
+          RowBox[{
+           RowBox[{"row", "=", "1"}], ",", 
+           RowBox[{"row", "\[LessEqual]", 
+            RowBox[{"Length", "[", "Hbaryon", "]"}]}], ",", 
+           RowBox[{"row", "++"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"r", "=", 
+             RowBox[{"Hbaryon", "[", 
+              RowBox[{"[", "row", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            
+            RowBox[{"c", "=", 
+             RowBox[{"Hbaryon", "[", 
+              RowBox[{"[", 
+               RowBox[{"All", ",", "row"}], "]"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Total", "[", "r", "]"}], "\[Equal]", "0"}], ",", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"zeros", ",", 
+                RowBox[{"{", "row", "}"}]}], "]"}]}], "]"}]}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Hbaryon", "=", 
+          RowBox[{"Delete", "[", 
+           RowBox[{"Hbaryon", ",", "zeros"}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"removeList", "=", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"zeros", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"j", ",", "1"}], "]"}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"j", ",", "1", ",", 
+                RowBox[{"Length", "[", "zeros", "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "1", ",", 
+                RowBox[{"Length", "[", "Hbaryon", "]"}]}], "}"}]}], "]"}], 
+            ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Hbaryon", "=", 
+          RowBox[{"Delete", "[", 
+           RowBox[{"Hbaryon", ",", "removeList"}], "]"}]}]}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"Return", "[", "Hbaryon", "]"}]}]}], "\[IndentingNewLine]", 
     "]"}]}]}], "\[IndentingNewLine]", 
  RowBox[{"Get", "[", "\"\<modules/dumpSave/hamiltonian.mx\>\"", 
@@ -428,8 +515,15 @@ Cell[BoxData[{
    3.8581616681633453`*^9}, {3.858317271384447*^9, 3.858317346319175*^9}, {
    3.858317484012496*^9, 3.858317502141095*^9}, {3.858318972568215*^9, 
    3.8583189946688967`*^9}, {3.858754590297682*^9, 3.858754602470346*^9}, {
-   3.859459947966213*^9, 
-   3.859459978806254*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.859459947966213*^9, 3.859459978806254*^9}, {3.859463221071458*^9, 
+   3.859463259959972*^9}, {3.859463447187492*^9, 3.859463662004067*^9}, {
+   3.859463726003034*^9, 3.859463778852496*^9}, {3.8594638160190363`*^9, 
+   3.859463818305828*^9}, {3.8594638828246727`*^9, 3.859463884030861*^9}, {
+   3.859464223612282*^9, 3.859464238381277*^9}, {3.8598640337592793`*^9, 
+   3.859864041389984*^9}, {3.859866172105912*^9, 3.8598661906583567`*^9}, {
+   3.859867349652417*^9, 3.859867350881733*^9}, {3.86004507439571*^9, 
+   3.860045094956711*^9}, {3.860045245636348*^9, 
+   3.860045249850646*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -449,7 +543,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 17382, 412, 1784, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 21510, 506, 2260, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
