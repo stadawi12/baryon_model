@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    100534,       2287]
-NotebookOptionsPosition[    100141,       2272]
-NotebookOutlinePosition[    100576,       2289]
-CellTagsIndexPosition[    100533,       2286]
+NotebookDataLength[    100416,       2282]
+NotebookOptionsPosition[    100023,       2267]
+NotebookOutlinePosition[    100458,       2284]
+CellTagsIndexPosition[    100415,       2281]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -96,47 +96,44 @@ Cell[BoxData[{
        RowBox[{"j", ",", "m"}], "}"}]}], "]"}]}]}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"nineJ", "[", 
-   RowBox[{
-   "j1_", ",", "j2_", ",", "j4_", ",", "j5_", ",", "x_", ",", "L_", ",", "l_",
-     ",", "\[CapitalLambda]_", ",", "l1_", ",", "l2_"}], "]"}], ":=", 
   RowBox[{
    RowBox[{"nineJ", "[", 
     RowBox[{
-    "j1", ",", "j2", ",", "j4", ",", "j5", ",", "x", ",", "L", ",", "l", ",", 
-     "\[CapitalLambda]", ",", "l1", ",", "l2"}], "]"}], "=", 
+    "j1_", ",", "j2_", ",", "j4_", ",", "j5_", ",", "x_", ",", "L_", ",", 
+     "l_", ",", "\[CapitalLambda]_", ",", "l1_", ",", "l2_"}], "]"}], ":=", 
    RowBox[{
+    RowBox[{"nineJ", "[", 
+     RowBox[{
+     "j1", ",", "j2", ",", "j4", ",", "j5", ",", "x", ",", "L", ",", "l", ",",
+       "\[CapitalLambda]", ",", "l1", ",", "l2"}], "]"}], "=", 
     RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], "^", 
+      RowBox[{"(", 
+       RowBox[{"2", "*", "x"}], ")"}]}], "*", 
      RowBox[{"(", 
-      RowBox[{"-", "1"}], ")"}], "^", 
-     RowBox[{"(", 
-      RowBox[{"2", "*", "x"}], ")"}]}], "*", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"2", "*", "x"}], "+", "1"}], ")"}], "*", 
-    RowBox[{"SixJSymbol", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"j1", ",", "j4", ",", "L"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"l", ",", "\[CapitalLambda]", ",", "x"}], "}"}]}], "]"}], "*", 
-    
-    RowBox[{"SixJSymbol", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"j2", ",", "j5", ",", "l"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"j4", ",", "x", ",", "l2"}], "}"}]}], "]"}], "*", 
-    RowBox[{"SixJSymbol", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"l1", ",", "l2", ",", "\[CapitalLambda]"}], "}"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"x", ",", "j1", ",", "j2"}], "}"}]}], 
-     "]"}]}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Get", "[", "\"\<modules/dumpSave/nineJ.mx\>\"", "]"}], 
-  "\n"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"2", "*", "x"}], "+", "1"}], ")"}], "*", 
+     RowBox[{"SixJSymbol", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"j1", ",", "j4", ",", "L"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"l", ",", "\[CapitalLambda]", ",", "x"}], "}"}]}], "]"}], "*", 
+     RowBox[{"SixJSymbol", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"j2", ",", "j5", ",", "l"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"j4", ",", "x", ",", "l2"}], "}"}]}], "]"}], "*", 
+     RowBox[{"SixJSymbol", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"l1", ",", "l2", ",", "\[CapitalLambda]"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "j1", ",", "j2"}], "}"}]}], "]"}]}]}]}], 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"talmi", "[", 
@@ -712,7 +709,7 @@ Cell[BoxData[{
      "]"}]}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "talmi"}], " ", "*)"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"TalmiTest", "[", "]"}], ":=", "\[IndentingNewLine]", 
@@ -886,10 +883,7 @@ Cell[BoxData[{
      RowBox[{"End", " ", "of", " ", "i", " ", "loop"}], " ", "*)"}], 
     "\[IndentingNewLine]", "]"}]}], 
   RowBox[{"(*", " ", 
-   RowBox[{"End", " ", "of", " ", "TalmiTest"}], " ", 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", "]"}], 
+   RowBox[{"End", " ", "of", " ", "TalmiTest"}], " ", "*)"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -1063,7 +1057,7 @@ Cell[BoxData[{
     "]"}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "allowedStatesNoSpin"}], " ", "*)"}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"combinedStatesNoSpin", "[", 
@@ -1254,7 +1248,7 @@ Cell[BoxData[{
     "]"}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "combinedStatesNoSpin"}], " ", "*)"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"allStates", "[", 
@@ -1781,7 +1775,7 @@ Cell[BoxData[{
       RowBox[{"Return", "[", "new", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "tmatrix"}], " ", "*)"}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"stateMatrix", "[", 
@@ -2266,8 +2260,9 @@ Cell[BoxData[{
    3.85660835376403*^9, 3.8566083551379843`*^9}, {3.858157005040736*^9, 
    3.858157019865037*^9}, {3.858158420573368*^9, 3.858158421573124*^9}, {
    3.858158517026004*^9, 3.858158534857421*^9}, {3.859459858554308*^9, 
-   3.859459868080611*^9}, {3.859459904133198*^9, 
-   3.859459908895793*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
+   3.859459868080611*^9}, {3.859459904133198*^9, 3.859459908895793*^9}, {
+   3.861274139856522*^9, 
+   3.8612741502139883`*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
 db12206f4eb3"]
 },
 WindowSize->{1854, 1016},
@@ -2288,7 +2283,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 99579, 2250, 10369, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+Cell[558, 20, 99461, 2245, 10315, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)
