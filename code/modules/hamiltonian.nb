@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16424,        375]
-NotebookOptionsPosition[     16104,        361]
-NotebookOutlinePosition[     16468,        377]
-CellTagsIndexPosition[     16425,        374]
+NotebookDataLength[     16616,        377]
+NotebookOptionsPosition[     16296,        363]
+NotebookOutlinePosition[     16660,        379]
+CellTagsIndexPosition[     16617,        376]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -201,6 +201,16 @@ Cell[BoxData[{
        SubsuperscriptBox["V", "SS", "radial"], " ", "*)"}], 
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
+       RowBox[{"Generate", " ", "the", " ", 
+        SubscriptBox["C", "qqq"], " ", "term", " ", "in", " ", "Hamiltonian", 
+        " ", "as", " ", "a", " ", "matrix"}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"cqqq", "=", 
+       RowBox[{
+        RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", 
+        RowBox[{"(", "Cqqq", ")"}]}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
        RowBox[{
         RowBox[{"Define", " ", 
          SubscriptBox["V", "12"], " ", "term", " ", "of", " ", "the", " ", 
@@ -218,7 +228,7 @@ Cell[BoxData[{
         FractionBox[
          RowBox[{"coeffLinear", "*", "vLinear"}], 
          RowBox[{"alphas", "[", "system", "]"}]], "+", 
-        RowBox[{"spinPart", "[", "system", "]"}]}]}], ";", 
+        RowBox[{"spinPart", "[", "system", "]"}], "-", "cqqq"}]}], ";", 
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{"Generate", " ", 
@@ -255,16 +265,7 @@ Cell[BoxData[{
         RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", 
         RowBox[{"(", 
          RowBox[{"m1", "+", "m2", "+", "m3"}], ")"}]}]}], ";", 
-      "\[IndentingNewLine]", 
-      RowBox[{"(*", " ", 
-       RowBox[{"Generate", " ", "the", " ", 
-        SubscriptBox["C", "qqq"], " ", "term", " ", "in", " ", "Hamiltonian", 
-        " ", "as", " ", "a", " ", "matrix"}], " ", "*)"}], 
-      "\[IndentingNewLine]", 
-      RowBox[{"cqqq", "=", 
-       RowBox[{
-        RowBox[{"IdentityMatrix", "[", "size", "]"}], "*", 
-        RowBox[{"(", "Cqqq", ")"}]}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
        "Combine", " ", "the", " ", "mass", " ", "and", " ", "rest", " ", "of",
@@ -272,6 +273,7 @@ Cell[BoxData[{
        " ", "*)"}], "\[IndentingNewLine]", 
       RowBox[{"kinetic", "=", 
        RowBox[{"mTot", "+", "kin"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
         RowBox[{"Combine", " ", "all", " ", "terms"}], ",", " ", 
@@ -290,13 +292,12 @@ Cell[BoxData[{
          RowBox[{"(", 
           RowBox[{
            RowBox[{"v12baryon", "[", "3", "]"}], "+", "v23baryon", "+", 
-           "v31baryon", "-", 
-           RowBox[{"3", "*", "cqqq"}]}], ")"}]}]}]}], ";", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           "v31baryon"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"Hbaryon", "=", 
        RowBox[{
         RowBox[{"Transpose", "[", "projector", "]"}], ".", "Hbaryon", ".", 
-        "projector"}]}], ";", "\[IndentingNewLine]", 
+        "projector"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"Hbaryon", "=", 
        RowBox[{"Hbaryon", "-", 
         RowBox[{
@@ -355,8 +356,9 @@ Cell[BoxData[{
    3.861337076896644*^9, 3.8613370803566723`*^9}, {3.861341215394504*^9, 
    3.861341233332185*^9}, {3.8613425388567038`*^9, 3.861342539159378*^9}, {
    3.8613425938454227`*^9, 3.861342597699291*^9}, {3.8613426544769*^9, 
-   3.861342692249618*^9}, 
-   3.861343495999728*^9},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.861342692249618*^9}, 3.861343495999728*^9, {3.861345098352008*^9, 
+   3.861345111794168*^9}, {3.861346332435357*^9, 3.861346360094396*^9}, 
+   3.861346487631526*^9},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -376,7 +378,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 15542, 339, 1461, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 15734, 341, 1573, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)

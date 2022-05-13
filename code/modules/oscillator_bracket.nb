@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    102261,       2323]
-NotebookOptionsPosition[    101867,       2308]
-NotebookOutlinePosition[    102302,       2325]
-CellTagsIndexPosition[    102259,       2322]
+NotebookDataLength[    102746,       2331]
+NotebookOptionsPosition[    102352,       2316]
+NotebookOutlinePosition[    102787,       2333]
+CellTagsIndexPosition[    102744,       2330]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -133,7 +133,7 @@ Cell[BoxData[{
         RowBox[{"l1", ",", "l2", ",", "\[CapitalLambda]"}], "}"}], ",", 
        RowBox[{"{", 
         RowBox[{"x", ",", "j1", ",", "j2"}], "}"}]}], "]"}]}]}]}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"talmi", "[", 
@@ -709,7 +709,7 @@ Cell[BoxData[{
      "]"}]}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "talmi"}], " ", "*)"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"TalmiTest", "[", "]"}], ":=", "\[IndentingNewLine]", 
@@ -1057,7 +1057,7 @@ Cell[BoxData[{
     "]"}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "allowedStatesNoSpin"}], " ", "*)"}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"combinedStatesNoSpin", "[", 
@@ -1248,7 +1248,7 @@ Cell[BoxData[{
     "]"}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "combinedStatesNoSpin"}], " ", "*)"}], 
-  "\[IndentingNewLine]"}], "\n", 
+  "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"allStates", "[", 
@@ -1775,7 +1775,7 @@ Cell[BoxData[{
       RowBox[{"Return", "[", "new", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
   RowBox[{"(*", " ", 
    RowBox[{"End", " ", "of", " ", "tmatrix"}], " ", "*)"}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"stateMatrix", "[", 
@@ -2094,6 +2094,11 @@ Cell[BoxData[{
          RowBox[{"Eigensystem", "[", 
           RowBox[{"proj12", ".", "proj23"}], "]"}]}], ";", 
         "\[IndentingNewLine]", 
+        RowBox[{"evecs", "=", 
+         RowBox[{"Orthogonalize", "[", 
+          RowBox[{"evecs", ",", 
+           RowBox[{"Method", "->", "\"\<GramSchmidt\>\""}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
         RowBox[{"Print", "[", "evals", "]"}], ";", "\[IndentingNewLine]", 
         RowBox[{"For", "[", 
          RowBox[{
@@ -2302,8 +2307,11 @@ Cell[BoxData[{
    3.861276366143005*^9, 3.861276367121221*^9}, {3.8613378886259813`*^9, 
    3.8613379804494762`*^9}, 3.861338015871798*^9, {3.8613383480065804`*^9, 
    3.861338375160945*^9}, {3.861339466083658*^9, 3.8613394708068438`*^9}, {
-   3.861339518174679*^9, 
-   3.8613395201494226`*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
+   3.861339518174679*^9, 3.8613395201494226`*^9}, {3.861353102052343*^9, 
+   3.861353147487014*^9}, {3.8613533659800167`*^9, 3.861353373295122*^9}, 
+   3.861353445642808*^9, {3.8613547834426737`*^9, 3.861354804277054*^9}, {
+   3.861441830384327*^9, 3.8614418435399427`*^9}, {3.8614421125058813`*^9, 
+   3.861442115853372*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
 db12206f4eb3"]
 },
 WindowSize->{1854, 1016},
@@ -2324,7 +2332,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 101305, 2286, 10261, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+Cell[558, 20, 101790, 2294, 10288, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)
