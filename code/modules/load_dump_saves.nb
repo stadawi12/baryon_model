@@ -10,16 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2005,         60]
-NotebookOptionsPosition[      1718,         47]
-NotebookOutlinePosition[      2052,         62]
-CellTagsIndexPosition[      2009,         59]
+NotebookDataLength[      2114,         60]
+NotebookOptionsPosition[      1827,         47]
+NotebookOutlinePosition[      2161,         62]
+CellTagsIndexPosition[      2118,         59]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
- RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", 
+ RowBox[{"Get", "[", "\"\<dumpSave/talmi.mx\>\"", 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
@@ -41,9 +41,9 @@ Cell[BoxData[{
  CellChangeTimes->{{3.861266111276026*^9, 3.861266111638094*^9}, {
   3.861266160414926*^9, 3.861266174931304*^9}, {3.8612662052638903`*^9, 
   3.861266205572001*^9}, {3.861274084492838*^9, 3.8612740931458597`*^9}, {
-  3.861855051278021*^9, 
-  3.861855060844083*^9}},ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-\
-caa4e9814e5f"]
+  3.861855051278021*^9, 3.861855060844083*^9}, {3.862027759924959*^9, 
+  3.862027781053376*^9}, {3.8620285027483788`*^9, 3.8620285030085163`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
 },
 WindowSize->{808, 911},
 WindowMargins->{{490, Automatic}, {0, Automatic}},
@@ -61,7 +61,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1156, 25, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
+Cell[558, 20, 1265, 25, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
 }
 ]
 *)
