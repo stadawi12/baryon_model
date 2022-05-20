@@ -10,16 +10,18 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2114,         60]
-NotebookOptionsPosition[      1827,         47]
-NotebookOutlinePosition[      2161,         62]
-CellTagsIndexPosition[      2118,         59]
+NotebookDataLength[      2490,         71]
+NotebookOptionsPosition[      2077,         55]
+NotebookOutlinePosition[      2411,         70]
+CellTagsIndexPosition[      2368,         67]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{"Get", "[", "\"\<dumpSave/talmi.mx\>\"", 
+ RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", 
   "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
@@ -42,8 +44,14 @@ Cell[BoxData[{
   3.861266160414926*^9, 3.861266174931304*^9}, {3.8612662052638903`*^9, 
   3.861266205572001*^9}, {3.861274084492838*^9, 3.8612740931458597`*^9}, {
   3.861855051278021*^9, 3.861855060844083*^9}, {3.862027759924959*^9, 
-  3.862027781053376*^9}, {3.8620285027483788`*^9, 3.8620285030085163`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
+  3.862027781053376*^9}, {3.8620285027483788`*^9, 3.8620285030085163`*^9}, {
+  3.862031971706925*^9, 3.8620319724720993`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.862031974132601*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"d76a625a-cfe6-46c7-97cb-a3899b975be7"]
+}, Open  ]]
 },
 WindowSize->{808, 911},
 WindowMargins->{{490, Automatic}, {0, Automatic}},
@@ -61,7 +69,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1265, 25, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
+Cell[CellGroupData[{
+Cell[580, 22, 1324, 26, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"],
+Cell[1907, 50, 154, 2, 68, "Output",ExpressionUUID->"d76a625a-cfe6-46c7-97cb-a3899b975be7"]
+}, Open  ]]
 }
 ]
 *)
