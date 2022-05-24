@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16616,        377]
-NotebookOptionsPosition[     16296,        363]
-NotebookOutlinePosition[     16660,        379]
-CellTagsIndexPosition[     16617,        376]
+NotebookDataLength[     16579,        375]
+NotebookOptionsPosition[     16259,        361]
+NotebookOutlinePosition[     16623,        377]
+CellTagsIndexPosition[     16580,        374]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,11 +36,10 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"{", " ", 
       RowBox[{
-      "alphas", ",", "coeffss", ",", "sigmasqrds", ",", "p", ",", "sM", ",", 
-       "vCoulomb", ",", "vLinear", ",", "spinPart", ",", "v12baryon", ",", 
-       "v23baryon", ",", "v31baryon", ",", "kin", ",", "mTot", ",", "cqqq", 
-       ",", "kinetic", ",", "Hbaryon", ",", "size"}], "}"}], ",", 
-     "\[IndentingNewLine]", 
+      "alphas", ",", "coeffss", ",", "sigmasqrds", ",", "p", ",", "spinPart", 
+       ",", "v12baryon", ",", "v23baryon", ",", "v31baryon", ",", "kin", ",", 
+       "mTot", ",", "cqqq", ",", "kinetic", ",", "Hbaryon", ",", "size"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{
       "THIS", " ", "FUNCTION", " ", "RETURNS", " ", "THE", " ", "BARYON", " ",
@@ -162,11 +161,6 @@ Cell[BoxData[{
        "Generate", " ", "an", " ", "auxiliary", " ", "matrix", " ", "of", " ",
          "all", " ", "state", " ", "sandwiches"}], " ", "*)"}], 
       "\[IndentingNewLine]", 
-      RowBox[{"sM", "=", 
-       RowBox[{"stateMatrix", "[", 
-        RowBox[{
-        "J", ",", "P", ",", "\[CapitalLambda]", ",", "S", ",", 
-         "\[Gamma]Max"}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"size", "=", 
        RowBox[{"Length", "[", "sM", "]"}]}], ";", "\[IndentingNewLine]", 
       "\[IndentingNewLine]", 
@@ -174,20 +168,22 @@ Cell[BoxData[{
        RowBox[{
        "Define", " ", "potential", " ", "terms", " ", "in", " ", "the", " ", 
         "12", " ", "frame"}], " ", "*)"}], "\[IndentingNewLine]", 
-      RowBox[{"vCoulomb", "=", 
-       RowBox[{"polynomialOperatorRho", "[", 
-        RowBox[{"sM", ",", 
-         RowBox[{"-", "1"}]}], "]"}]}], ";", 
-      RowBox[{"(*", " ", 
+      RowBox[{"(*", 
        RowBox[{
-        FractionBox["1", "\[Rho]"], " ", "matrix", " ", "dimensionless"}], 
-       " ", "*)"}], "\[IndentingNewLine]", 
-      RowBox[{"vLinear", "=", 
-       RowBox[{"polynomialOperatorRho", "[", 
-        RowBox[{"sM", ",", "1"}], "]"}]}], ";", 
-      RowBox[{"(*", " ", 
-       RowBox[{"\[Rho]", " ", "matrix", " ", "dimensionless"}], " ", "*)"}], 
-      "\[IndentingNewLine]", 
+        RowBox[{"vCoulomb", "=", 
+         RowBox[{"polynomialOperatorRho", "[", 
+          RowBox[{"sM", ",", 
+           RowBox[{"-", "1"}]}], "]"}]}], ";", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+          FractionBox["1", "\[Rho]"], " ", "matrix", " ", "dimensionless"}], 
+         " ", "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"vLinear", "=", 
+         RowBox[{"polynomialOperatorRho", "[", 
+          RowBox[{"sM", ",", "1"}], "]"}]}], ";"}], 
+       RowBox[{"(*", " ", 
+        RowBox[{"\[Rho]", " ", "matrix", " ", "dimensionless"}], " ", "*)"}], 
+       "*)"}], "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"spinPart", "[", "system_", "]"}], ":=", 
        RowBox[{
@@ -358,7 +354,9 @@ Cell[BoxData[{
    3.8613425938454227`*^9, 3.861342597699291*^9}, {3.8613426544769*^9, 
    3.861342692249618*^9}, 3.861343495999728*^9, {3.861345098352008*^9, 
    3.861345111794168*^9}, {3.861346332435357*^9, 3.861346360094396*^9}, 
-   3.861346487631526*^9},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.861346487631526*^9, {3.8623813242693653`*^9, 3.862381335756247*^9}, {
+   3.8623814004044867`*^9, 3.86238140073035*^9}, {3.862381458984435*^9, 
+   3.862381459136054*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -378,7 +376,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 15734, 341, 1573, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 15697, 339, 1545, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
