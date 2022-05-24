@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    102721,       2331]
-NotebookOptionsPosition[    102327,       2316]
-NotebookOutlinePosition[    102762,       2333]
-CellTagsIndexPosition[    102719,       2330]
+NotebookDataLength[    104002,       2363]
+NotebookOptionsPosition[    103608,       2348]
+NotebookOutlinePosition[    104043,       2365]
+CellTagsIndexPosition[    104000,       2362]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -133,111 +133,26 @@ Cell[BoxData[{
         RowBox[{"l1", ",", "l2", ",", "\[CapitalLambda]"}], "}"}], ",", 
        RowBox[{"{", 
         RowBox[{"x", ",", "j1", ",", "j2"}], "}"}]}], "]"}]}]}]}], 
-  "\n"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}], "\n", 
  RowBox[{
   RowBox[{
-   RowBox[{"talmi", "[", 
+   RowBox[{"summationVariables", "[", 
     RowBox[{
-    "n1_", ",", "l1_", ",", "n2_", ",", "l2_", ",", "n_", ",", "l_", ",", 
-     "nN_", ",", "L_", ",", "\[CapitalLambda]_", ",", "\[Theta]_"}], "]"}], ":=", 
+    "n1_", ",", "l1_", ",", "n2_", ",", "l2_", ",", "nN_", ",", "L_", ",", 
+     "n_", ",", "l_"}], "]"}], ":=", 
    RowBox[{
-    RowBox[{"talmi", "[", 
+    RowBox[{"summationVariables", "[", 
      RowBox[{
-     "n1", ",", "l1", ",", "n2", ",", "l2", ",", "n", ",", "l", ",", "nN", 
-      ",", "L", ",", "\[CapitalLambda]", ",", "\[Theta]"}], "]"}], "=", 
-    "\[IndentingNewLine]", 
-    RowBox[{"(*", 
-     RowBox[{
-      RowBox[{
-       RowBox[{
-        RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{" ", 
-            RowBox[{
-             RowBox[{
-             "This", " ", "function", " ", "calculates", " ", "the", " ", 
-              "talmi", " ", "coefficient"}], ",", " ", 
-             RowBox[{
-             "the", " ", "talmi", " ", "coefficient", " ", "is", " ", 
-              "defined", " ", "as", " ", "in", " ", 
-              RowBox[{"Buck", "'"}], "s", " ", "paper"}], ",", 
-             "\[IndentingNewLine]", "\[IndentingNewLine]", 
-             RowBox[{"Talmi", " ", 
-              RowBox[{
-              "transformation", ":", "\[IndentingNewLine]", 
-               "\[IndentingNewLine]", 
-               RowBox[{"\[LeftBracketingBar]", 
-                RowBox[{
-                 RowBox[{
-                  SubscriptBox["n", "1"], 
-                  SubscriptBox["l", "1"], 
-                  RowBox[{"(", "\[Rho]", ")"}]}], ",", " ", 
-                 RowBox[{
-                  RowBox[{
-                   SubscriptBox["n", "2"], 
-                   SubscriptBox["l", "2"], 
-                   RowBox[{"(", "\[Lambda]", ")"}]}], ":", " ", 
-                  "\[CapitalLambda]"}]}]}]}]}]}], "\[RightAngleBracket]"}], 
-           " ", "=", " ", 
-           RowBox[{
-            RowBox[{
-             UnderscriptBox["\[Sum]", "NLnl"], " ", 
-             RowBox[{"\[LeftAngleBracket]", 
-              RowBox[{"nl", ",", " ", 
-               RowBox[{"NL", ":", " ", 
-                RowBox[{"\[CapitalLambda]", "|", 
-                 RowBox[{
-                  SubscriptBox["n", "1"], 
-                  SubscriptBox["l", "1"]}]}]}], ",", " ", 
-               RowBox[{
-                SubscriptBox["n", "2"], 
-                RowBox[{
-                 SubscriptBox["l", "2"], ":", " ", "\[CapitalLambda]"}]}]}], 
-              "\[RightAngleBracket]"}]}], "|", 
-            RowBox[{"nl", 
-             RowBox[{"(", 
-              SubscriptBox["\[Rho]", "i"], ")"}]}]}]}], ",", 
-          RowBox[{"NL", 
-           RowBox[{"(", 
-            SubscriptBox["\[Lambda]", "i"], ")"}]}]}], 
-         "\[RightAngleBracket]"}], " ", "for", " ", "i"}], "=", "1"}], ",", 
-      RowBox[{
-       RowBox[{
-       "2", "\[IndentingNewLine]", "\[IndentingNewLine]", "talmi", " ", 
-        "coefficient"}], " ", "=", " ", 
-       RowBox[{
-        RowBox[{"\[LeftAngleBracket]", 
-         RowBox[{"nl", ",", " ", 
-          RowBox[{"NL", ":", " ", 
-           RowBox[{"\[CapitalLambda]", "|", 
-            RowBox[{
-             SubscriptBox["n", "1"], 
-             SubscriptBox["l", "1"]}]}]}], ",", " ", 
-          RowBox[{
-           SubscriptBox["n", "2"], 
-           RowBox[{
-            SubscriptBox["l", "2"], ":", " ", "\[CapitalLambda]"}]}]}], 
-         "\[RightAngleBracket]"}], "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{"\[Theta]", ":", " ", 
-         RowBox[{
-         "float", "\[IndentingNewLine]", "Angle", " ", "between", " ", "new", 
-          " ", "and", " ", "old", " ", "coordinate", " ", "frame", 
-          "\[IndentingNewLine]", "\[IndentingNewLine]", "This", " ", 
-          "function", " ", "returns", " ", "a", " ", "single", " ", "float", 
-          " ", "corresponding", " ", "to", " ", "the", " ", "talmi", " ", 
-          "coefficient", " ", "as", " ", "defined", " ", "above"}]}]}]}]}], 
-     "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+     "n1", ",", "l1", ",", "n2", ",", "l2", ",", "nN", ",", "L", ",", "n", 
+      ",", "l"}], "]"}], "=", 
     RowBox[{"Module", "[", 
      RowBox[{
       RowBox[{"{", 
        RowBox[{
        "fMatrix", ",", "ListOfFs", ",", "aMatrix", ",", "amin", ",", "bmin", 
         ",", "cmin", ",", "dmin", ",", "SummationVariables", ",", "a", ",", 
-        "b", ",", "c", ",", "d", ",", "la", ",", "lb", ",", "lc", ",", "ld", 
-        ",", "sum", ",", "coeff", ",", "y", ",", "t", ",", "i", ",", "J"}], 
-       "}"}], ",", "\[IndentingNewLine]", 
+        "b", ",", "c", ",", "d", ",", "la", ",", "lb", ",", "lc", ",", "ld"}],
+        "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"fMatrix", "=", 
         RowBox[{"{", 
@@ -463,11 +378,126 @@ Cell[BoxData[{
                     RowBox[{"AppendTo", "[", 
                     RowBox[{"SummationVariables", ",", 
                     RowBox[{"{", 
-                    RowBox[{"a", ",", "b", ",", "c", ",", "d", ",", "la", ",",
-                     "lb", ",", "lc", ",", "ld"}], "}"}]}], "]"}]}], "]"}]}], 
+                    RowBox[{
+                    "a", ",", "b", ",", "c", ",", "d", ",", "la", ",", "lb", 
+                    ",", "lc", ",", "ld"}], "}"}]}], "]"}]}], "]"}]}], 
                     "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], 
                     "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], "]"}]}], 
               "]"}]}], "]"}]}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", "SummationVariables", "]"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}]}], 
+  RowBox[{"(*", " ", 
+   RowBox[{"end", " ", "of", " ", "summationVariables"}], " ", "*)"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"talmi", "[", 
+    RowBox[{
+    "n1_", ",", "l1_", ",", "n2_", ",", "l2_", ",", "n_", ",", "l_", ",", 
+     "nN_", ",", "L_", ",", "\[CapitalLambda]_", ",", "\[Theta]_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"talmi", "[", 
+     RowBox[{
+     "n1", ",", "l1", ",", "n2", ",", "l2", ",", "n", ",", "l", ",", "nN", 
+      ",", "L", ",", "\[CapitalLambda]", ",", "\[Theta]"}], "]"}], "=", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{" ", 
+            RowBox[{
+             RowBox[{
+             "This", " ", "function", " ", "calculates", " ", "the", " ", 
+              "talmi", " ", "coefficient"}], ",", " ", 
+             RowBox[{
+             "the", " ", "talmi", " ", "coefficient", " ", "is", " ", 
+              "defined", " ", "as", " ", "in", " ", 
+              RowBox[{"Buck", "'"}], "s", " ", "paper"}], ",", 
+             "\[IndentingNewLine]", "\[IndentingNewLine]", 
+             RowBox[{"Talmi", " ", 
+              RowBox[{
+              "transformation", ":", "\[IndentingNewLine]", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\[LeftBracketingBar]", 
+                RowBox[{
+                 RowBox[{
+                  SubscriptBox["n", "1"], 
+                  SubscriptBox["l", "1"], 
+                  RowBox[{"(", "\[Rho]", ")"}]}], ",", " ", 
+                 RowBox[{
+                  RowBox[{
+                   SubscriptBox["n", "2"], 
+                   SubscriptBox["l", "2"], 
+                   RowBox[{"(", "\[Lambda]", ")"}]}], ":", " ", 
+                  "\[CapitalLambda]"}]}]}]}]}]}], "\[RightAngleBracket]"}], 
+           " ", "=", " ", 
+           RowBox[{
+            RowBox[{
+             UnderscriptBox["\[Sum]", "NLnl"], " ", 
+             RowBox[{"\[LeftAngleBracket]", 
+              RowBox[{"nl", ",", " ", 
+               RowBox[{"NL", ":", " ", 
+                RowBox[{"\[CapitalLambda]", "|", 
+                 RowBox[{
+                  SubscriptBox["n", "1"], 
+                  SubscriptBox["l", "1"]}]}]}], ",", " ", 
+               RowBox[{
+                SubscriptBox["n", "2"], 
+                RowBox[{
+                 SubscriptBox["l", "2"], ":", " ", "\[CapitalLambda]"}]}]}], 
+              "\[RightAngleBracket]"}]}], "|", 
+            RowBox[{"nl", 
+             RowBox[{"(", 
+              SubscriptBox["\[Rho]", "i"], ")"}]}]}]}], ",", 
+          RowBox[{"NL", 
+           RowBox[{"(", 
+            SubscriptBox["\[Lambda]", "i"], ")"}]}]}], 
+         "\[RightAngleBracket]"}], " ", "for", " ", "i"}], "=", "1"}], ",", 
+      RowBox[{
+       RowBox[{
+       "2", "\[IndentingNewLine]", "\[IndentingNewLine]", "talmi", " ", 
+        "coefficient"}], " ", "=", " ", 
+       RowBox[{
+        RowBox[{"\[LeftAngleBracket]", 
+         RowBox[{"nl", ",", " ", 
+          RowBox[{"NL", ":", " ", 
+           RowBox[{"\[CapitalLambda]", "|", 
+            RowBox[{
+             SubscriptBox["n", "1"], 
+             SubscriptBox["l", "1"]}]}]}], ",", " ", 
+          RowBox[{
+           SubscriptBox["n", "2"], 
+           RowBox[{
+            SubscriptBox["l", "2"], ":", " ", "\[CapitalLambda]"}]}]}], 
+         "\[RightAngleBracket]"}], "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"\[Theta]", ":", " ", 
+         RowBox[{
+         "float", "\[IndentingNewLine]", "Angle", " ", "between", " ", "new", 
+          " ", "and", " ", "old", " ", "coordinate", " ", "frame", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", "This", " ", 
+          "function", " ", "returns", " ", "a", " ", "single", " ", "float", 
+          " ", "corresponding", " ", "to", " ", "the", " ", "talmi", " ", 
+          "coefficient", " ", "as", " ", "defined", " ", "above"}]}]}]}]}], 
+     "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "SummationVariables", ",", "a", ",", "b", ",", "c", ",", "d", ",", 
+        "la", ",", "lb", ",", "lc", ",", "ld", ",", "sum", ",", "coeff", ",", 
+        "y", ",", "t", ",", "i", ",", "J"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"SummationVariables", "=", 
+        RowBox[{"summationVariables", "[", 
+         RowBox[{
+         "n1", ",", "l1", ",", "n2", ",", "l2", ",", "nN", ",", "L", ",", "n",
+           ",", "l"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"sum", "=", 
         RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"coeff", "=", 
@@ -2310,8 +2340,10 @@ Cell[BoxData[{
    3.861353147487014*^9}, {3.8613533659800167`*^9, 3.861353373295122*^9}, 
    3.861353445642808*^9, {3.8613547834426737`*^9, 3.861354804277054*^9}, {
    3.861441830384327*^9, 3.8614418435399427`*^9}, {3.8614421125058813`*^9, 
-   3.861442115853372*^9}, {3.862031915159933*^9, 
-   3.862031915297619*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
+   3.861442115853372*^9}, {3.862031915159933*^9, 3.862031915297619*^9}, {
+   3.8623820217256927`*^9, 3.862382062009164*^9}, {3.862382239650737*^9, 
+   3.862382451829678*^9}, {3.862383976858292*^9, 
+   3.8623839830727*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
 db12206f4eb3"]
 },
 WindowSize->{1854, 1016},
@@ -2332,7 +2364,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 101765, 2294, 10261, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+Cell[558, 20, 103046, 2326, 10423, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)

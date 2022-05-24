@@ -10,18 +10,24 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2272,         67]
-NotebookOptionsPosition[      1986,         54]
-NotebookOutlinePosition[      2319,         69]
-CellTagsIndexPosition[      2276,         66]
+NotebookDataLength[      2523,         74]
+NotebookOptionsPosition[      2237,         61]
+NotebookOutlinePosition[      2570,         76]
+CellTagsIndexPosition[      2527,         73]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", "]"}], 
-  ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "Get", "[", "\"\<modules/dumpSave/summationVariables.mx\>\"", "]"}], ";"}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", "]"}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Get", "[", "\"\<modules/dumpSave/nineJ.mx\>\"", "]"}], 
   ";"}], "\[IndentingNewLine]", 
@@ -44,12 +50,13 @@ Cell[BoxData[{
     RowBox[{"Get", "[", "\"\<modules/dumpSave/delta3.mx\>\"", "]"}]}], 
    "*)"}]}]}], "Input",
  CellChangeTimes->{{3.861266111276026*^9, 3.861266111638094*^9}, {
-  3.861266160414926*^9, 3.861266174931304*^9}, {3.8612662052638903`*^9, 
-  3.861266205572001*^9}, {3.861274084492838*^9, 3.8612740931458597`*^9}, {
-  3.861855051278021*^9, 3.861855060844083*^9}, {3.862027759924959*^9, 
-  3.862027781053376*^9}, {3.8620285027483788`*^9, 3.8620285030085163`*^9}, {
-  3.862031971706925*^9, 3.8620319724720993`*^9}, {3.8623804926455812`*^9, 
-  3.862380516141206*^9}},ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-\
+   3.861266160414926*^9, 3.861266174931304*^9}, {3.8612662052638903`*^9, 
+   3.861266205572001*^9}, {3.861274084492838*^9, 3.8612740931458597`*^9}, {
+   3.861855051278021*^9, 3.861855060844083*^9}, {3.862027759924959*^9, 
+   3.862027781053376*^9}, {3.8620285027483788`*^9, 3.8620285030085163`*^9}, {
+   3.862031971706925*^9, 3.8620319724720993`*^9}, {3.8623804926455812`*^9, 
+   3.862380516141206*^9}, {3.8623829966481457`*^9, 3.862383013421529*^9}, 
+   3.862392974870614*^9},ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-\
 caa4e9814e5f"]
 },
 WindowSize->{927, 1016},
@@ -68,7 +75,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1424, 32, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
+Cell[558, 20, 1675, 39, 216, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
 }
 ]
 *)
