@@ -10,30 +10,33 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2490,         71]
-NotebookOptionsPosition[      2077,         55]
-NotebookOutlinePosition[      2411,         70]
-CellTagsIndexPosition[      2368,         67]
+NotebookDataLength[      2272,         67]
+NotebookOptionsPosition[      1986,         54]
+NotebookOutlinePosition[      2319,         69]
+CellTagsIndexPosition[      2276,         66]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", 
-  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<modules/dumpSave/talmi.mx\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<modules/dumpSave/nineJ.mx\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<modules/dumpSave/rel.mx\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<modules/dumpSave/Rcoeff.mx\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<modules/dumpSave/Lcoeff.mx\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
    RowBox[{
-    RowBox[{"Get", "[", "\"\<modules/dumpSave/nineJ.mx\>\"", "]"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"Get", "[", "\"\<modules/dumpSave/rel.mx\>\"", "]"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"Get", "[", "\"\<modules/dumpSave/Rcoeff.mx\>\"", "]"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"Get", "[", "\"\<modules/dumpSave/Lcoeff.mx\>\"", "]"}], 
-    "\[IndentingNewLine]", 
     RowBox[{"Get", "[", "\"\<modules/dumpSave/gaussKsum.mx\>\"", "]"}], 
     "\[IndentingNewLine]", 
     RowBox[{"Get", "[", "\"\<modules/dumpSave/hamiltonian.mx\>\"", "]"}], 
@@ -45,16 +48,12 @@ Cell[BoxData[{
   3.861266205572001*^9}, {3.861274084492838*^9, 3.8612740931458597`*^9}, {
   3.861855051278021*^9, 3.861855060844083*^9}, {3.862027759924959*^9, 
   3.862027781053376*^9}, {3.8620285027483788`*^9, 3.8620285030085163`*^9}, {
-  3.862031971706925*^9, 3.8620319724720993`*^9}},
- CellLabel->"In[1]:=",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{3.862031974132601*^9},
- CellLabel->"Out[1]=",ExpressionUUID->"d76a625a-cfe6-46c7-97cb-a3899b975be7"]
-}, Open  ]]
+  3.862031971706925*^9, 3.8620319724720993`*^9}, {3.8623804926455812`*^9, 
+  3.862380516141206*^9}},ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-\
+caa4e9814e5f"]
 },
-WindowSize->{808, 911},
-WindowMargins->{{490, Automatic}, {0, Automatic}},
+WindowSize->{927, 1016},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -69,10 +68,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 1324, 26, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"],
-Cell[1907, 50, 154, 2, 68, "Output",ExpressionUUID->"d76a625a-cfe6-46c7-97cb-a3899b975be7"]
-}, Open  ]]
+Cell[558, 20, 1424, 32, 193, "Input",ExpressionUUID->"76f3bbf5-8ab8-44f5-adc6-caa4e9814e5f"]
 }
 ]
 *)
