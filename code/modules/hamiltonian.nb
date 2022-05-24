@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16579,        375]
-NotebookOptionsPosition[     16259,        361]
-NotebookOutlinePosition[     16623,        377]
-CellTagsIndexPosition[     16580,        374]
+NotebookDataLength[     16149,        364]
+NotebookOptionsPosition[     15829,        350]
+NotebookOutlinePosition[     16193,        366]
+CellTagsIndexPosition[     16150,        363]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,15 +23,12 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"Hb", "[", 
    RowBox[{
-   "J_", ",", "P_", ",", "Isospin_", ",", "\[CapitalLambda]_", ",", "S_", ",",
-     "\[Gamma]Max_", ",", "\[Omega]_", ",", "m1_", ",", "m2_", ",", "m3_", 
-    ",", "projector_"}], "]"}], ":=", "\[IndentingNewLine]", 
+   "\[Omega]_", ",", "m1_", ",", "m2_", ",", "m3_", ",", "projector_"}], 
+   "]"}], ":=", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"Hb", "[", 
-    RowBox[{
-    "J", ",", "P", ",", "Isospin", ",", "\[CapitalLambda]", ",", "S", ",", 
-     "\[Gamma]Max", ",", "\[Omega]", ",", "m1", ",", "m2", ",", "m3", ",", 
-     "project"}], "]"}], "=", 
+    RowBox[{"\[Omega]", ",", "m1", ",", "m2", ",", "m3", ",", "projector"}], 
+    "]"}], "=", 
    RowBox[{"Module", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"{", " ", 
@@ -168,22 +165,6 @@ Cell[BoxData[{
        RowBox[{
        "Define", " ", "potential", " ", "terms", " ", "in", " ", "the", " ", 
         "12", " ", "frame"}], " ", "*)"}], "\[IndentingNewLine]", 
-      RowBox[{"(*", 
-       RowBox[{
-        RowBox[{"vCoulomb", "=", 
-         RowBox[{"polynomialOperatorRho", "[", 
-          RowBox[{"sM", ",", 
-           RowBox[{"-", "1"}]}], "]"}]}], ";", 
-        RowBox[{"(*", " ", 
-         RowBox[{
-          FractionBox["1", "\[Rho]"], " ", "matrix", " ", "dimensionless"}], 
-         " ", "*)"}], "\[IndentingNewLine]", 
-        RowBox[{"vLinear", "=", 
-         RowBox[{"polynomialOperatorRho", "[", 
-          RowBox[{"sM", ",", "1"}], "]"}]}], ";"}], 
-       RowBox[{"(*", " ", 
-        RowBox[{"\[Rho]", " ", "matrix", " ", "dimensionless"}], " ", "*)"}], 
-       "*)"}], "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"spinPart", "[", "system_", "]"}], ":=", 
        RowBox[{
@@ -248,9 +229,13 @@ Cell[BoxData[{
         "the", " ", "kinetic", " ", "term"}], "  ", "*)"}], 
       "\[IndentingNewLine]", 
       RowBox[{"kin", "=", 
-       RowBox[{"kMatrix", "[", 
-        RowBox[{"sM", ",", "\[Omega]", ",", "m1", ",", "m2", ",", "m3"}], 
-        "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"\[Omega]", "*", "qhoSpect"}], "-", 
+        RowBox[{
+         FractionBox["\[Omega]", "2"], "*", "kineticRho"}], "-", 
+        RowBox[{
+         FractionBox["\[Omega]", "2"], "*", "kineticLam"}]}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{"Generate", " ", "the", " ", 
         SubscriptBox["m", "i"], " ", "terms", " ", "in", " ", "the", " ", 
@@ -356,7 +341,11 @@ Cell[BoxData[{
    3.861345111794168*^9}, {3.861346332435357*^9, 3.861346360094396*^9}, 
    3.861346487631526*^9, {3.8623813242693653`*^9, 3.862381335756247*^9}, {
    3.8623814004044867`*^9, 3.86238140073035*^9}, {3.862381458984435*^9, 
-   3.862381459136054*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.862381459136054*^9}, {3.862394974168898*^9, 3.862395172062871*^9}, {
+   3.862395268500869*^9, 3.8623953332818937`*^9}, {3.8623954428915977`*^9, 
+   3.862395443399766*^9}, {3.862395475502071*^9, 3.8623954760270033`*^9}, {
+   3.8623955593028307`*^9, 3.8623955593741426`*^9}, {3.8623957181337557`*^9, 
+   3.862395721808276*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -376,7 +365,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 15697, 339, 1545, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 15267, 328, 1496, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
