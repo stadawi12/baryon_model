@@ -1,0 +1,238 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9077,        228]
+NotebookOptionsPosition[      8659,        212]
+NotebookOutlinePosition[      8993,        227]
+CellTagsIndexPosition[      8950,        224]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v1", ",", "v2", ",", "v3", ",", "v4"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"v1", "[", 
+        RowBox[{"r_", ",", "t_"}], "]"}], ":=", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"-", "1"}], "r"], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "-", "t"}], ")"}], "*", "r"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"v2", "[", 
+        RowBox[{"r_", ",", "t_"}], "]"}], ":=", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"-", "1"}], "r"], "+", 
+        RowBox[{
+         SqrtBox[
+          RowBox[{"1", "-", "t"}]], "*", "r"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"v3", "[", 
+        RowBox[{"r_", ",", "t_"}], "]"}], ":=", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"-", "1"}], "r"], "+", 
+        RowBox[{
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            SuperscriptBox["t", "2"], "1"]}]], "*", "r"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"v4", "[", 
+        RowBox[{"r_", ",", "t_"}], "]"}], ":=", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "t"], 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           SuperscriptBox["E", 
+            RowBox[{
+             RowBox[{"-", "t"}], "*", "r"}]]}], ")"}]}], "-", 
+        RowBox[{
+         FractionBox["1", "r"], 
+         SuperscriptBox["E", 
+          RowBox[{
+           RowBox[{"-", "t"}], "*", "r"}]]}]}]}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"v1", "[", 
+           RowBox[{"r", ",", "t"}], "]"}], ",", 
+          RowBox[{"v2", "[", 
+           RowBox[{"r", ",", "t"}], "]"}], ",", 
+          RowBox[{"v3", "[", 
+           RowBox[{"r", ",", "t"}], "]"}], ",", 
+          RowBox[{"v4", "[", 
+           RowBox[{"r", ",", "t"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"r", ",", "0.001", ",", "5"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "5"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "}"}]}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"PlotLegends", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<1-t\>\"", ",", "\"\<\!\(\*SqrtBox[\(1 - t\)]\)\>\"", ",", 
+           "\"\<\!\(\*SqrtBox[\(1 - \*SuperscriptBox[\(t\), \(2\)]\)]\)\>\"", 
+           ",", "\"\<~\!\(\*SuperscriptBox[\(\[ExponentialE]\), \
+\(-tr\)]\)\>\""}], "}"}]}]}], "\[IndentingNewLine]", "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0.001", ",", "1"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8624673497174673`*^9, 3.862467418440716*^9}, {
+  3.862467450237913*^9, 3.862467522092639*^9}, {3.8624675654216223`*^9, 
+  3.862467578314769*^9}, {3.862467726952353*^9, 3.8624677983789387`*^9}, {
+  3.862467864222609*^9, 3.862467890803503*^9}, {3.862467964879126*^9, 
+  3.862467974045453*^9}, {3.862468013011722*^9, 3.862468025735345*^9}, {
+  3.8624681624874*^9, 3.8624682014726973`*^9}, {3.8624682315969477`*^9, 
+  3.862468232179323*^9}, {3.86246831431745*^9, 3.862468442526103*^9}, {
+  3.862468485405795*^9, 3.862468485531307*^9}, {3.862468520119772*^9, 
+  3.8624685212134542`*^9}, {3.8624689891522818`*^9, 3.8624690608433857`*^9}, {
+  3.8624691352712107`*^9, 3.862469135451988*^9}, {3.8624691673367*^9, 
+  3.8624691985766077`*^9}, {3.862473657114357*^9, 3.8624736583297873`*^9}, {
+  3.862473735074739*^9, 3.8624738689966297`*^9}, {3.862473919025323*^9, 
+  3.862474128094329*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"dab0a262-e365-44cf-a436-98e2130ed444"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 0.54501863489151, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0.001, 1}}, Typeset`size$$ = {
+    458., {103., 109.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`t$739559$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0.001}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$739559$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`v1$, $CellContext`v2$, $CellContext`v3$, \
+$CellContext`v4$}, $CellContext`v1$[
+           Pattern[$CellContext`r, 
+            Blank[]], 
+           Pattern[$CellContext`t, 
+            Blank[]]] := (-1)/$CellContext`r + (
+            1 - $CellContext`t) $CellContext`r; $CellContext`v2$[
+           Pattern[$CellContext`r, 
+            Blank[]], 
+           Pattern[$CellContext`t, 
+            Blank[]]] := (-1)/$CellContext`r + 
+          Sqrt[1 - $CellContext`t] $CellContext`r; $CellContext`v3$[
+           Pattern[$CellContext`r, 
+            Blank[]], 
+           Pattern[$CellContext`t, 
+            Blank[]]] := (-1)/$CellContext`r + 
+          Sqrt[1 - $CellContext`t^2/1] $CellContext`r; $CellContext`v4$[
+           Pattern[$CellContext`r, 
+            Blank[]], 
+           Pattern[$CellContext`t, 
+            Blank[]]] := (1/$CellContext`t) (1 - 
+            E^((-$CellContext`t) $CellContext`r)) - (1/$CellContext`r) 
+          E^((-$CellContext`t) $CellContext`r); Plot[{
+           $CellContext`v1$[$CellContext`r, $CellContext`t$$], 
+           $CellContext`v2$[$CellContext`r, $CellContext`t$$], 
+           $CellContext`v3$[$CellContext`r, $CellContext`t$$], 
+           $CellContext`v4$[$CellContext`r, $CellContext`t$$]}, \
+{$CellContext`r, 0.001, 5}, PlotRange -> {{0, 5}, {-5, 5}}, 
+          PlotLegends -> {
+           "1-t", "\!\(\*SqrtBox[\(1 - t\)]\)", 
+            "\!\(\*SqrtBox[\(1 - \*SuperscriptBox[\(t\), \(2\)]\)]\)", 
+            "~\!\(\*SuperscriptBox[\(\[ExponentialE]\), \(-tr\)]\)"}]], 
+      "Specifications" :> {{$CellContext`t$$, 0.001, 1, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{505., {138., 145.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.8624680286359787`*^9, {3.8624681785469027`*^9, 3.862468202459158*^9}, 
+   3.862468232779724*^9, {3.862468323445821*^9, 3.862468334944078*^9}, {
+   3.8624683818858337`*^9, 3.8624683945755377`*^9}, 3.8624684433986073`*^9, 
+   3.8624684866554193`*^9, 3.862468522217568*^9, 3.8624690612599154`*^9, {
+   3.862469140237162*^9, 3.8624691692488813`*^9}, 3.862473646751277*^9, {
+   3.862473807178495*^9, 3.8624738694124117`*^9}, 3.8624739274359083`*^9, {
+   3.862473967370442*^9, 3.862474003682764*^9}, {3.862474035091367*^9, 
+   3.862474128752931*^9}},
+ CellLabel->"Out[41]=",ExpressionUUID->"30637391-c72d-44cf-a2e3-c2db95f3f4eb"]
+}, Open  ]]
+},
+WindowSize->{1854, 1016},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4013, 106, 418, "Input",ExpressionUUID->"dab0a262-e365-44cf-a436-98e2130ed444"],
+Cell[4596, 130, 4047, 79, 359, "Output",ExpressionUUID->"30637391-c72d-44cf-a2e3-c2db95f3f4eb"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
