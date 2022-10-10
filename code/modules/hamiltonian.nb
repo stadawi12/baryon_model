@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19147,        425]
-NotebookOptionsPosition[     18827,        411]
-NotebookOutlinePosition[     19191,        427]
-CellTagsIndexPosition[     19148,        424]
+NotebookDataLength[     19402,        430]
+NotebookOptionsPosition[     19082,        416]
+NotebookOutlinePosition[     19446,        432]
+CellTagsIndexPosition[     19403,        429]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -55,7 +55,7 @@ Cell[BoxData[{
             UnderoverscriptBox["\[Sum]", 
              RowBox[{"i", "=", "1"}], "3"], 
             SubscriptBox["m", "i"]}], "]"}], "+", 
-          RowBox[{"\[Omega]", 
+          RowBox[{"\[Omega]", "*", 
            RowBox[{"(", 
             RowBox[{
              RowBox[{"2", 
@@ -63,11 +63,9 @@ Cell[BoxData[{
              SubscriptBox["l", "\[Rho]"], "+", 
              RowBox[{"3", "/", "2"}]}], ")"}]}], "-", 
           RowBox[{
-           FractionBox["1", "2"], 
-           SubscriptBox["\[Mu]", "\[Rho]"], 
-           SuperscriptBox["\[Omega]", "2"], 
+           FractionBox["1", "2"], "\[Omega]", "*", 
            SuperscriptBox["\[Rho]", "2"]}], "+", 
-          RowBox[{"\[Omega]", 
+          RowBox[{"\[Omega]", "*", 
            RowBox[{"(", 
             RowBox[{
              RowBox[{"2", 
@@ -75,43 +73,49 @@ Cell[BoxData[{
              SubscriptBox["l", "\[Lambda]"], "+", 
              RowBox[{"3", "/", "2"}]}], ")"}]}], "+", 
           RowBox[{
-           FractionBox["1", "2"], 
-           SubscriptBox["\[Mu]", "\[Lambda]"], 
-           SuperscriptBox["\[Omega]", "2"], 
-           SuperscriptBox["\[Lambda]", "2"], "\[IndentingNewLine]", "V"}]}], 
-         " ", "=", " ", 
+           FractionBox["1", "2"], "\[Omega]", "*", 
+           SuperscriptBox["\[Lambda]", "2"], "\[IndentingNewLine]", 
+           SubscriptBox["V", "12"]}]}], " ", "=", " ", 
          RowBox[{
-          UnderoverscriptBox["\[Sum]", 
-           RowBox[{"i", "<", "j"}], "3"], 
-          RowBox[{"[", 
-           RowBox[{
-            RowBox[{"-", 
-             FractionBox["\[Kappa]", 
-              SubscriptBox["r", "ij"]]}], "+", 
-            SubscriptBox["\[Lambda]r", "ij"], "-", 
-            SubscriptBox["C", "qqq"], "+", 
+          RowBox[{"-", 
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"\[Kappa]", "*", "\[Alpha]"}], "\[Rho]"], ")"}]}], " ", 
+          "+", " ", 
+          RowBox[{
+           RowBox[{"(", 
             RowBox[{
-             FractionBox[
-              RowBox[{"8", 
-               RowBox[{"\[Kappa]", "'"}], "\[Pi]"}], 
-              RowBox[{"3", 
-               SubscriptBox["m", "i"], 
-               SubscriptBox["m", "j"]}]], 
-             FractionBox[
-              RowBox[{"exp", 
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"-", 
-                  SubsuperscriptBox["r", "ij", "2"]}], "/", 
-                 SubsuperscriptBox["r", "0", "2"]}], ")"}]}], 
-              RowBox[{
-               SuperscriptBox["\[Pi]", 
-                RowBox[{"3", "/", "2"}]], 
-               SubsuperscriptBox["r", "0", "3"]}]], 
-             RowBox[{
-              SubscriptBox["S", "i"], ".", 
-              SubscriptBox["S", "j"]}]}]}], "]"}]}]}]}]}], 
-      "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+             FractionBox["\[Lambda]", "\[Alpha]"], "*", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               RowBox[{
+                SuperscriptBox["T", "2"], "/", 
+                RowBox[{"\[InvisiblePrefixScriptBase]", 
+                 SubsuperscriptBox["T", "c", "2"]}]}]}]]}], ")"}], "\[Rho]"}],
+           " ", "-", " ", 
+          SubscriptBox["C", "qqq"], " ", "+", " ", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"8", 
+             RowBox[{"\[Kappa]", "'"}]}], 
+            RowBox[{"3", 
+             SubscriptBox["m", "i"], 
+             SubscriptBox["m", "j"], 
+             SuperscriptBox["\[Pi]", 
+              RowBox[{"1", "/", "2"}]], 
+             SubsuperscriptBox["r", "0", "3"]}]], "*", "exp", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", 
+              FractionBox["1", 
+               RowBox[{
+                SuperscriptBox["\[Alpha]", "2"], 
+                SubsuperscriptBox["r", "0", "2"]}]]}], 
+             SuperscriptBox["\[Rho]", "2"]}], ")"}], "*", 
+           RowBox[{
+            SubscriptBox["S", "i"], ".", 
+            SubscriptBox["S", "j"]}]}]}]}]}]}], "\[IndentingNewLine]", "*)"}],
+      "\[IndentingNewLine]", 
      RowBox[{"(*", " ", "Dictionaries", " ", "*)"}], "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"alphas", "=", 
@@ -405,8 +409,9 @@ Cell[BoxData[{
    3.864125495262182*^9, 3.864125495505471*^9}, {3.864125657883202*^9, 
    3.864125678959618*^9}, {3.864197713827076*^9, 3.8641977324338007`*^9}, {
    3.872829019011449*^9, 3.8728290386277227`*^9}, {3.87439699253563*^9, 
-   3.874397042260108*^9}, {3.8743971155063877`*^9, 
-   3.874397137698654*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.874397042260108*^9}, {3.8743971155063877`*^9, 3.874397137698654*^9}, {
+   3.874399599621093*^9, 3.8743996077542763`*^9}, {3.8743996475350513`*^9, 
+   3.874400230359682*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -426,7 +431,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 18265, 389, 1962, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 18520, 394, 1961, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
