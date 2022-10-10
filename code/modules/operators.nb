@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     54165,       1375]
-NotebookOptionsPosition[     53844,       1361]
-NotebookOutlinePosition[     54208,       1377]
-CellTagsIndexPosition[     54165,       1374]
+NotebookDataLength[     49020,       1199]
+NotebookOptionsPosition[     48699,       1185]
+NotebookOutlinePosition[     49063,       1201]
+CellTagsIndexPosition[     49020,       1198]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,9 +22,9 @@ Cell[BoxData[{
  RowBox[{"ClearAll", "[", 
   RowBox[{
   "Rcoeff", ",", "Lcoeff", ",", "ksum", ",", "rPsum", ",", "rel", ",", 
-   "kMatrix", ",", "polynomialOperatorRho", ",", "polynomialOperatorLambda", 
-   ",", "delta3", ",", "delta3RhoMatrix", ",", "GaussOperator", ",", 
-   "gaussKsum"}], "]"}], "\n", 
+   "polynomialOperatorRho", ",", "polynomialOperatorLambda", ",", "delta3", 
+   ",", "delta3RhoMatrix", ",", "GaussOperator", ",", "gaussKsum"}], 
+  "]"}], "\n", 
  RowBox[{
   RowBox[{"Rcoeff", "[", 
    RowBox[{"n_", ",", "l_"}], "]"}], ":=", 
@@ -376,7 +376,7 @@ Cell[BoxData[{
        RowBox[{"Transpose", "[", "new", "]"}], "-", 
        RowBox[{"DiagonalMatrix", "[", 
         RowBox[{"Diagonal", "[", "new", "]"}], "]"}]}]}]}], 
-    "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]"}], "\n", 
+    "\[IndentingNewLine]", ")"}]}], "\n"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"polynomialOperatorLambda", "[", 
@@ -645,160 +645,22 @@ Cell[BoxData[{
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"ExponentialOperator2", "[", 
-    RowBox[{
-    "sM_", ",", "power_", ",", "omega_", ",", "alphaCounter_", ",", "m1_", 
-     ",", "m2_", ",", "m3_"}], "]"}], ":=", 
+   RowBox[{"ExponentialOperator", "[", 
+    RowBox[{"sM_", ",", "power_", ",", "alpha_", ",", "\[Xi]_"}], "]"}], ":=", 
    RowBox[{"(", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"\[Omega]", "=", "omega"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"listOfAlphas", "=", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"\[Alpha]1", "[", 
-         RowBox[{"m1", ",", "m2", ",", "m3"}], "]"}], ",", 
-        RowBox[{"\[Alpha]2", "[", 
-         RowBox[{"m1", ",", "m2", ",", "m3"}], "]"}], ",", 
-        RowBox[{"\[Alpha]", "[", 
-         RowBox[{"m1", ",", "m2"}], "]"}]}], "}"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"alpha", "=", 
-      RowBox[{"listOfAlphas", "[", 
-       RowBox[{"[", "alphaCounter", "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"\[Xi]", "=", 
-      FractionBox["1", 
-       RowBox[{"r0", " ", "alpha"}]]}], ";", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"Gexp", "[", "\[Omega]_", "]"}], ":=", 
+     RowBox[{"matrixSize", "=", 
+      RowBox[{"Length", "[", "sM", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Gexp", "=", 
       RowBox[{"Exp", "[", 
        FractionBox[
-        SuperscriptBox["\[Xi]", "2"], "8"], 
+        SuperscriptBox["\[Xi]", "2"], 
+        RowBox[{"8", "*", 
+         SuperscriptBox["alpha", "2"]}]], 
        StyleBox["]",
         FontFamily->"Consolas"]}]}], 
      StyleBox[";",
-      FontFamily->"Consolas"], "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"GRcoeff", 
-       StyleBox["[",
-        FontFamily->"Consolas"], 
-       StyleBox[
-        RowBox[{"n_", ",", "l_"}],
-        FontFamily->"Consolas"], 
-       StyleBox["]",
-        FontFamily->"Consolas"]}], 
-      StyleBox[":=",
-       FontFamily->"Consolas"], 
-      StyleBox[
-       RowBox[{
-        RowBox[{"GRcoeff", 
-         StyleBox["[",
-          FontWeight->"Bold"], 
-         StyleBox[
-          RowBox[{"n", ",", "l"}],
-          FontWeight->"Bold"], "]"}], 
-        StyleBox["=",
-         FontWeight->"Bold"], 
-        RowBox[{"Sqrt", "[", 
-         StyleBox[
-          FractionBox[
-           RowBox[{"2", "*", 
-            RowBox[{"(", 
-             RowBox[{"n", "!"}], ")"}]}], 
-           StyleBox[
-            RowBox[{"Gamma", "[", 
-             RowBox[{"n", "+", "l", "+", 
-              FractionBox["3", "2"]}], "]"}],
-            FontFamily->"Consolas",
-            FontWeight->"Bold"]],
-          FontWeight->"Bold"], "]"}]}],
-       FontFamily->"Consolas"]}], 
-     StyleBox[";",
-      FontFamily->"Consolas"], "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"GLcoeff", 
-       StyleBox["[",
-        FontFamily->"Consolas"], 
-       StyleBox[
-        RowBox[{"n_", ",", "l_", ",", "k_"}],
-        FontFamily->"Consolas"], 
-       StyleBox["]",
-        FontFamily->"Consolas"]}], 
-      StyleBox[":=",
-       FontFamily->"Consolas"], 
-      StyleBox[
-       RowBox[{
-        RowBox[{"GLcoeff", 
-         StyleBox["[",
-          FontWeight->"Bold"], 
-         StyleBox[
-          RowBox[{"n", ",", "l", ",", "k"}],
-          FontWeight->"Bold"], "]"}], 
-        StyleBox["=",
-         FontWeight->"Bold"], 
-        FractionBox[
-         RowBox[{
-          SuperscriptBox[
-           RowBox[{"(", 
-            RowBox[{"-", "1"}], ")"}], "k"], 
-          StyleBox[
-           RowBox[{"Gamma", "[", 
-            RowBox[{"n", "+", "l", "+", 
-             FractionBox["3", "2"]}], "]"}],
-           FontFamily->"Consolas",
-           FontWeight->"Bold"]}], 
-         RowBox[{
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"n", "-", "k"}], ")"}], "!"}], " ", 
-          RowBox[{"Gamma", "[", 
-           RowBox[{"l", "+", "k", "+", 
-            FractionBox["3", "2"]}], "]"}], " ", 
-          RowBox[{
-           RowBox[{"(", "k", ")"}], "!"}]}]]}],
-       FontFamily->"Consolas"]}], 
-     StyleBox[";",
-      FontFamily->"Consolas"], "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"Gksum", 
-       StyleBox["[",
-        FontFamily->"Consolas"], 
-       StyleBox[
-        RowBox[{"n_", ",", "m_", ",", "l_", ",", "p_"}],
-        FontFamily->"Consolas"], 
-       StyleBox["]",
-        FontFamily->"Consolas"]}], 
-      StyleBox[":=",
-       FontFamily->"Consolas"], 
-      StyleBox[
-       RowBox[{
-        RowBox[{"Gksum", 
-         StyleBox["[",
-          FontWeight->"Bold"], 
-         StyleBox[
-          RowBox[{"n", ",", "m", ",", "l", ",", "p"}],
-          FontWeight->"Bold"], "]"}], 
-        StyleBox["=",
-         FontWeight->"Bold"], 
-        RowBox[{"Sum", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"GLcoeff", "[", 
-            RowBox[{"n", ",", "l", ",", "k"}], "]"}], " ", 
-           RowBox[{"GLcoeff", "[", 
-            RowBox[{"m", ",", "l", ",", 
-             RowBox[{"p", "-", "k", "-", "l"}]}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"k", ",", 
-            RowBox[{"Max", "[", 
-             RowBox[{"0", ",", 
-              RowBox[{"p", "-", "l", "-", "m"}]}], "]"}], ",", 
-            RowBox[{"Min", "[", 
-             RowBox[{"n", ",", 
-              RowBox[{"p", "-", "l"}]}], "]"}]}], "}"}]}], "]"}]}],
-       FontFamily->"Consolas"]}], 
-     StyleBox[";",
-      FontFamily->"Consolas"], "\[IndentingNewLine]", 
+      FontFamily->"Consolas"], 
      RowBox[{
       RowBox[{"Gpsum", 
        StyleBox["[",
@@ -808,7 +670,7 @@ Cell[BoxData[{
          StyleBox[",",
           FontWeight->"Bold"], 
          StyleBox["y_",
-          FontWeight->"Bold"], ",", "\[Omega]_"}],
+          FontWeight->"Bold"]}],
         FontFamily->"Consolas"], 
        StyleBox["]",
         FontFamily->"Consolas"]}], 
@@ -832,40 +694,29 @@ Cell[BoxData[{
               FontWeight->"Bold"], 
              StyleBox["y",
               FontWeight->"Bold"]}], ")"}], "!"}], " ", 
-          RowBox[{
-           StyleBox["N",
-            FontWeight->"Bold"], 
-           StyleBox["[",
-            FontWeight->"Bold"], 
+          RowBox[{"ParabolicCylinderD", "[", 
            RowBox[{
-            RowBox[{"ParabolicCylinderD", "[", 
+            RowBox[{"-", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"2", "p"}], "+", "3", 
+               StyleBox["+",
+                FontWeight->"Bold"], 
+               StyleBox["y",
+                FontWeight->"Bold"]}], ")"}]}], ",", 
+            FractionBox[
+             RowBox[{"\[Xi]", "  "}], 
              RowBox[{
-              RowBox[{"-", 
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"2", "p"}], "+", "3", 
-                 StyleBox["+",
-                  FontWeight->"Bold"], 
-                 StyleBox["y",
-                  FontWeight->"Bold"]}], ")"}]}], ",", 
-              FractionBox[
-               RowBox[{"\[Xi]", "  "}], 
-               RowBox[{"Sqrt", "[", "2", "]"}]]}], "]"}], 
-            StyleBox[",",
-             FontWeight->"Bold"], 
-            RowBox[{
-             StyleBox["3",
-              FontWeight->"Bold"], "0"}]}], 
-           StyleBox["]",
-            FontWeight->"Bold"]}], " ", 
-          RowBox[{"Gksum", "[", 
+              RowBox[{"Sqrt", "[", "2", "]"}], "*", "alpha"}]]}], "]"}], " ", 
+          "*", 
+          RowBox[{"ksum", "[", 
            RowBox[{"n", ",", "m", ",", "l", ",", "p"}], "]"}]}], ",", 
          RowBox[{"{", 
           RowBox[{"p", ",", "l", ",", 
            RowBox[{"l", "+", "n", "+", "m"}]}], "}"}]}], "]"}],
        FontFamily->"Consolas"]}], 
      StyleBox[";",
-      FontFamily->"Consolas"], "\[IndentingNewLine]", 
+      FontFamily->"Consolas"], 
      StyleBox["\[IndentingNewLine]",
       FontFamily->"Consolas"], 
      RowBox[{
@@ -877,7 +728,7 @@ Cell[BoxData[{
          StyleBox[",",
           FontWeight->"Bold"], 
          StyleBox["y_",
-          FontWeight->"Bold"], ",", "\[Omega]_"}],
+          FontWeight->"Bold"]}],
         FontFamily->"Consolas"], 
        StyleBox["]",
         FontFamily->"Consolas"]}], 
@@ -888,44 +739,46 @@ Cell[BoxData[{
         StyleBox["1",
          FontFamily->"Consolas"], 
         SuperscriptBox["alpha", "power"]], 
-       StyleBox[
-        RowBox[{"Gexp", "[", "\[Omega]", "]"}],
+       StyleBox["Gexp",
         FontFamily->"Consolas"], 
-       StyleBox[" ",
+       StyleBox["*",
         FontFamily->"Consolas"], 
        StyleBox[
-        RowBox[{"GRcoeff", "[", 
+        RowBox[{"Rcoeff", "[", 
          RowBox[{"n", ",", "l"}], "]"}],
         FontFamily->"Consolas"], 
-       StyleBox[" ",
+       StyleBox["*",
         FontFamily->"Consolas"], 
        StyleBox[
-        RowBox[{"GRcoeff", "[", 
+        RowBox[{"Rcoeff", "[", 
          RowBox[{"m", ",", "l"}], "]"}],
         FontFamily->"Consolas"], 
-       StyleBox[" ",
+       StyleBox["*",
         FontFamily->"Consolas"], 
        StyleBox[
         RowBox[{"Gpsum", "[", 
          RowBox[{"n", ",", "m", ",", "l", ",", 
           StyleBox["y",
-           FontWeight->"Bold"], 
-          StyleBox[",",
-           FontWeight->"Bold"], "\[Omega]"}], "]"}],
+           FontWeight->"Bold"]}], "]"}],
         FontFamily->"Consolas"]}]}], 
      StyleBox[";",
       FontFamily->"Consolas"], "\[IndentingNewLine]", 
      RowBox[{"new", "=", 
-      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Array", "[", 
+       RowBox[{
+        RowBox[{"0", "&"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"matrixSize", ",", "matrixSize"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"For", "[", 
       RowBox[{
        RowBox[{"i", "=", "1"}], ",", 
        RowBox[{"i", "\[LessEqual]", 
         RowBox[{"Length", "[", "sM", "]"}]}], ",", 
-       RowBox[{"i", "++"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
        RowBox[{"For", "[", 
         RowBox[{
-         RowBox[{"j", "=", "1"}], ",", 
+         RowBox[{"j", "=", "i"}], ",", 
          RowBox[{"j", "\[LessEqual]", 
           RowBox[{"Length", "[", "sM", "]"}]}], ",", 
          RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
@@ -970,7 +823,27 @@ Cell[BoxData[{
             RowBox[{"[", 
              RowBox[{"i", ",", "j", ",", "2", ",", "4"}], "]"}], "]"}]}], ";",
            "\[IndentingNewLine]", 
-          RowBox[{"rho", "=", 
+          RowBox[{"s12p", "=", 
+           RowBox[{"sM", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "j", ",", "1", ",", "6"}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"sp", "=", 
+           RowBox[{"sM", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "j", ",", "1", ",", "7"}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"s12", "=", 
+           RowBox[{"sM", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "j", ",", "2", ",", "6"}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"s", "=", 
+           RowBox[{"sM", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "j", ",", "2", ",", "7"}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"el", "=", 
            RowBox[{
             RowBox[{"KroneckerDelta", "[", 
              RowBox[{"lp", ",", "l"}], "]"}], "*", 
@@ -978,20 +851,24 @@ Cell[BoxData[{
              RowBox[{"nlp", ",", "nl"}], "]"}], "*", 
             RowBox[{"KroneckerDelta", "[", 
              RowBox[{"llp", ",", "ll"}], "]"}], "*", 
+            RowBox[{"KroneckerDelta", "[", 
+             RowBox[{"s12p", ",", "s12"}], "]"}], "*", 
+            RowBox[{"KroneckerDelta", "[", 
+             RowBox[{"sp", ",", "s"}], "]"}], "*", 
             RowBox[{"Gelement", "[", 
-             RowBox[{
-             "np", ",", "n", ",", "l", ",", "power", ",", "\[Omega]"}], 
-             "]"}]}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"AppendTo", "[", 
-           RowBox[{"new", ",", "rho"}], "]"}]}]}], "]"}]}], "]"}], ";", 
-     "\[IndentingNewLine]", 
+             RowBox[{"np", ",", "n", ",", "l", ",", "power"}], "]"}]}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"new", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "j"}], "]"}], "]"}], "=", "el"}]}]}], 
+        "\[IndentingNewLine]", "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
      RowBox[{"new", "=", 
-      RowBox[{"ArrayReshape", "[", 
-       RowBox[{"new", ",", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"Length", "[", "sM", "]"}], ",", 
-          RowBox[{"Length", "[", "sM", "]"}]}], "}"}]}], "]"}]}]}], ")"}]}], 
+      RowBox[{"new", "+", 
+       RowBox[{"Transpose", "[", "new", "]"}], "-", 
+       RowBox[{"DiagonalMatrix", "[", 
+        RowBox[{"Diagonal", "[", "new", "]"}], "]"}]}]}]}], 
+    "\[IndentingNewLine]", ")"}]}], "\[IndentingNewLine]", 
   "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{
@@ -1012,39 +889,9 @@ Cell[BoxData[{
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{
-    RowBox[{"gaussKsum", "[", 
-     RowBox[{"n_", ",", "m_", ",", "l_", ",", "p_"}], "]"}], ":=", 
-    RowBox[{
-     RowBox[{"gaussKsum", "[", 
-      RowBox[{"n", ",", "m", ",", "l", ",", "p"}], "]"}], "=", 
-     RowBox[{"Sum", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Lcoeff", "[", 
-         RowBox[{"n", ",", "l", ",", "k"}], "]"}], "*", " ", 
-        RowBox[{"Lcoeff", "[", 
-         RowBox[{"m", ",", "l", ",", 
-          RowBox[{"p", "-", "k", "-", "l"}]}], "]"}]}], ",", 
-       RowBox[{"{", 
-        RowBox[{"k", ",", 
-         RowBox[{"Max", "[", 
-          RowBox[{"0", ",", 
-           RowBox[{"p", "-", "l", "-", "m"}]}], "]"}], ",", 
-         RowBox[{"Min", "[", 
-          RowBox[{"n", ",", 
-           RowBox[{"p", "-", "l"}]}], "]"}]}], "}"}]}], "]"}]}]}], ";"}], 
-  "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{"sigma2", " ", "is", " ", "the", " ", 
-    SuperscriptBox["\[Sigma]", "2"], " ", "in", " ", "the", " ", "exponent"}],
-    " ", "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
    RowBox[{"gaussPsum", "[", 
-    RowBox[{
-    "n_", ",", "m_", ",", "l_", ",", "r0choice_", ",", "alpha_", ",", 
-     "sigmaSqrd_"}], "]"}], ":=", 
+    RowBox[{"n_", ",", "m_", ",", "l_", ",", "alpha_", ",", "sigma_"}], "]"}],
+    ":=", 
    RowBox[{"Sum", "[", 
     RowBox[{
      RowBox[{
@@ -1056,13 +903,14 @@ Cell[BoxData[{
         SuperscriptBox[
          RowBox[{"(", 
           RowBox[{"1", "+", 
-           FractionBox["sigmaSqrd", 
+           FractionBox[
+            SuperscriptBox["sigma", "2"], 
             SuperscriptBox["alpha", "2"]]}], ")"}], 
          RowBox[{"(", 
           FractionBox[
            RowBox[{
             RowBox[{"2", "p"}], "+", "3"}], "2"], ")"}]]}]], " ", "*", " ", 
-      RowBox[{"gaussKsum", "[", 
+      RowBox[{"ksum", "[", 
        RowBox[{"n", ",", "m", ",", "l", ",", "p"}], "]"}]}], ",", 
      RowBox[{"{", 
       RowBox[{"p", ",", "l", ",", 
@@ -1072,64 +920,30 @@ Cell[BoxData[{
   RowBox[{
    RowBox[{
     RowBox[{"gaussEl", "[", 
-     RowBox[{
-     "n_", ",", "m_", ",", "l_", ",", "r0choice_", ",", "alpha_", ",", 
-      "sigmaSqrd_"}], "]"}], ":=", 
+     RowBox[{"n_", ",", "m_", ",", "l_", ",", "alpha_", ",", "sigma_"}], 
+     "]"}], ":=", 
     RowBox[{
      RowBox[{"Rcoeff", "[", 
       RowBox[{"n", ",", "l"}], "]"}], "*", 
      RowBox[{"Rcoeff", "[", 
       RowBox[{"m", ",", "l"}], "]"}], "*", 
      RowBox[{"gaussPsum", "[", 
-      RowBox[{
-      "n", ",", "m", ",", "l", ",", "r0choice", ",", "alpha", ",", 
-       "sigmaSqrd"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", 
+      RowBox[{"n", ",", "m", ",", "l", ",", "alpha", ",", "sigma"}], 
+      "]"}]}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{"Main", " ", "function"}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"GaussOperator", "[", 
-   RowBox[{
-   "sM_", ",", "\[Omega]_", ",", "alphaCounter_", ",", "mi_", ",", "mj_", ",",
-     "mk_", ",", "sigmaSqrd_"}], "]"}], ":=", 
+   RowBox[{"sM_", ",", "alpha_", ",", "sigma_"}], "]"}], ":=", 
   RowBox[{"Module", "[", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"{", 
      RowBox[{
-     "alphaList", ",", "r0list", ",", "r0choice", ",", "alpha", ",", "s1s2", 
-      ",", "matrixSize", ",", "new", ",", "i", ",", "j", ",", "np", ",", "lp",
-       ",", "n", ",", "l", ",", "nlp", ",", "llp", ",", "nl", ",", "ll", ",", 
-      "s12p", ",", "sp", ",", "s12", ",", "s", ",", "spinTerm", ",", "rho"}], 
-     "}"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     "s1s2", ",", "matrixSize", ",", "new", ",", "i", ",", "j", ",", "np", 
+      ",", "lp", ",", "n", ",", "l", ",", "nlp", ",", "llp", ",", "nl", ",", 
+      "ll", ",", "s12p", ",", "sp", ",", "s12", ",", "s", ",", "spinTerm", 
+      ",", "rho"}], "}"}], ",", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"alphaList", "=", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"\[Alpha]1", "[", 
-         RowBox[{"mi", ",", "mj", ",", "mk", ",", "\[Omega]"}], "]"}], ",", 
-        RowBox[{"\[Alpha]2", "[", 
-         RowBox[{"mi", ",", "mj", ",", "mk", ",", "\[Omega]"}], "]"}], ",", 
-        RowBox[{"\[Alpha]", "[", 
-         RowBox[{"mi", ",", "mj", ",", "\[Omega]"}], "]"}]}], "}"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"r0list", "=", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"r0", "[", 
-         RowBox[{"mj", ",", "mk"}], "]"}], ",", 
-        RowBox[{"r0", "[", 
-         RowBox[{"mi", ",", "mk"}], "]"}], ",", 
-        RowBox[{"r0", "[", 
-         RowBox[{"mi", ",", "mj"}], "]"}]}], "}"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"r0choice", "=", 
-      RowBox[{"r0list", "[", 
-       RowBox[{"[", "alphaCounter", "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"alpha", "=", 
-      RowBox[{"alphaList", "[", 
-       RowBox[{"[", "alphaCounter", "]"}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
      RowBox[{"s1s2", "=", 
       RowBox[{"{", 
        RowBox[{
@@ -1245,9 +1059,8 @@ Cell[BoxData[{
             RowBox[{"KroneckerDelta", "[", 
              RowBox[{"sp", ",", "s"}], "]"}], "*", "spinTerm", "*", 
             RowBox[{"gaussEl", "[", 
-             RowBox[{
-             "np", ",", "n", ",", "l", ",", "r0choice", ",", "alpha", ",", 
-              "sigmaSqrd"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"np", ",", "n", ",", "l", ",", "alpha", ",", "sigma"}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{"new", "[", 
             RowBox[{"[", 
@@ -1355,9 +1168,20 @@ Cell[BoxData[{
    3.858318579855289*^9}, {3.858318775044222*^9, 3.858318806855995*^9}, {
    3.861274174915648*^9, 3.861274189736435*^9}, {3.8623943026758013`*^9, 
    3.8623943444555273`*^9}, {3.862394648593483*^9, 3.862394694682637*^9}, {
-   3.862394730836083*^9, 
-   3.862394789618216*^9}},ExpressionUUID->"77518bdd-a50c-46eb-a572-\
-a991744c92b5"]
+   3.862394730836083*^9, 3.862394789618216*^9}, {3.874394354127989*^9, 
+   3.8743943591638603`*^9}, {3.8743944676217833`*^9, 3.874394470361291*^9}, {
+   3.874394650286417*^9, 3.874394700220751*^9}, {3.874394744200602*^9, 
+   3.8743947875697308`*^9}, {3.874394861590452*^9, 3.874394914461494*^9}, 
+   3.874394945999259*^9, {3.874394987092063*^9, 3.874395032780686*^9}, 
+   3.874395185521585*^9, {3.8743952873234787`*^9, 3.874395427713182*^9}, {
+   3.8743954770616407`*^9, 3.874395532657599*^9}, {3.8743955781595907`*^9, 
+   3.874395589023984*^9}, 3.87439562615551*^9, {3.8743957000378513`*^9, 
+   3.87439570322993*^9}, {3.874395740985149*^9, 3.874395750385738*^9}, {
+   3.874395884378996*^9, 3.874395947882578*^9}, {3.8743961519567204`*^9, 
+   3.874396152090684*^9}, {3.874396300695489*^9, 3.874396355403397*^9}, {
+   3.8743966937624683`*^9, 3.8743967025877542`*^9}, {3.874396884526032*^9, 
+   3.8743968847666807`*^9}, {3.87439691889496*^9, 3.87439697019495*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
 },
 WindowSize->{1854, 1016},
 WindowMargins->{{0, Automatic}, {0, Automatic}},
@@ -1376,7 +1200,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 53282, 1339, 6584, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
+Cell[558, 20, 48137, 1163, 6240, "Input",ExpressionUUID->"77518bdd-a50c-46eb-a572-a991744c92b5"]
 }
 ]
 *)

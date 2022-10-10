@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19104,        425]
-NotebookOptionsPosition[     18784,        411]
-NotebookOutlinePosition[     19148,        427]
-CellTagsIndexPosition[     19105,        424]
+NotebookDataLength[     19147,        425]
+NotebookOptionsPosition[     18827,        411]
+NotebookOutlinePosition[     19191,        427]
+CellTagsIndexPosition[     19148,        424]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -34,8 +34,8 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"{", " ", 
       RowBox[{
-      "alphas", ",", "coeffss", ",", "sigmasqrds", ",", "p", ",", "spinPart", 
-       ",", "v12baryon", ",", "v23baryon", ",", "v31baryon", ",", "kin", ",", 
+      "alphas", ",", "coeffss", ",", "sigmas", ",", "p", ",", "spinPart", ",",
+        "v12baryon", ",", "v23baryon", ",", "v31baryon", ",", "kin", ",", 
        "mTot", ",", "cqqq", ",", "kinetic", ",", "Hbaryon", ",", "size"}], 
       "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
@@ -141,17 +141,17 @@ Cell[BoxData[{
           RowBox[{"coeffSS", "[", 
            RowBox[{"m3", ",", "m1"}], "]"}]}]}], "|>"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"sigmasqrds", "=", 
+      RowBox[{"sigmas", "=", 
        RowBox[{"<|", 
         RowBox[{
          RowBox[{"3", "\[Rule]", 
-          RowBox[{"sigmaSqrd", "[", 
+          RowBox[{"sigma", "[", 
            RowBox[{"m1", ",", "m2"}], "]"}]}], ",", 
          RowBox[{"1", "\[Rule]", 
-          RowBox[{"sigmaSqrd", "[", 
+          RowBox[{"sigma", "[", 
            RowBox[{"m2", ",", "m3"}], "]"}]}], ",", 
          RowBox[{"2", "\[Rule]", 
-          RowBox[{"sigmaSqrd", "[", 
+          RowBox[{"sigma", "[", 
            RowBox[{"m3", ",", "m1"}], "]"}]}]}], "|>"}]}], ";", 
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
@@ -171,10 +171,9 @@ Cell[BoxData[{
        RowBox[{
         RowBox[{"coeffss", "[", "system", "]"}], "*", 
         RowBox[{"GaussOperator", "[", 
-         RowBox[{
-         "sM", ",", "\[Omega]", ",", "system", ",", "m1", ",", "m2", ",", 
-          "m3", ",", 
-          RowBox[{"sigmasqrds", "[", "system", "]"}]}], "]"}]}]}], ";", 
+         RowBox[{"sM", ",", 
+          RowBox[{"alphas", "[", "system", "]"}], ",", 
+          RowBox[{"sigmas", "[", "system", "]"}]}], "]"}]}]}], ";", 
       RowBox[{"(*", " ", 
        SubsuperscriptBox["V", "SS", "radial"], " ", "*)"}], 
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -405,8 +404,9 @@ Cell[BoxData[{
    3.864125362383184*^9}, {3.864125400668275*^9, 3.864125426742629*^9}, {
    3.864125495262182*^9, 3.864125495505471*^9}, {3.864125657883202*^9, 
    3.864125678959618*^9}, {3.864197713827076*^9, 3.8641977324338007`*^9}, {
-   3.872829019011449*^9, 
-   3.8728290386277227`*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
+   3.872829019011449*^9, 3.8728290386277227`*^9}, {3.87439699253563*^9, 
+   3.874397042260108*^9}, {3.8743971155063877`*^9, 
+   3.874397137698654*^9}},ExpressionUUID->"0a487b3b-0477-4dda-8a4a-\
 1bba9fdae37b"]
 },
 WindowSize->{1854, 1016},
@@ -426,7 +426,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 18222, 389, 1962, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
+Cell[558, 20, 18265, 389, 1962, "Input",ExpressionUUID->"0a487b3b-0477-4dda-8a4a-1bba9fdae37b"]
 }
 ]
 *)
