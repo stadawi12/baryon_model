@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    108962,       2491]
-NotebookOptionsPosition[    107446,       2461]
-NotebookOutlinePosition[    107881,       2478]
-CellTagsIndexPosition[    107838,       2475]
+NotebookDataLength[    104295,       2365]
+NotebookOptionsPosition[    103901,       2350]
+NotebookOutlinePosition[    104336,       2367]
+CellTagsIndexPosition[    104293,       2364]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2346,118 +2346,7 @@ Cell[BoxData[{
    3.8762212665576878`*^9}, {3.876221301469121*^9, 3.876221307327756*^9}, {
    3.8766538409098*^9, 3.8766538636057043`*^9}, {3.877404590634609*^9, 
    3.877404606709476*^9}, {3.885019296555574*^9, 3.8850192967267847`*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"TalmiTest", "[", "]"}]], "Input",
- CellChangeTimes->{{3.8850193125379553`*^9, 3.885019314194256*^9}},
- CellLabel->"In[34]:=",ExpressionUUID->"7232041a-41c2-49af-9b3f-748c97ad5682"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"1", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[1, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.885019329202875*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"a680adc5-7b1e-460d-b377-146c4f76452d"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"2", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[2, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.8850193292046432`*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"52c09b67-3a61-45d9-a13c-762e9e6b0dd3"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"3", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[3, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.8850193292057533`*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"fa426e46-6fd3-42fb-966a-4bc86c86f3dd"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"4", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[4, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.885019329206567*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"d416e92a-0ef2-4aa3-b547-b96a3153896e"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"5", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[5, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.8850193292073727`*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"65a1f75d-78cf-4a12-8ee7-5a3378820319"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"6", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[6, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.885019329208186*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"b198c203-fd9b-4b0d-b11e-139a2fda8bad"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"7", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[7, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.885019329208995*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"21017523-30de-4116-9d14-dedfc4ed9645"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"8", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[8, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.885019329209811*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"2e653e62-96ce-4cf0-9a89-3ef1de3f0de7"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"9", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[9, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.885019329210619*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"5882ec45-367b-4a17-aa98-44be56d0c5e4"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"10", "\[InvisibleSpace]", "\<\") Agrees\"\>"}],
-  SequenceForm[10, ") Agrees"],
-  Editable->False]], "Print",
- CellChangeTimes->{{3.885019315015065*^9, 3.8850193292114067`*^9}},
- CellLabel->
-  "During evaluation of \
-In[34]:=",ExpressionUUID->"8e1ae9ca-a21e-4aa8-b9e8-95238efc9896"]
-}, Open  ]]
-}, Open  ]]
+ CellLabel->"In[17]:=",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 },
 WindowSize->{1854, 1016},
 WindowMargins->{{Automatic, 0}, {0, Automatic}},
@@ -2477,22 +2366,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 103339, 2328, 10423, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"],
-Cell[CellGroupData[{
-Cell[103922, 2352, 204, 3, 48, "Input",ExpressionUUID->"7232041a-41c2-49af-9b3f-748c97ad5682"],
-Cell[CellGroupData[{
-Cell[104151, 2359, 323, 8, 28, "Print",ExpressionUUID->"a680adc5-7b1e-460d-b377-146c4f76452d"],
-Cell[104477, 2369, 325, 8, 28, "Print",ExpressionUUID->"52c09b67-3a61-45d9-a13c-762e9e6b0dd3"],
-Cell[104805, 2379, 325, 8, 28, "Print",ExpressionUUID->"fa426e46-6fd3-42fb-966a-4bc86c86f3dd"],
-Cell[105133, 2389, 323, 8, 28, "Print",ExpressionUUID->"d416e92a-0ef2-4aa3-b547-b96a3153896e"],
-Cell[105459, 2399, 325, 8, 28, "Print",ExpressionUUID->"65a1f75d-78cf-4a12-8ee7-5a3378820319"],
-Cell[105787, 2409, 323, 8, 28, "Print",ExpressionUUID->"b198c203-fd9b-4b0d-b11e-139a2fda8bad"],
-Cell[106113, 2419, 323, 8, 28, "Print",ExpressionUUID->"21017523-30de-4116-9d14-dedfc4ed9645"],
-Cell[106439, 2429, 323, 8, 28, "Print",ExpressionUUID->"2e653e62-96ce-4cf0-9a89-3ef1de3f0de7"],
-Cell[106765, 2439, 323, 8, 28, "Print",ExpressionUUID->"5882ec45-367b-4a17-aa98-44be56d0c5e4"],
-Cell[107091, 2449, 327, 8, 28, "Print",ExpressionUUID->"8e1ae9ca-a21e-4aa8-b9e8-95238efc9896"]
-}, Open  ]]
-}, Open  ]]
+Cell[558, 20, 103339, 2328, 10423, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)
