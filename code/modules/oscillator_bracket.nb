@@ -10,17 +10,19 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    104295,       2365]
-NotebookOptionsPosition[    103901,       2350]
-NotebookOutlinePosition[    104336,       2367]
-CellTagsIndexPosition[    104293,       2364]
+NotebookDataLength[    104374,       2369]
+NotebookOptionsPosition[    103980,       2354]
+NotebookOutlinePosition[    104415,       2371]
+CellTagsIndexPosition[    104372,       2368]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
  RowBox[{"ClearAll", "[", 
-  RowBox[{"theta", ",", "nineJ", ",", " ", "talmi"}], "]"}], "\n", 
+  RowBox[{
+  "theta", ",", "nineJ", ",", " ", "talmi", ",", "summationVariables", ",", 
+   "cg"}], "]"}], "\n", 
  RowBox[{
   RowBox[{
    RowBox[{"theta", "[", 
@@ -2345,8 +2347,10 @@ Cell[BoxData[{
    3.8762210374773073`*^9, 3.876221115025174*^9}, {3.876221258879263*^9, 
    3.8762212665576878`*^9}, {3.876221301469121*^9, 3.876221307327756*^9}, {
    3.8766538409098*^9, 3.8766538636057043`*^9}, {3.877404590634609*^9, 
-   3.877404606709476*^9}, {3.885019296555574*^9, 3.8850192967267847`*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+   3.877404606709476*^9}, {3.885019296555574*^9, 3.8850192967267847`*^9}, {
+   3.8889169583971033`*^9, 
+   3.888916964926165*^9}},ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-\
+db12206f4eb3"]
 },
 WindowSize->{1854, 1016},
 WindowMargins->{{Automatic, 0}, {0, Automatic}},
@@ -2366,7 +2370,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 103339, 2328, 10423, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
+Cell[558, 20, 103418, 2332, 10423, "Input",ExpressionUUID->"6bf8f49e-3c3d-4e9e-8365-db12206f4eb3"]
 }
 ]
 *)
